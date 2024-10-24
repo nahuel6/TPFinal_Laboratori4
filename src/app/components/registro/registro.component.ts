@@ -11,8 +11,8 @@ import { Usuario } from '../../models/usuario';
 })
 export class RegistroComponent {
   registroForm: FormGroup;
-  registroExitoso: boolean = false;  // Para manejar el mensaje de éxito
-  private apiUrl = 'http://localhost:3000/usuarios';  // URL del JSON server
+  registroExitoso: boolean = false; 
+  private apiUrl = 'http://localhost:3000/usuarios';  
 
   constructor(private fb: FormBuilder, private http: HttpClient, private router: Router) {
     this.registroForm = this.fb.group({
@@ -26,7 +26,7 @@ export class RegistroComponent {
 
   // Método para enviar el formulario
   onSubmit() {
-    const nuevoUsuario = this.registroForm.value;  // Obtenemos los valores del formulario
+    const nuevoUsuario = this.registroForm.value;  
 
     // Verificar si el email ya está registrado
     this.http.get<Usuario[]>(this.apiUrl).subscribe(usuarios => {
@@ -37,8 +37,8 @@ export class RegistroComponent {
       } else {
         // Registrar nuevo usuario
         this.http.post(this.apiUrl, nuevoUsuario).subscribe(() => {
-          this.registroExitoso = true;  // Mostramos el mensaje de éxito
-          this.registroForm.reset();    // Limpiamos el formulario
+          this.registroExitoso = true;  
+          this.registroForm.reset();  
         });
       }
     });
