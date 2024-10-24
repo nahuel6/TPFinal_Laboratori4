@@ -1,0 +1,53 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "dni": "12345678",
+      "email": "juan.perez@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "Gómez",
+      "dni": "87654321",
+      "email": "maria.gomez@example.com",
+      "password": "password456"
+    },
+    {
+      "nombre": "pedro",
+      "apellido": "carlos",
+      "dni": "34343423",
+      "email": "rodriguez@gmail.com",
+      "password": "121212",
+      "id": 3
+    },
+    {
+      "nombre": "roberto",
+      "apellido": "gonzalez",
+      "dni": "233445",
+      "email": "rb@gmail.com",
+      "password": "1212",
+      "id": 4
+    }
+  ]
+}

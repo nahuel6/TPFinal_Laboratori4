@@ -1,0 +1,66 @@
+.login-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);  /* Fondo semitransparente */
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #00000033;
+    position: relative;
+    z-index: 2;
+  }
+  .login-container h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+  }
+  .login-container input {
+    display: block;
+    margin: 10px auto; /* Margen automático para centrar */
+    width: 80%; /* Ancho de los inputs */
+    padding: 5px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  .login-container button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    padding: 10px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar */
+  }
+  .login-container button:disabled {
+    background-color: #ccc; /* Color cuando está deshabilitado */
+  }
+  
+  .login-container p {
+    margin-top: 20px; /* Espacio arriba del párrafo */
+  }
+  
+  
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .is-invalid {
+    border-color: #dc3545;
+  }
+  
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+  }
+  
+  p {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }

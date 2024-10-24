@@ -16,6 +16,8 @@
           "standalone": false
         }
       },
+
+     
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -33,7 +35,9 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+    "output": "/assets"
+                 
               }
             ],
             "styles": [
@@ -91,7 +95,8 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",
+    "output": "/assets"
               }
             ],
             "styles": [
@@ -102,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
