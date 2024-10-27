@@ -10,12 +10,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './components/login/login.component';
 import { CarruselComponent } from './components/pages/carrusel/carrusel.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { DestinationsComponent } from './destinations/destinations.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
     LoginComponent,
-    CarruselComponent
+    CarruselComponent,
+    DestinationsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,3 +31,4 @@ import {  HttpClientModule } from '@angular/common/http';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 
