@@ -1,6 +1,8 @@
   import { Injectable } from '@angular/core';
   import { HttpClient } from '@angular/common/http';
   import { Observable } from 'rxjs';
+  import { UnsplashResponse } from '../models/unsplash-response.model';
+  
   
   @Injectable({
     providedIn: 'root'
@@ -10,9 +12,13 @@
     private apiUrl = `https://api.unsplash.com/search/photos`;
   
     constructor(private http: HttpClient) {}
-  
+
+    getImages(destination: string): Observable<UnsplashResponse> {  
+      return this.http.get<UnsplashResponse>(`${this.apiUrl}?query=${destination}&client_id=${this.accessKey}&per_page=3`);
+    }
+  /*
     getImages(destination: string): Observable<any> {
       return this.http.get(`${this.apiUrl}?query=${destination}&client_id=${this.accessKey}&per_page=3`);
-    }
+    }*/
   }
   

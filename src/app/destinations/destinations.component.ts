@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DestinationsService } from '../services/destinations.service';
-import { UnsplashResponse } from '../models/unsplash-response.model';
+import { UnsplashImage, UnsplashResponse } from '../models/unsplash-response.model';
 import { Router } from '@angular/router';
 
 
@@ -9,22 +9,26 @@ import { Router } from '@angular/router';
   templateUrl: './destinations.component.html',
   styleUrls: ['./destinations.component.css']
 })
-export class DestinationsComponent {
+export class DestinationsComponent implements OnInit{
   imageUrls: string[] = []; // Array para almacenar las URLs de múltiples imágenes
   description: string = ''; // Nueva propiedad para almacenar la descripción del destino
 
   constructor(private destinationsService: DestinationsService, private router: Router) {}
+
+ngOnInit(): void {
+  
+}
 
   fetchImage(destination: string) {
     // Actualizar la descripción según el destino seleccionado
     this.setDescription(destination);
 
     this.destinationsService.getImages(destination).subscribe(
-      (response: any) => {
+      (response: UnsplashResponse) => {
         // Extrae las URLs de las primeras tres imágenes
-        this.imageUrls = response.results.slice(0, 3).map((result: any) => result.urls.regular);
+        this.imageUrls = response.results.slice(0, 3).map((result: UnsplashImage) => result.urls.regular);
       },
-      (error: any) => {
+      (error: UnsplashResponse) => {
         console.error('Error fetching images:', error);
         this.imageUrls = []; // Limpiar las imágenes si hay un error
       }
