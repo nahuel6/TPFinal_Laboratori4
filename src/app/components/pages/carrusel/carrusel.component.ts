@@ -13,7 +13,7 @@ export class CarruselComponent implements OnInit {
     'assets/images/lake-6476212_1280.jpg'
   ];
   imagenActiva: number = 0;
-  intervalo: any;
+  intervalo!: ReturnType<typeof setInterval>;
 
   constructor() {}
 
@@ -22,6 +22,7 @@ export class CarruselComponent implements OnInit {
   }
 
   iniciarCarrusel(): void {
+    
     this.intervalo = setInterval(() => {
       this.imagenActiva = (this.imagenActiva + 1) % this.imagenes.length;
     }, 5000); 
@@ -29,7 +30,7 @@ export class CarruselComponent implements OnInit {
 
   ngOnDestroy(): void {
     if (this.intervalo) {
-      clearInterval(this.intervalo); // Limpia el intervalo cuando se destruya el componente
+      clearInterval(this.intervalo); // Aca se Limpia el intervalo cuando se destruya el componente
     }
   }
 }

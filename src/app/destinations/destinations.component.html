@@ -1,0 +1,45 @@
+ <div class="content">
+    <header>
+      <div class="logo">
+        <a href="destinations.component.html"><img src="assets/images/logo.png" alt="Logo"></a>
+        <h1>UTN Viajes</h1>
+      </div>
+      <nav>
+        <ul class="title2">
+          <li><a (click)="goToDestinations()">Destinos</a></li>
+          <li><a href="#">Paquetes</a></li>
+          <li><a href="#">Promociones</a></li>
+          <li><a (click)="goToLogin()">Iniciar Sesion</a></li>
+        </ul>
+      </nav>
+    </header> 
+     <body>
+      
+     </body>
+    <main>
+      <h2 class="title">Destinos Disponibles</h2>
+  
+      <!-- Contenedor para botones e imágenes -->
+      <div class="destinations-container">
+        <div class="destinations">
+          <button (click)="fetchImage('Buenos Aires Capital Federal')">Buenos Aires</button>
+          <button (click)="fetchImage('Mendoza')">Mendoza</button>
+          <button (click)="fetchImage('Córdoba Argentina')">Córdoba</button>
+          <button (click)="fetchImage('Bariloche Cerro Campanario')">Bariloche</button>
+          <button (click)="fetchImage('Iguazú')">Iguazú</button>
+          <button (click)="fetchImage('Salta Argentina')">Salta</button>
+        </div>
+  
+        <!-- Imagenes del destino seleccionado -->
+        <div class="image-container" *ngIf="imageUrls.length > 0">
+          <img *ngFor="let url of imageUrls" [src]="url" alt="Imagen del destino" />
+        </div>
+  
+        <!-- Descripción del destino seleccionado -->
+        <div *ngIf="description" class="description-container">
+          <p>{{ description }}</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  
