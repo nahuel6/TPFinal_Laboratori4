@@ -5,10 +5,10 @@ import { RegistroComponent } from './components/registro/registro.component';
 
 const routes: Routes = [
     
-      { path: 'login', component: LoginComponent },  // Ruta para login
-      { path: 'registro', component: RegistroComponent },  // Ruta para registro
+      { path: 'login', component: LoginComponent },  
+      { path: 'registro', component: RegistroComponent },  
     
-  { path: '', redirectTo: '/login', pathMatch: 'full' }  // Redirige al login por defecto
+  { path: '', redirectTo: '/login', pathMatch: 'full' }  
 ];
 
 @NgModule({

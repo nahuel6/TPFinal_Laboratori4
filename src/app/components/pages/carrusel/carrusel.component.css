@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1; /* Asegura que el formulario esté sobre las imágenes */
+    z-index: 1; /* Hace que el formulario esté sobre las imágenes */
   }
    h2{
     position:absolute;   

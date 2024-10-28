@@ -44,7 +44,7 @@ export class RegistroComponent {
     });
   }
 
-  // Método para redirigir al login
+  
   goToLogin() {
     this.router.navigate(['/login']);
   }

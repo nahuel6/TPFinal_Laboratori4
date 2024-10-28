@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   loginForm: FormGroup;
-  private apiUrl = 'http://localhost:3000/usuarios';  // Tu JSON server API
+  private apiUrl = 'http://localhost:3000/usuarios';  
   loginFailed: boolean = false;
 
 
@@ -32,7 +32,7 @@ export class LoginComponent {
 
       if (usuarioEncontrado) {
         console.log('Login exitoso');
-        // Puedes guardar el usuario en localStorage o manejar el estado de autenticación aquí
+        // Guardamos el usuario en localStorage y manejamos el estado de autenticación:
         localStorage.setItem('user', JSON.stringify(usuarioEncontrado));
         this.loginFailed = false;
       } else {
@@ -42,6 +42,6 @@ export class LoginComponent {
     });
   }
   goToRegister(): void {
-    this.router.navigate(['/registro']); // Redirigir al formulario de registro
+    this.router.navigate(['/registro']); 
   }
 }
