@@ -24,15 +24,11 @@ export class RegistroComponent implements OnInit{
     });
   }
   ngOnInit(): void {  
-    this.registroExitoso = false; 
-    const user = localStorage.getItem('user'); 
-  
-    if (user) {
-      
-      this.router.navigate(['/destinations']); 
-    }
+    
   }
-  
+  goToLogin() {
+    this.router.navigate(['/login']);
+  }
   onSubmit() {
     const nuevoUsuario = this.registroForm.value;  
 
@@ -43,7 +39,7 @@ export class RegistroComponent implements OnInit{
       if (usuarioExistente) {
         alert('El email ya está registrado. Por favor, utiliza otro email.');
       } else {
-        
+        this.router.navigate(['/login']);
         this.http.post(this.apiUrl, nuevoUsuario).subscribe(() => {
           this.registroExitoso = true;  
           this.registroForm.reset();  
@@ -53,7 +49,5 @@ export class RegistroComponent implements OnInit{
   }
 
   
-  goToLogin() {
-    this.router.navigate(['/login']);
-  }
+  
 }

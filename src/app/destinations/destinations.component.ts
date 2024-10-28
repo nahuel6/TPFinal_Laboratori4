@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./destinations.component.css']
 })
 export class DestinationsComponent implements OnInit{
-  imageUrls: string[] = []; // Array para almacenar las URLs de múltiples imágenes
+  imageUrls: string[] = []; 
   description: string = ''; // Nueva propiedad para almacenar la descripción del destino
 
   constructor(private destinationsService: DestinationsService, private router: Router) {}
@@ -20,12 +20,12 @@ ngOnInit(): void {
 }
 
   fetchImage(destination: string) {
-    // Actualizar la descripción según el destino seleccionado
+    // Actualiza la descripción según el destino seleccionado
     this.setDescription(destination);
 
     this.destinationsService.getImages(destination).subscribe(
       (response: UnsplashResponse) => {
-        // Extrae las URLs de las primeras tres imágenes
+        // Extrae URLs de las primeras tres imágenes
         this.imageUrls = response.results.slice(0, 3).map((result: UnsplashImage) => result.urls.regular);
       },
       (error: UnsplashResponse) => {

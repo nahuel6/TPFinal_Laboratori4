@@ -3,13 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../../models/usuario';
 import { Router } from '@angular/router';
+import { DestinationsComponent } from '../../destinations/destinations.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   loginForm: FormGroup;
   private apiUrl = 'http://localhost:3000/usuarios';  
   loginFailed: boolean = false;
@@ -22,7 +23,9 @@ export class LoginComponent {
       password: ['', [Validators.required]]
     });
   }
-
+  ngOnInit(): void {
+    
+  }
   onLogin() {
     const email = this.loginForm.get('email')?.value;
     
@@ -31,7 +34,9 @@ export class LoginComponent {
       const usuarioEncontrado = usuarios.find(usuario => usuario.email === email);
 
       if (usuarioEncontrado) {
+        
         console.log('Login exitoso');
+        this.router.navigate(['/destinations']);
         // Guardamos el usuario en localStorage y manejamos el estado de autenticación:
         localStorage.setItem('user', JSON.stringify(usuarioEncontrado));
         this.loginFailed = false;
