@@ -1,6 +1,11 @@
- <div class="content">
+<div *ngIf="userName" class="welcome-message">
+  <h2>Bienvenido, {{ userName }}!</h2>
+  <button class="log-out" (click)="logout()" class="log-out">Cerrar sesión</button>
+</div>
+<div class="content">
     <header>
       <div class="logo">
+        
         <a href="destinations.component.html"><img src="assets/images/logo.png" alt="Logo"></a>
         <h1>UTN Viajes</h1>
       </div>

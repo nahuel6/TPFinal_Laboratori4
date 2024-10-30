@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DestinationsService } from '../services/destinations.service';
 import { UnsplashImage, UnsplashResponse } from '../models/unsplash-response.model';
 import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
@@ -12,11 +13,20 @@ import { Router } from '@angular/router';
 export class DestinationsComponent implements OnInit{
   imageUrls: string[] = []; 
   description: string = ''; // Nueva propiedad para almacenar la descripción del destino
+  userName: string | null = '';
 
-  constructor(private destinationsService: DestinationsService, private router: Router) {}
+  constructor(private destinationsService: DestinationsService, private router: Router,private authService: AuthService) {}
 
 ngOnInit(): void {
-  
+  if (this.authService.isAuthenticated()) {
+    this.userName = this.authService.getUserName();
+
+  }
+  console.log('User Name:', this.userName);
+  /*
+  this.userName = this.authService.getUserName();
+  console.log('User Name:', this.userName);
+  */
 }
 
   fetchImage(destination: string) {
@@ -41,7 +51,11 @@ ngOnInit(): void {
     this.router.navigate(['/login']);
   }
 
-  
+  logout() {
+    this.authService.logout();
+    this.userName = null;  // Limpia el nombre del usuario al cerrar sesión
+  }
+
   setDescription(destination: string) {
     switch (destination) {
       case 'Buenos Aires Capital Federal':

@@ -4,7 +4,6 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently \"npx json-server --watch usuarios.json --port 3000\" \"npx ng serve\"",
-    
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
