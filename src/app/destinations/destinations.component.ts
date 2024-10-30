@@ -25,7 +25,7 @@ ngOnInit(): void {
 
     this.destinationsService.getImages(destination).subscribe(
       (response: UnsplashResponse) => {
-        // Extrae URLs de las primeras tres imágenes
+        
         this.imageUrls = response.results.slice(0, 3).map((result: UnsplashImage) => result.urls.regular);
       },
       (error: UnsplashResponse) => {
@@ -41,7 +41,7 @@ ngOnInit(): void {
     this.router.navigate(['/login']);
   }
 
-  // Nueva función para actualizar la descripción basada en el destino seleccionado
+  
   setDescription(destination: string) {
     switch (destination) {
       case 'Buenos Aires Capital Federal':

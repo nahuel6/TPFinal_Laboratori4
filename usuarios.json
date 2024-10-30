@@ -48,6 +48,14 @@
       "email": "rb@gmail.com",
       "password": "1212",
       "id": 4
+    },
+    {
+      "nombre": "nahuel",
+      "apellido": "rodriguez",
+      "dni": "233445",
+      "email": "nr@gmail.com",
+      "password": "1212",
+      "id": 5
     }
   ]
 }

@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit{
         
         console.log('Login exitoso');
         this.router.navigate(['/destinations']);
-        // Guardamos el usuario en localStorage y manejamos el estado de autenticación:
+        
         localStorage.setItem('user', JSON.stringify(usuarioEncontrado));
         this.loginFailed = false;
       } else {
