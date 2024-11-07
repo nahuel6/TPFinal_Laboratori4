@@ -44,6 +44,13 @@
         <div *ngIf="description" class="description-container">
           <p>{{ description }}</p>
         </div>
+        <div *ngIf="selectedDestinationId">
+          <button (click)="showComments = !showComments">
+            {{ showComments ? 'Ocultar Reseñas' : 'Ver Reseñas' }}
+          </button>
+        
+          <app-comentarios *ngIf="showComments" [destinationId]="selectedDestinationId"></app-comentarios>
+        </div>
       </div>
     </main>
   </div>

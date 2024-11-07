@@ -9,6 +9,7 @@
     box-shadow: 0 4px 10px #00000033;
     position: relative;
     z-index: 2;
+    color: #e64a19;
   }
   .login-container h2 {
     margin-bottom: 20px; 

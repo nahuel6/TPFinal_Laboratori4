@@ -14,7 +14,8 @@ export class DestinationsComponent implements OnInit{
   imageUrls: string[] = []; 
   description: string = ''; // Nueva propiedad para almacenar la descripción del destino
   userName: string | null = '';
-
+  showComments: boolean = false;
+  selectedDestinationId: string = '';
   constructor(private destinationsService: DestinationsService, private router: Router,private authService: AuthService) {}
 
 ngOnInit(): void {
@@ -43,6 +44,21 @@ ngOnInit(): void {
         this.imageUrls = []; // Limpiar las imágenes si hay un error
       }
     );
+    this.selectedDestinationId = this.getDestinationIdByName(destination);
+  }
+
+  getDestinationIdByName(destinationName: string): string {
+   
+    const destinationMap: { [key: string]: string } = {
+      'Buenos Aires Capital Federal': '1',
+      'Mendoza': '2',
+      'Córdoba Argentina': '3',
+      'Bariloche Cerro Campanario': '4',
+      'Iguazú': '5',
+      'Salta Argentina': '6'
+    };
+
+    return destinationMap[destinationName] || '';
   }
   goToDestinations() {
     this.router.navigate(['/destinations']);

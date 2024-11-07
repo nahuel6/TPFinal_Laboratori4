@@ -9,8 +9,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { LoginComponent } from './components/login/login.component';
 import { CarruselComponent } from './components/pages/carrusel/carrusel.component';
-import {  HttpClientModule } from '@angular/common/http';
+import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { DestinationsComponent } from './destinations/destinations.component';
+import { ComentariosComponent } from './components/comentarios/comentarios.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DestinationsComponent } from './destinations/destinations.component';
     RegistroComponent,
     LoginComponent,
     CarruselComponent,
-    DestinationsComponent
+    DestinationsComponent,
+    ComentariosComponent
   ],
   imports: [
     BrowserModule,

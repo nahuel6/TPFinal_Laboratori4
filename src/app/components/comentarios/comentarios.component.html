@@ -1,0 +1,24 @@
+<!--
+<div *ngFor="let comentario of comentarios">
+    <p><strong>Usuario {{ comentario.nombreUsuario }}:</strong> {{ comentario.content }}</p>
+  </div>-->
+
+  <div class="comentarios-container">
+    <div class="comentario" *ngFor="let comentario of comentarios">
+      <div class="comentario-con-avatar">
+        <!--<img class="avatar" src="path_to_avatar" alt="Avatar">-->
+        <div class="comentario-info">
+          <div class="comentario-header">
+            {{ comentario.nombreUsuario }} 
+            <!--<span class="fecha">{{ comentario.fecha | date:'short' }}</span>-->
+          </div>
+          <div class="comentario-body">
+            {{ comentario.content }}
+          </div>
+          <div class="comentario-footer">
+           <!-- <button class="comentario-button">Me gusta</button>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

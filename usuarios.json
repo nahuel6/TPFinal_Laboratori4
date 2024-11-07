@@ -56,6 +56,163 @@
       "email": "nr@gmail.com",
       "password": "1212",
       "id": 5
+    },
+    {  
+    "id": 6,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "dni": "12345678",
+      "email": "juan.perez@example.com",
+      "password": "password123"
+    },
+    {
+      "id": 7,
+      "nombre": "María",
+      "apellido": "Gómez",
+      "dni": "87654321",
+      "email": "maria.gomez@example.com",
+      "password": "password456"
+    },
+    {
+      "id": 8,
+      "nombre": "Pedro",
+      "apellido": "Rodríguez",
+      "dni": "34343423",
+      "email": "pedro.rodriguez@example.com",
+      "password": "1234abcd"
+    },
+    {
+      "id": 9,
+      "nombre": "Roberto",
+      "apellido": "González",
+      "dni": "23344567",
+      "email": "roberto.gonzalez@example.com",
+      "password": "1234password"
+    },
+    {
+      "id": 10,
+      "nombre": "Laura",
+      "apellido": "Martínez",
+      "dni": "99887766",
+      "email": "laura.martinez@example.com",
+      "password": "laura123"
+    },
+    {
+      "id": 11,
+      "nombre": "Carlos",
+      "apellido": "Fernández",
+      "dni": "55667788",
+      "email": "carlos.fernandez@example.com",
+      "password": "carlos2024"
+    },
+    {
+      "id": 12,
+      "nombre": "Ana",
+      "apellido": "López",
+      "dni": "12398765",
+      "email": "ana.lopez@example.com",
+      "password": "ana@2024"
+    },
+    {
+      "id": 13,
+      "nombre": "Luis",
+      "apellido": "Sánchez",
+      "dni": "99887755",
+      "email": "luis.sanchez@example.com",
+      "password": "luis1234"
+    }
+  ],
+  "comentarios":
+[
+    {
+      "id": 1,
+      "userId": 1,
+      "destinationId": "1", 
+      "content": "Hermoso lugar, definitivamente lo recomiendo."
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "destinationId": "2",
+      "content": "Los vinos y la vista de las montañas son maravillosos."
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "destinationId": "1",
+      "content": "Gran experiencia cultural y gastronómica en Buenos Aires."
+    },
+    {
+      "id": 4,
+      "userId": 3,
+      "destinationId": "3",
+      "content": "Bariloche es un paraíso para los amantes de la naturaleza y el trekking."
+    },
+    {
+      "id": 5,
+      "userId": 4,
+      "destinationId": "3",
+      "content": "Lugares mágicos en Bariloche, con paisajes que quitan el aliento. Totalmente recomendable."
+    },
+    {
+      "id": 6,
+      "userId": 5,
+      "destinationId": "4",
+      "content": "Iguazú es impresionante, las cataratas son un espectáculo de la naturaleza."
+    },
+    {
+      "id": 7,
+      "userId": 6,
+      "destinationId": "4",
+      "content": "Una de las maravillas naturales del mundo. La experiencia es indescriptible."
+    },
+    {
+      "id": 8,
+      "userId": 7,
+      "destinationId": "5",
+      "content": "Mendoza tiene una belleza única, y los viñedos son espectaculares."
+    },
+    {
+      "id": 9,
+      "userId": 8,
+      "destinationId": "5",
+      "content": "Un lugar tranquilo y pintoresco, perfecto para relajarse y disfrutar de un buen vino."
+    },
+    {
+      "id": 10,
+      "userId": 9,
+      "destinationId": "2",
+      "content": "Me encantó la comida y la hospitalidad. Definitivamente volveré."
+    },
+    {
+      "id": 11,
+      "userId": 10,
+      "destinationId": "1",
+      "content": "Buenos Aires es una ciudad llena de vida, arte, cultura y buenas opciones gastronómicas."
+    },
+    {
+      "id": 12,
+      "userId": 11,
+      "destinationId": "2",
+      "content": "La región de Mendoza tiene unos vinos espectaculares, y la vista de los Andes es impresionante."
+    },
+    {
+      "id": 13,
+      "userId": 12,
+      "destinationId": "3",
+      "content": "¡Esos lagos en Bariloche son un sueño hecho realidad! Perfecto para hacer senderismo."
+    },
+    {
+      "id": 14,
+      "userId": 13,
+      "destinationId": "4",
+      "content": "El parque nacional Iguazú es increíble, el paisaje y las cascadas son de otro mundo."
+    },
+    {
+      "id": 15,
+      "userId": 14,
+      "destinationId": "5",
+      "content": "Mendoza es todo lo que me esperaba y más. Vine por los vinos, pero la ciudad es un encanto."
     }
   ]
 }
