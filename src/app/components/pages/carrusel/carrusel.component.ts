@@ -8,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class CarruselComponent implements OnInit {
   imagenes: string[] = [
     
-    'assets/images/the-side-of-the-road-4259510_1280.jpg',
+   
     "assets/images/man-5983064_1280.jpg",
-    'assets/images/lake-6476212_1280.jpg'
+    'assets/images/lake-6476212_1280.jpg',
+    'assets/images/bg4.jpg',
+    'assets/images/bg6.jpg',
+    'assets/images/img-10.jpg',
+    'assets/images/img-11.jpg',
+    'assets/images/img-12.jpg',
+    'assets/images/img-13.jpg'
   ];
   imagenActiva: number = 0;
   intervalo: any;

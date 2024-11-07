@@ -86,3 +86,11 @@ a:hover {
   text-decoration: underline;
   color: #007bff;
 }
+
+.navbar {
+  position: fixed; /* O absolute, dependiendo de tu diseño */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Un número alto para asegurarte de que esté arriba */
+}

@@ -14,7 +14,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< Updated upstream
     z-index: 1; /* Asegura que el formulario esté sobre las imágenes */
+=======
+   
+>>>>>>> Stashed changes
   }
    h2{
     position:absolute;   
