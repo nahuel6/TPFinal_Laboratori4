@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
 import { Usuario } from '../models/usuario';  
 
 @Injectable({
@@ -11,20 +11,22 @@ export class AuthService {
   
   constructor(private http: HttpClient) { }
 
-  
-  /*login(email: string, password: string): Observable<Usuario[]> {
-    return this.http.get<Usuario[]>(`${this.apiUrl}?email=${email}`);
-  }*/
+  private autenticado = new BehaviorSubject<boolean>(this.isAuthenticated());
+  public autenticado$ = this.autenticado.asObservable();
 
     login(email: string, password: string): Observable<Usuario | null> {
       return new Observable((observer) => {
         this.http.get<Usuario[]>(`${this.apiUrl}?email=${email}&password=${password}`).subscribe((usuarios) => {
           const usuario = usuarios[0];
           if (usuario) {
+            //this.usuarioLogueado = usuario;
             localStorage.setItem('user', JSON.stringify(usuario));
+            this.autenticado.next(true);
+            console.log("Usuario logueado:", usuario);
             observer.next(usuario);
           } else {
-            observer.next(null);  // Usuario no encontrado
+            this.autenticado.next(false);
+            observer.next(null);  
           }
           observer.complete();
         });
@@ -33,20 +35,24 @@ export class AuthService {
     getUserName(): string | null {
       const user = JSON.parse(localStorage.getItem('user') || '{}');
     return user && user.nombre ? user.nombre : null;
-      /*
-      const user = localStorage.getItem('user') ;
-      return user ? JSON.parse(user).nombre : null;  // Asumiendo que 'name' es el atributo del nombre
-      */
+      
     }
-
+    getUserId(): number | null {
+      const user = JSON.parse(localStorage.getItem('user') || '{}');
+      return user && user.id ? user.id : null;
+    }
   logout() {
     // Eliminar token de sesión u otros mecanismos de logout
     localStorage.removeItem('user');
+    
+    this.autenticado.next(false);
+    console.log("Usuario deslogueado");
   }
 
   
   isAuthenticated(): boolean {
     return localStorage.getItem('user') !== null;
   }
+  
 }
 

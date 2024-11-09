@@ -4,6 +4,7 @@
   </div>-->
 
   <div class="comentarios-container">
+    
     <div class="comentario" *ngFor="let comentario of comentarios">
       <div class="comentario-con-avatar">
         <!--<img class="avatar" src="path_to_avatar" alt="Avatar">-->
@@ -21,4 +22,9 @@
         </div>
       </div>
     </div>
+    <div *ngIf="usuarioLogueado">
+      <textarea [(ngModel)]="nuevoComentario" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
+      <button (click)="agregarComentario()">Enviar Comentario</button>
+    </div>
   </div>
+  

@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export interface Comentario {
-  id: number;
+  id?: number;
   userId: number;
   destinationId: string;
   content: string;

@@ -1,5 +1,5 @@
 <div *ngIf="userName" class="welcome-message">
-  <h2>Bienvenido, {{ userName }}!</h2>
+  <h2>Hola, {{ userName }}!</h2>
   <button class="log-out" (click)="logout()" class="log-out">Cerrar sesión</button>
 </div>
 <div class="content">
@@ -11,9 +11,9 @@
       </div>
       <nav>
         <ul class="title2">
+          <li><a href="#">Home</a></li>
           <li><a (click)="goToDestinations()" style="cursor: pointer;">Destinos</a></li>
           <li><a href="#">Paquetes</a></li>
-          <li><a href="#">Promociones</a></li>
           <li><a (click)="goToLogin() " style="cursor: pointer;">Iniciar Sesion</a></li>
         </ul>
       </nav>
