@@ -12,7 +12,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class DestinationsComponent implements OnInit{
   imageUrls: string[] = []; 
-  description: string = ''; // Nueva propiedad para almacenar la descripción del destino
+  description: string = ''; 
   userName: string | null = '';
   showComments: boolean = false;
   selectedDestinationId: string = '';
@@ -59,12 +59,6 @@ ngOnInit(): void {
     };
 
     return destinationMap[destinationName] || '';
-  }
-  goToDestinations() {
-    this.router.navigate(['/destinations']);
-  }
-  goToLogin() {
-    this.router.navigate(['/login']);
   }
 
   logout() {

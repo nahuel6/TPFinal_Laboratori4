@@ -12,6 +12,8 @@ import { CarruselComponent } from './components/pages/carrusel/carrusel.componen
 import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
+import { HomeComponent } from './components/pages/home/home.component';
+import { NavbarComponent } from './components/pages/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
     LoginComponent,
     CarruselComponent,
     DestinationsComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

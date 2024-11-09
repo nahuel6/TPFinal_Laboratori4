@@ -3,25 +3,6 @@
   <button class="log-out" (click)="logout()" class="log-out">Cerrar sesión</button>
 </div>
 <div class="content">
-    <header>
-      <div class="logo">
-        
-        <a href="destinations.component.html"><img src="assets/images/logo.png" alt="Logo"></a>
-        <h1>UTN Viajes</h1>
-      </div>
-      <nav>
-        <ul class="title2">
-          <li><a href="#">Home</a></li>
-          <li><a (click)="goToDestinations()" style="cursor: pointer;">Destinos</a></li>
-          <li><a href="#">Paquetes</a></li>
-          <li><a (click)="goToLogin() " style="cursor: pointer;">Iniciar Sesion</a></li>
-        </ul>
-      </nav>
-    </header> 
-     <body>
-      
-     </body>
-    <main>
       <h2 class="title">Destinos Disponibles</h2>
   
       <!-- Contenedor para botones e imágenes -->
@@ -52,6 +33,6 @@
           <app-comentarios *ngIf="showComments" [destinationId]="selectedDestinationId"></app-comentarios>
         </div>
       </div>
-    </main>
+    
   </div>
   
