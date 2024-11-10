@@ -1,0 +1,6 @@
+.welcome{
+    color: #e64a19;
+}
+:host {
+    font-size: 30px; /* Ajusta este valor al tamaño deseado */
+  }

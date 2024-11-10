@@ -20,9 +20,9 @@ export class AppComponent implements OnInit {
       this.userName = this.authService.getUserName();
   
     }
-    if (user && user.name) {
+    /*if (user && user.name) {
       this.userName = user.name;
-    }
+    }*/
   }
 
   logout() {

@@ -226,6 +226,13 @@
       "content": "Muy lindo lugar, volvere pronto!",
       "nombreUsuario": "roberto",
       "id": 17
+    },
+    {
+      "userId": 4,
+      "destinationId": "3",
+      "content": "Hermosos lugares de cordoba!",
+      "nombreUsuario": "roberto",
+      "id": 18
     }
   ]
 }

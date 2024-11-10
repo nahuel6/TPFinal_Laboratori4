@@ -31,12 +31,12 @@ export class LoginComponent implements OnInit {
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
 
-    // Llama al método de login en el AuthService
+    
     this.authService.login(email, password).subscribe(
       (usuario: Usuario | null) => {
         if (usuario) {
           console.log('Login exitoso:', usuario);
-          this.router.navigate(['/destinations']); // Redirige al usuario
+          this.router.navigate(['/']); 
           this.loginFailed = false;
         } else {
           console.log('Credenciales incorrectas');
@@ -54,46 +54,3 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/registro']);
   }
 }
-/*
-export class LoginComponent implements OnInit{
-  loginForm: FormGroup;
-  private apiUrl = 'http://localhost:3000/usuarios';  
-  loginFailed: boolean = false;
-
-
-  
-  constructor(private fb: FormBuilder, private http: HttpClient,private router: Router) {
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]]
-    });
-  }
-  ngOnInit(): void {
-    
-  }
-  onLogin() {
-    const email = this.loginForm.get('email')?.value;
-    
-
-    this.http.get<Usuario[]>(this.apiUrl).subscribe(usuarios => {
-      const usuarioEncontrado = usuarios.find(usuario => usuario.email === email);
-
-      if (usuarioEncontrado) {
-        
-        console.log('Login exitoso');
-        this.router.navigate(['/destinations']);
-        
-        localStorage.setItem('user', JSON.stringify(usuarioEncontrado));
-        this.loginFailed = false;
-      } else {
-        console.log('Credenciales incorrectas');
-        this.loginFailed = true;
-      }
-    });
-  }
-  
-  goToRegister(): void {
-    this.router.navigate(['/registro']); 
-  }
-}
-*/

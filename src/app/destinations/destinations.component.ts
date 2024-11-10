@@ -19,15 +19,12 @@ export class DestinationsComponent implements OnInit{
   constructor(private destinationsService: DestinationsService, private router: Router,private authService: AuthService) {}
 
 ngOnInit(): void {
-  if (this.authService.isAuthenticated()) {
+  /*if (this.authService.isAuthenticated()) {
     this.userName = this.authService.getUserName();
 
   }
   console.log('User Name:', this.userName);
-  /*
-  this.userName = this.authService.getUserName();
-  console.log('User Name:', this.userName);
-  */
+ */
 }
 
   fetchImage(destination: string) {
@@ -60,11 +57,11 @@ ngOnInit(): void {
 
     return destinationMap[destinationName] || '';
   }
-
+/*
   logout() {
     this.authService.logout();
     this.userName = null;  // Limpia el nombre del usuario al cerrar sesión
-  }
+  }*/
 
   setDescription(destination: string) {
     switch (destination) {
