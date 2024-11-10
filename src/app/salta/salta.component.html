@@ -1,0 +1,169 @@
+<div class="destinations-container">
+    <div class="destinations">
+      <button (click)="showDetails()">Detalles</button>
+      <button (click)="showItinerary()">Itinerario</button>
+      <button (click)="showLocation()">Ubicación</button>
+      <button (click)="showAccommodation()">Opciones de Alojamiento</button>
+    </div>
+  
+    <!-- Contenido dinámico basado en el botón seleccionado -->
+    <div class="description-container">
+      <!-- Detalles del paquete -->
+      <div *ngIf="showingDetails" class="description">
+        <h2>Paquete Turístico a Salta</h2>
+        <p class="text">
+            Este programa invita a descubrir Salta, una ciudad colonial con una rica historia, cultura y paisajes únicos en el noroeste argentino.
+         <br>
+         <br>
+         PROGRAMA “SALTA, LA LINDA”
+          <br>
+          <br>
+          Este paquete ofrece un recorrido por la ciudad de Salta y sus alrededores, incluyendo visitas a Cafayate, sus bodegas, y los Valles Calchaquíes. Disfruta de su arquitectura colonial, sus mercados y la calidez de su gente.
+          <br>
+          <br>
+          LUGAR DE PARTIDA/REGRESO
+          Aeropuerto Internacional Martín Miguel de Güemes, Salta
+          <br>  
+          <br>  
+          HORARIO DE SALIDA
+            A confirmar
+          <br>  
+          <br>  
+          INCLUIDO 	
+          Traslados In/Out
+4 noches de alojamiento con desayuno
+City tour y excursión a Cafayate
+Degustación de vinos
+          NO INCLUIDO
+          <br>  
+          <br>  
+          Entradas a museos y parques.
+          Otros gastos
+          <br>
+          <br>
+          Valor final por pasajero en base doble:
+
+          $190,000 (alojando en Hotel Posada del Sol 3*)
+$240,000 (alojando en Hotel Design Suites Salta 4*)
+          <br>
+          <br>
+          **Consultar otras opciones de alojamiento**
+          <br>
+          <br>
+          Comisionable para agencias
+          Tarifas por persona, sujetas a disponibilidad y a modificaciones.
+          Adicionar 2% de gastos administrativos.
+        </p>
+      </div>
+  
+        <!-- Itinerario del paquete -->
+      <div *ngIf="showingItinerary" class="itinerary">
+        <h3>Itinerario</h3>
+        <ul class="items">
+          <li>
+            Día 1: Llegada a Salta
+Arribo, traslado al hotel y check-in. Tarde libre para conocer la Plaza 9 de Julio y el centro histórico.
+            
+            </li>
+            <li>
+                Día 2: City Tour por Salta
+Desayuno y city tour por la ciudad, incluyendo el Cerro San Bernardo y el Museo de Arqueología de Alta Montaña (MAAM).
+            </li>
+            <li>
+                Día 3: Excursión a Cafayate
+Salida temprano hacia Cafayate, con paradas en los Valles Calchaquíes para admirar la Quebrada de las Conchas. Visita a una bodega y degustación de vinos.
+               
+            </li>
+            <li>
+                Día 4: Día Libre
+Día libre para realizar actividades opcionales, como una visita a Cachi o al Tren a las Nubes.
+            </li>
+            <li>
+                Día 5: Regreso
+Traslado al aeropuerto para el vuelo de regreso.
+            </li>
+        </ul>
+      </div>
+    
+  
+      <!-- Ubicación del hotel -->
+      <div *ngIf="showingLocation" class="map-container iframe">
+        <h3>Ubicación Hotel Colonial Salta</h3>
+        <!-- <a href="https://maps.app.goo.gl/rgeZsj7h8RCoGPkm8" target="_blank" style="text-decoration: none; color: blue;">
+          Ver ubicación en Google Maps
+        </a> -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115903.91022570255!2d-65.51303054598078!3d-24.795549591395865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3a34ded1f5b%3A0x3c80055903f3a9c4!2sHotel%20Colonial%20Salta!5e0!3m2!1ses-419!2sar!4v1731275195338!5m2!1ses-419!2sar"
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div> 
+      
+  
+         <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Válido desde el 01 de Mar hasta:</p>
+        <div class="accommodation-container">
+        <table class="accommodation-table">
+          <thead>
+            <tr>
+              <th>HOTEL</th>
+              <th>CAT</th>
+              <th>SINGLE</th>
+              <th>DOBLE</th>
+              <th>TRIPLE</th>
+              <th>Válido Hasta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>COLONIAL SALTA</td>
+              <td>Bout</td>
+              <td>$ 31239</td>
+              <td>$ 15675</td>
+              <td>$ 14350</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>PORTOZUELO HOTEL</td>
+              <td>4*</td>
+              <td>$ 23900</td>
+              <td>$ 12780</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>HOUSE APART</td>
+              <td>4*</td>
+              <td>$ 19744</td>
+              <td>$ 9928</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>HOTEL HAYBAL</td>
+              <td>3*+</td>
+              <td>$ 21770</td>
+              <td>$ 11953</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>LA SECUNDIDA</td>
+              <td>3*</td>
+              <td>$ 15300</td>
+              <td>$ 9150</td>
+              <td>$ 7199</td>
+              <td>30/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <p class="disclaimer">Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes</p>
+      </div>    
+    </div>
+  </div>
+

@@ -67,10 +67,31 @@ ngOnInit(): void {
     this.router.navigate(['/login']);
   }
 
+  goToPaquetes() {
+    this.router.navigate(['/paquetes']);
+  }
+
   logout() {
     this.authService.logout();
     this.userName = null;  // Limpia el nombre del usuario al cerrar sesión
   }
+
+  isDropdownVisible: boolean = false;
+
+toggleDropdown() {
+  this.isDropdownVisible = !this.isDropdownVisible;
+}
+
+goToPaquete(paquete: string) {
+  this.router.navigate([`/paquete/${paquete}`]);
+}
+
+
+navigateToDestination(destination: string) {
+  this.fetchImage(destination);  // O realiza cualquier lógica necesaria para el destino
+  this.isDropdownVisible = false;  // Ocultar el menú al seleccionar un destino
+}
+
 
   setDescription(destination: string) {
     switch (destination) {

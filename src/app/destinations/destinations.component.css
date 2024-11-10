@@ -167,5 +167,30 @@
   }
   
 
-    
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    display: none;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(158, 151, 151, 0.8);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
+    min-width: 160px;
+  }
+
+  .dropdown-menu li {
+    padding: 8px 16px;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: rgba(29, 27, 27, 0.7);
+    border-radius: 15px;
+  }
+  
+
   

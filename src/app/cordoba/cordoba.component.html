@@ -1,0 +1,205 @@
+ <!-- <div class="paquete-detalle">
+    <h2>Paquete Turístico a Córdoba</h2>
+    <p>
+      Este paquete incluye estadía en el Hotel Sussex, con desayuno incluido y excursiones por la ciudad de Córdoba.
+    </p>
+  </div> -->
+  <!-- <div class="description">
+    <h2>Paquete Turístico a Córdoba</h2>
+    <p>
+      Este paquete incluye estadía en el Hotel Sussex, con desayuno incluido y excursiones por la ciudad de Córdoba.
+      Este paquete incluye estadía en el Hotel Sussex, con desayuno incluido y excursiones por la ciudad de Córdoba.
+    </p>
+  <h3>Ubicación del Hotel Sussex</h3>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27238.77728871434!2d-64.2069308!3d-31.4183368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b559b42b7%3A0x5692ff45c3581207!2sHotel%20Sussex!5e0!3m2!1ses-419!2sar!4v1731186921997!5m2!1ses-419!2sar" 
+      width="600" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    
+  </div>
+</div> -->
+
+<!-- <div class="description">
+  <h2>Paquete Turístico a Córdoba</h2>
+  <p>
+    Este paquete incluye estadía en el Hotel Sussex, con desayuno incluido y excursiones por la ciudad de Córdoba.
+  </p>
+  <h3>Ubicación del Hotel Sussex</h3>
+  <div class="map-container">
+    <a href="https://maps.app.goo.gl/rgeZsj7h8RCoGPkm8" target="_blank" style="text-decoration: none; color: blue;">
+      Ver ubicación en Google Maps
+    </a>
+  </div>
+</div> -->
+<div class="destinations-container">
+    <div class="destinations">
+      <button (click)="showDetails()">Detalles</button>
+      <button (click)="showItinerary()">Itinerario</button>
+      <button (click)="showLocation()">Ubicación</button>
+      <button (click)="showAccommodation()">Opciones de Alojamiento</button>
+    </div>
+  
+    <!-- Contenido dinámico basado en el botón seleccionado -->
+    <div class="description-container">
+      <!-- Detalles del paquete -->
+      <div *ngIf="showingDetails" class="description">
+        <h2>Paquete Turístico a Córdoba</h2>
+        <p class="text">
+          Este programa te invita a disfrutar Córdoba de una manera diferente, descubriendo una ciudad pujante y divertida.
+         <br>
+         <br>
+          PROGRAMA “ESCAPE A CÓRDOBA CIUDAD”
+          <br>
+          <br>
+          Este programa invita a disfrutar Córdoba de una manera diferente, descubriendo una ciudad pujante, con una gran infraestructura de servicios y opciones para divertirse en pareja, en familia, con amigos o conociendo a otros viajeros.
+          Se incluye un recorrido diferente por la ciudad, EN BICICLETA!  pedaleando por Córdoba y visitando los atractivos  históricos culturales de una manera única. Para quienes prefieran pueden optar por nuestro City Tour convencional.
+          <br>
+          <br>
+          LUGAR DE PARTIDA/REGRESO
+            Aeropuerto Internacional Córdoba
+          <br>  
+          <br>  
+          HORARIO DE SALIDA
+            A confirmar
+          <br>  
+          <br>  
+          INCLUIDO 	
+          Traslados In/ Out. 	2 noches de alojamiento con desayuno.
+          City BIKE tour por la ciudad. 	Refrigerio.
+          NO INCLUIDO
+          <br>  
+          <br>  
+          Entradas a museos.
+          Otros gastos
+          <br>
+          <br>
+          Valor final por pasajero en base doble $ 151250 (alojando en Camino Real Cordoba 2*)
+          Valor final por pasajero en base doble $ 169550 (alojando en NH Urbano 3*)
+          <br>
+          <br>
+          **Consultar otras opciones de alojamiento**
+          <br>
+          <br>
+          Comisionable para agencias
+          Tarifas por persona, sujetas a disponibilidad y a modificaciones.
+          Adicionar 2% de gastos administrativos.
+        </p>
+      </div>
+  
+        <!-- Itinerario del paquete -->
+      <div *ngIf="showingItinerary" class="itinerary">
+        <h3>Itinerario</h3>
+        <ul class="items">
+          <li>
+            Día 1: Partida
+            Arribo a la ciudad de Cordoba. Traslado a su hotel. Check in. Resto del dia libre.
+            </li>
+            <li>
+              2
+              Día 2
+              Domingo: Luego del desayuno nos reunimos en el punto de encuentro establecido para dar comienzo al BIKE TOUR, un divertido city tour pedaleando por las calles y atractivos más destacados.
+            </li>
+            <li>
+              3
+              Día 3
+              En horario acordado traslado al aeropuerto o terminal de buses
+            </li>
+        </ul>
+      </div>
+    
+  
+      <!-- Ubicación del hotel -->
+      <div *ngIf="showingLocation" class="map-container iframe">
+        <h3>Ubicación del Hotel Sussex</h3>
+        <!-- <a href="https://maps.app.goo.gl/rgeZsj7h8RCoGPkm8" target="_blank" style="text-decoration: none; color: blue;">
+          Ver ubicación en Google Maps
+        </a> -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27238.77728871434!2d-64.2069308!3d-31.4183368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b559b42b7%3A0x5692ff45c3581207!2sHotel%20Sussex!5e0!3m2!1ses-419!2sar!4v1731186921997!5m2!1ses-419!2sar" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div> 
+      
+  
+      <!-- Opciones de alojamiento -->
+      <!-- <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Descripción de las opciones de alojamiento disponibles.</p>
+      </div> -->
+      <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Válido desde el 01 de Mar hasta:</p>
+        <div class="accommodation-container">
+        <table class="accommodation-table">
+          <thead>
+            <tr>
+              <th>HOTEL</th>
+              <th>CAT</th>
+              <th>SINGLE</th>
+              <th>DOBLE</th>
+              <th>TRIPLE</th>
+              <th>Válido Hasta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AZUR SUSSEX</td>
+              <td>Bout</td>
+              <td>$ 31239</td>
+              <td>$ 15675</td>
+              <td>$ 14350</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>AMERIAN EXECUTIVE</td>
+              <td>4*</td>
+              <td>$ 23900</td>
+              <td>$ 12780</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>NH PANORAMA</td>
+              <td>4*</td>
+              <td>$ 19744</td>
+              <td>$ 9928</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>CASEROS 248</td>
+              <td>3*+</td>
+              <td>$ 21770</td>
+              <td>$ 11953</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>KUBE APART</td>
+              <td>3*</td>
+              <td>$ 15300</td>
+              <td>$ 9150</td>
+              <td>$ 7199</td>
+              <td>30/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <p class="disclaimer">Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes</p>
+      </div>    
+    </div>
+  </div>
+  
+  
+  

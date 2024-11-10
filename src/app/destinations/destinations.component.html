@@ -9,14 +9,33 @@
         <a href="destinations.component.html"><img src="assets/images/logo.png" alt="Logo"></a>
         <h1>UTN Viajes</h1>
       </div>
+      <!-- <nav>
+        <ul class="title2">
+          <li><a href="#">Home</a></li>
+          <li><a (click)="goToDestinations()" style="cursor: pointer;">Destinos</a></li>
+          <li><a (click)="goToPaquetes()" style="cursor: pointer;">Paquetes</a></li>
+          <li><a (click)="goToLogin() " style="cursor: pointer;">Iniciar Sesion</a></li>
+        </ul>
+      </nav> -->
       <nav>
         <ul class="title2">
           <li><a href="#">Home</a></li>
           <li><a (click)="goToDestinations()" style="cursor: pointer;">Destinos</a></li>
-          <li><a href="#">Paquetes</a></li>
-          <li><a (click)="goToLogin() " style="cursor: pointer;">Iniciar Sesion</a></li>
+          <li class="dropdown">
+            <a (click)="toggleDropdown()" style="cursor: pointer;">Paquetes</a>
+            <ul *ngIf="isDropdownVisible" class="dropdown-menu">
+              <li><button (click)="goToPaquete('buenos-aires')">Buenos Aires</button></li>
+              <li><button (click)="goToPaquete('mendoza')">Mendoza</button></li>
+              <li><button (click)="goToPaquete('cordoba')">Córdoba</button></li>
+              <li><button (click)="goToPaquete('bariloche')">Bariloche</button></li>
+              <li><button (click)="goToPaquete('iguazu')">Iguazú</button></li>
+              <li><button (click)="goToPaquete('salta')">Salta</button></li>
+            </ul>
+          </li>
+          <li><a (click)="goToLogin()" style="cursor: pointer;">Iniciar Sesion</a></li>
         </ul>
       </nav>
+      
     </header> 
      <body>
       

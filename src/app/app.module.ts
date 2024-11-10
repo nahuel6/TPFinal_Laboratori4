@@ -12,6 +12,13 @@ import { CarruselComponent } from './components/pages/carrusel/carrusel.componen
 import {  HttpClient, HttpClientModule } from '@angular/common/http';
 import { DestinationsComponent } from './destinations/destinations.component';
 import { ComentariosComponent } from './components/comentarios/comentarios.component';
+import { PaquetesComponent } from './paquetes/paquetes.component';
+import { BuenosAiresComponent } from './buenos-aires/buenos-aires.component';
+import { MendozaComponent } from './mendoza/mendoza.component';
+import { CordobaComponent } from './cordoba/cordoba.component';
+import { BarilocheComponent } from './bariloche/bariloche.component';
+import { IguazuComponent } from './iguazu/iguazu.component';
+import { SaltaComponent } from './salta/salta.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +27,14 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
     LoginComponent,
     CarruselComponent,
     DestinationsComponent,
-    ComentariosComponent
+    ComentariosComponent,
+    PaquetesComponent,
+    BuenosAiresComponent,
+    MendozaComponent,
+    CordobaComponent,
+    BarilocheComponent,
+    IguazuComponent,
+    SaltaComponent
   ],
   imports: [
     BrowserModule,

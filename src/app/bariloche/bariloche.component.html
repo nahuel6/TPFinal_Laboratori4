@@ -1,0 +1,181 @@
+<div class="destinations-container">
+    <div class="destinations">
+      <button (click)="showDetails()">Detalles</button>
+      <button (click)="showItinerary()">Itinerario</button>
+      <button (click)="showLocation()">Ubicación</button>
+      <button (click)="showAccommodation()">Opciones de Alojamiento</button>
+    </div>
+  
+    <!-- Contenido dinámico basado en el botón seleccionado -->
+    <div class="description-container">
+      <!-- Detalles del paquete -->
+      <div *ngIf="showingDetails" class="description">
+        <h2>Paquete Turístico a Bariloche</h2>
+        <p class="text">
+            Este programa invita a descubrir Bariloche, un destino con paisajes 
+            impresionantes y actividades para toda la familia. Disfruta de sus lagos, 
+            montañas y gastronomía única.   
+         <br>
+         <br>
+         PROGRAMA “EXPLORANDO BARILOCHE”
+          <br>
+          <br>
+          Un recorrido ideal para parejas, familias o grupos de amigos, Bariloche ofrece 
+          actividades como senderismo, paseos en barco y experiencias gastronómicas. 
+          El paquete incluye una excursión en catamarán por el Lago Nahuel Huapi y una visita al 
+          Circuito Chico para explorar sus famosos miradores y cerros.
+          <br>
+          <br>
+          LUGAR DE PARTIDA/REGRESO
+          Aeropuerto Internacional de San Carlos de Bariloche
+          <br>  
+          <br>  
+          HORARIO DE SALIDA
+            A confirmar
+          <br>  
+          <br>  
+          INCLUIDO 	
+          Traslados In/Out
+          4 noches de alojamiento con desayuno
+          Excursión en catamarán y Circuito Chico
+          Guía especializado
+          NO INCLUIDO
+          Entradas a parques nacionales y museos
+          Otros gastos personales
+          <br>  
+          <br>  
+          Entradas a museos.
+          Otros gastos
+          <br>
+          <br>
+          Valor final por pasajero en base doble:
+
+          $250,000 (alojando en Hotel Tres Reyes 3*)
+          $300,000 (alojando en Llao Llao Resort 5*)
+          <br>
+          <br>
+          **Consultar otras opciones de alojamiento**
+          <br>
+          <br>
+          Comisionable para agencias
+          Tarifas por persona, sujetas a disponibilidad y a modificaciones.
+          Adicionar 2% de gastos administrativos.
+        </p>
+      </div>
+  
+        <!-- Itinerario del paquete -->
+      <div *ngIf="showingItinerary" class="itinerary">
+        <h3>Itinerario</h3>
+        <ul class="items">
+          <li>
+            Día 1: Llegada a Bariloche
+            Arribo a Bariloche, traslado al hotel y check-in. Tarde libre para explorar el centro y 
+            sus famosas chocolaterías.
+            
+            </li>
+            <li>
+                Día 3: Excursión en Catamarán
+                Paseo en catamarán por el Lago Nahuel Huapi, recorriendo el Bosque de Arrayanes y la Isla Victoria. 
+               Tiempo libre para disfrutar de la naturaleza y tomar fotografías.
+                
+            </li>
+            <li>
+                Día 4: Día Libre
+                Día libre para actividades opcionales, como senderismo, cabalgatas o visita al Cerro Catedral.  
+               
+            </li>
+            <li>
+                Día 5: Regreso
+                Traslado al aeropuerto para el vuelo de regreso. 
+            </li>
+        </ul>
+      </div>
+    
+  
+      <!-- Ubicación del hotel -->
+      <div *ngIf="showingLocation" class="map-container iframe">
+        <h3>Ubicación Hotel Soft</h3>
+        <!-- <a href="https://maps.app.goo.gl/rgeZsj7h8RCoGPkm8" target="_blank" style="text-decoration: none; color: blue;">
+          Ver ubicación en Google Maps
+        </a> -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96169.74603759978!2d-71.42231554470787!3d-41.12787685783888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b6fefc5658b%3A0x34560365211c3283!2sSoft%20Bariloche!5e0!3m2!1ses-419!2sar!4v1731274110596!5m2!1ses-419!2sar" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div> 
+      
+  
+      <!-- Opciones de alojamiento -->
+      <!-- <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Descripción de las opciones de alojamiento disponibles.</p>
+      </div> -->
+      <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Válido desde el 01 de Mar hasta:</p>
+        <div class="accommodation-container">
+        <table class="accommodation-table">
+          <thead>
+            <tr>
+              <th>HOTEL</th>
+              <th>CAT</th>
+              <th>SINGLE</th>
+              <th>DOBLE</th>
+              <th>TRIPLE</th>
+              <th>Válido Hasta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>SOFT</td>
+              <td>Bout</td>
+              <td>$ 31239</td>
+              <td>$ 15675</td>
+              <td>$ 14350</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>LLAO LLAO</td>
+              <td>4*</td>
+              <td>$ 23900</td>
+              <td>$ 12780</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>HOTEL CAMPANARIO</td>
+              <td>4*</td>
+              <td>$ 19744</td>
+              <td>$ 9928</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>TRONADOR</td>
+              <td>3*+</td>
+              <td>$ 21770</td>
+              <td>$ 11953</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>HOTEL OTO</td>
+              <td>3*</td>
+              <td>$ 15300</td>
+              <td>$ 9150</td>
+              <td>$ 7199</td>
+              <td>30/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <p class="disclaimer">Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes</p>
+      </div>    
+    </div>
+  </div>
+
