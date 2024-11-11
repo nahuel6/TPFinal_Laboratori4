@@ -1,0 +1,171 @@
+<div class="destinations-container">
+    <div class="destinations">
+      <button (click)="showDetails()">Detalles</button>
+      <button (click)="showItinerary()">Itinerario</button>
+      <button (click)="showLocation()">Ubicación</button>
+      <button (click)="showAccommodation()">Opciones de Alojamiento</button>
+    </div>
+  
+    <!-- Contenido dinámico basado en el botón seleccionado -->
+    <div class="description-container">
+      <!-- Detalles del paquete -->
+      <div *ngIf="showingDetails" class="description">
+        <h2>Paquete Turístico a Cataratas del Iguazú</h2>
+        <p class="text">
+            Este programa te invita a descubrir las espectaculares Cataratas del Iguazú, una de las siete maravillas naturales del mundo, en una experiencia que 
+            combina aventura y contacto con la naturaleza.  
+         <br>
+         <br>
+         PROGRAMA “CATARATAS Y SELVA”
+          <br>
+          <br>
+          El paquete ofrece un recorrido completo por las Cataratas del Iguazú del lado argentino y brasileño, con actividades en la selva 
+          subtropical y una visita a la famosa Garganta del Diablo.
+          <br>
+          <br>
+          LUGAR DE PARTIDA/REGRESO
+          Aeropuerto Internacional de Puerto Iguazú
+          <br>  
+          <br>  
+          HORARIO DE SALIDA
+            A confirmar
+          <br>  
+          <br>  
+          INCLUIDO 	
+          Traslados In/Out
+3 noches de alojamiento con desayuno
+Entrada a Cataratas Argentinas y Cataratas Brasileñas
+Excursión en lancha opcional
+
+                   <br>
+          NO INCLUIDO
+          Excursiones opcionales en lancha
+Otros gastos personales
+          <br>  
+          
+          <br>
+          $230,000 (alojando en Beer Hotel Iguazu 4*)
+$280,000 (alojando en Gran Meliá Iguazú 5*)
+          <br>
+          <br>
+          **Consultar otras opciones de alojamiento**
+          <br>
+          <br>
+          Comisionable para agencias
+          Tarifas por persona, sujetas a disponibilidad y a modificaciones.
+          Adicionar 2% de gastos administrativos.
+        </p>
+      </div>
+  
+        <!-- Itinerario del paquete -->
+      <div *ngIf="showingItinerary" class="itinerary">
+        <h3>Itinerario</h3>
+        <ul class="items">
+          <li>
+            Día 1: Partida
+            Arribo a la ciudad de Cordoba. Traslado a su hotel. Check in. Resto del dia libre.
+            </li>
+            <li>
+              2
+              Día 2
+              Domingo: Luego del desayuno nos reunimos en el punto de encuentro establecido para dar comienzo al BIKE TOUR, un divertido city tour pedaleando por las calles y atractivos más destacados.
+            </li>
+            <li>
+              3
+              Día 3
+              En horario acordado traslado al aeropuerto o terminal de buses
+            </li>
+        </ul>
+      </div>
+    
+  
+      <!-- Ubicación del hotel -->
+      <div *ngIf="showingLocation" class="map-container iframe">
+        <h3>Ubicación del Beer Hotel Iguazú</h3>
+        <!-- <a href="https://maps.app.goo.gl/rgeZsj7h8RCoGPkm8" target="_blank" style="text-decoration: none; color: blue;">
+          Ver ubicación en Google Maps
+        </a> -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57562.09677066103!2d-54.646117695777015!3d-25.617173540417095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944e77c07179dfbf%3A0x26fa1fc321d95611!2sBEER%20HOTEL%20Iguazu!5e0!3m2!1ses-419!2sar!4v1731274478344!5m2!1ses-419!2sar" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div> 
+      
+  
+      <!-- Opciones de alojamiento -->
+      <!-- <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Descripción de las opciones de alojamiento disponibles.</p>
+      </div> -->
+      <div *ngIf="showingAccommodation" class="accommodation">
+        <h3>Opciones de Alojamiento</h3>
+        <p>Válido desde el 01 de Mar hasta:</p>
+        <div class="accommodation-container">
+        <table class="accommodation-table">
+          <thead>
+            <tr>
+              <th>HOTEL</th>
+              <th>CAT</th>
+              <th>SINGLE</th>
+              <th>DOBLE</th>
+              <th>TRIPLE</th>
+              <th>Válido Hasta</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>BEER HOTEL</td>
+              <td>Bout</td>
+              <td>$ 31239</td>
+              <td>$ 15675</td>
+              <td>$ 14350</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>HOTEL SELVA</td>
+              <td>4*</td>
+              <td>$ 23900</td>
+              <td>$ 12780</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>GRAN MELIA</td>
+              <td>4*</td>
+              <td>$ 19744</td>
+              <td>$ 9928</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>SOL CATARATAS</td>
+              <td>3*+</td>
+              <td>$ 21770</td>
+              <td>$ 11953</td>
+              <td>Consultar</td>
+              <td>30/09/2025</td>
+            </tr>
+            <tr>
+              <td>EL LIBERTADOR</td>
+              <td>3*</td>
+              <td>$ 15300</td>
+              <td>$ 9150</td>
+              <td>$ 7199</td>
+              <td>30/09/2025</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+        <p class="disclaimer">Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes</p>
+      </div>    
+    </div>
+  </div>
+  
+  
+  
+

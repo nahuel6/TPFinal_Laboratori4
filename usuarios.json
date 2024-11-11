@@ -120,6 +120,14 @@
       "dni": "99887755",
       "email": "luis.sanchez@example.com",
       "password": "luis1234"
+    },
+    {
+      "nombre": "agustin",
+      "apellido": "rodriguez",
+      "dni": "232323",
+      "email": "agus@gmail.com",
+      "password": "1212",
+      "id": 14
     }
   ],
   "comentarios": [

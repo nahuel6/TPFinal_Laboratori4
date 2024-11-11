@@ -15,6 +15,14 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
 import { HomeComponent } from './components/pages/home/home.component';
 import { NavbarComponent } from './components/pages/navbar/navbar.component';
 
+import { PaquetesComponent } from './paquetes/paquetes.component';
+import { BuenosAiresComponent } from './buenos-aires/buenos-aires.component';
+import { MendozaComponent } from './mendoza/mendoza.component';
+import { CordobaComponent } from './cordoba/cordoba.component';
+import { BarilocheComponent } from './bariloche/bariloche.component';
+import { IguazuComponent } from './iguazu/iguazu.component';
+import { SaltaComponent } from './salta/salta.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +32,15 @@ import { NavbarComponent } from './components/pages/navbar/navbar.component';
     DestinationsComponent,
     ComentariosComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    PaquetesComponent,
+    BuenosAiresComponent,
+    MendozaComponent,
+    CordobaComponent,
+    BarilocheComponent,
+    IguazuComponent,
+    SaltaComponent,
+
   ],
   imports: [
     BrowserModule,
