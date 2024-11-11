@@ -16,8 +16,9 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private authService: AuthService, // Usa el servicio de autenticación
-    private router: Router
+    private authService: AuthService, 
+    private router: Router,
+    
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -36,6 +37,7 @@ export class LoginComponent implements OnInit {
       (usuario: Usuario | null) => {
         if (usuario) {
           console.log('Login exitoso:', usuario);
+          this.authService.setUserName(usuario.nombre);
           this.router.navigate(['/']); 
           this.loginFailed = false;
         } else {

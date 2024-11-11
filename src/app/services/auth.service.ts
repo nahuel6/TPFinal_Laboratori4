@@ -13,6 +13,8 @@ export class AuthService {
 
   private autenticado = new BehaviorSubject<boolean>(this.isAuthenticated());
   public autenticado$ = this.autenticado.asObservable();
+  private userNameSource = new BehaviorSubject<string | null>(null);
+  userName$ = this.userNameSource.asObservable();
 
     login(email: string, password: string): Observable<Usuario | null> {
       return new Observable((observer) => {
@@ -42,7 +44,7 @@ export class AuthService {
       return user && user.id ? user.id : null;
     }
   logout() {
-    // Eliminar token de sesión u otros mecanismos de logout
+    
     localStorage.removeItem('user');
     
     this.autenticado.next(false);
@@ -52,6 +54,13 @@ export class AuthService {
   
   isAuthenticated(): boolean {
     return localStorage.getItem('user') !== null;
+  }
+  setUserName(name: string) {
+    this.userNameSource.next(name);
+  }
+
+  clearUserName() {
+    this.userNameSource.next(null);
   }
   
 }

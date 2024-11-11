@@ -2,5 +2,14 @@
     color: #e64a19;
 }
 :host {
-    font-size: 30px; /* Ajusta este valor al tamaño deseado */
+    font-size: 30px; 
+  }
+  .bienvenida{
+    font-size: 70px;
+    font-weight: bolder;
+  }
+  .subtitulo{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
   }

@@ -13,18 +13,13 @@ import { AuthService } from '../services/auth.service';
 export class DestinationsComponent implements OnInit{
   imageUrls: string[] = []; 
   description: string = ''; 
-  userName: string | null = '';
+  //userName: string | null = '';
   showComments: boolean = false;
   selectedDestinationId: string = '';
   constructor(private destinationsService: DestinationsService, private router: Router,private authService: AuthService) {}
 
 ngOnInit(): void {
-  /*if (this.authService.isAuthenticated()) {
-    this.userName = this.authService.getUserName();
-
-  }
-  console.log('User Name:', this.userName);
- */
+ 
 }
 
   fetchImage(destination: string) {
@@ -57,11 +52,7 @@ ngOnInit(): void {
 
     return destinationMap[destinationName] || '';
   }
-/*
-  logout() {
-    this.authService.logout();
-    this.userName = null;  // Limpia el nombre del usuario al cerrar sesión
-  }*/
+
 
   setDescription(destination: string) {
     switch (destination) {
