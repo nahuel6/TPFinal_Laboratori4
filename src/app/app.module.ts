@@ -48,6 +48,7 @@ import { SaltaComponent } from './salta/salta.component';
     FormsModule,
     ReactiveFormsModule,
    HttpClientModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

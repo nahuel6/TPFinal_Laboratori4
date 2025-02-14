@@ -5,11 +5,11 @@
   justify-content: center;
   height: 80vh;
   background-size: cover;
-  background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+  background-color: rgba(255, 255, 255, 0.8); 
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  position: relative; /* Para asegurar que se posicione sobre el carrusel */
+  position: relative; 
   background-position: center;
   color: #e64a19;
 }
@@ -64,7 +64,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Deshabilitar el botón si el formulario no es válido */
 button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;

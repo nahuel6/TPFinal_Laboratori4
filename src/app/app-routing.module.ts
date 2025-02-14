@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { DestinationsComponent } from './destinations/destinations.component';
-import { PaquetesComponent } from './paquetes/paquetes.component'; // Asegúrate de que esta importación coincida con la ubicación real de PaquetesComponent
+import { PaquetesComponent } from './paquetes/paquetes.component'; 
 import { BuenosAiresComponent } from './buenos-aires/buenos-aires.component';
 import { MendozaComponent } from './mendoza/mendoza.component';
 import { CordobaComponent } from './cordoba/cordoba.component';
@@ -11,7 +11,7 @@ import { BarilocheComponent } from './bariloche/bariloche.component';
 import { IguazuComponent } from './iguazu/iguazu.component';
 import { SaltaComponent } from './salta/salta.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { NavbarComponent } from './components/pages/navbar/navbar.component';
+
 
 const routes: Routes = [
 
@@ -29,7 +29,7 @@ const routes: Routes = [
       { path: 'paquete/salta', component: SaltaComponent},
     
    
-   { path: '**', redirectTo: '/' }  // Redirige cualquier ruta desconocida a la landing page 
+   { path: '**', redirectTo: '/' }  
 ];
 
 @NgModule({

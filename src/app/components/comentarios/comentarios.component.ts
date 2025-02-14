@@ -32,7 +32,7 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
     
     this.authService.autenticado$.subscribe((estado) => {
       this.usuarioLogueado = estado;
-      console.log("Estado de usuarioLogueado actualizado:", this.usuarioLogueado);  // Debería reflejar el cambio
+      console.log("Estado de usuarioLogueado actualizado:", this.usuarioLogueado);  
     });
   }
   ngOnChanges(changes: SimpleChanges): void {
@@ -76,39 +76,21 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
 
 
   agregarComentario(): void {
-    if (this.nuevoComentario.trim() && this.usuarioLogueado) { // Asegúrate de que el usuario esté logueado
+    if (this.nuevoComentario.trim() && this.usuarioLogueado) { 
       const comentario: Comentario = {
-        userId: this.authService.getUserId()?? 0, // Obtener ID del usuario logueado
+        userId: this.authService.getUserId()?? 0, 
         destinationId: this.destinationId,
         content: this.nuevoComentario,
-        nombreUsuario: this.authService.getUserName()|| "", // Asigna el nombre de usuario
+        nombreUsuario: this.authService.getUserName()|| "", 
         
       };
 
-      // Enviar el comentario a la API
+      
       this.http.post('http://localhost:3000/comentarios', comentario).subscribe(() => {
-        this.comentarios.push(comentario); // Agregar comentario a la lista
-        this.nuevoComentario = '';         // Limpiar el campo de texto
+        this.comentarios.push(comentario); 
+        this.nuevoComentario = '';         
       });
     }
   }
-/*
-agregarComentario(): void {
-  if (this.nuevoComentario.trim()) {
-    const comentario = {
-      userId: this.usuarioLogueado?.id,
-      destinationId: this.destinationId,
-      content: this.nuevoComentario
-    };
 
-    this.http.post<Comentario>('http://localhost:3000/comentarios', comentario).subscribe((data) => {
-      
-      this.comentarios.push({
-        ...data,
-        nombreUsuario: this.usuarioLogueado?.nombre || 'Usuario desconocido'
-      });
-      this.nuevoComentario = ''; 
-    });
-  }
-}*/
  }

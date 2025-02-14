@@ -30,7 +30,7 @@ export class CarruselComponent implements OnInit {
 
   ngOnDestroy(): void {
     if (this.intervalo) {
-      clearInterval(this.intervalo); // Aca se Limpia el intervalo cuando se destruya el componente
+      clearInterval(this.intervalo); 
     }
   }
 }

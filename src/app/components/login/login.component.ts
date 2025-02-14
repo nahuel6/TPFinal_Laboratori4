@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent  {
   loginForm: FormGroup;
   loginFailed: boolean = false;
 
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
 
   onLogin() {
     const email = this.loginForm.get('email')?.value;

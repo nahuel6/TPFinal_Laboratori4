@@ -19,7 +19,6 @@ export class PaquetesComponent implements OnInit {
     console.log("Paquetes component initialized");
   }
 
-  // Métodos para mostrar cada sección al hacer clic en el botón correspondiente
   showDetails() {
     this.resetViews();
     this.showingDetails = true;

@@ -4,12 +4,13 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Usuario } from '../../models/usuario';
 
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent implements OnInit{
+export class RegistroComponent {
   registroForm: FormGroup;
   registroExitoso: boolean = false; 
   private apiUrl = 'http://localhost:3000/usuarios';  
@@ -18,14 +19,12 @@ export class RegistroComponent implements OnInit{
     this.registroForm = this.fb.group({
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
-      dni: ['', Validators.required],
+      dni: ['', Validators.required,Validators.maxLength(8)],
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
     });
   }
-  ngOnInit(): void {  
-    
-  }
+  
   goToLogin() {
     this.router.navigate(['/login']);
   }

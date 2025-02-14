@@ -4,16 +4,6 @@
     box-sizing: border-box;
   }
   
-  .welcome-message {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #e64a19;
-  }
  
 .log-out{
   padding: 5px;
@@ -26,16 +16,12 @@
   transition: background-color 0.3s ease;
 }
  
- 
-  
   .content {
     width: 100%;
     max-width: 1200px;
     color: #ff5722;
     
-    
   }
-  
   
   .destinations {
     display: flex;
@@ -44,7 +30,6 @@
     margin-bottom: 30px;
     
   }
-  
   
   .title {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -81,31 +66,29 @@
   }
   
   .image-container img {
-    max-width: 300px; /* Ajusta este valor según tu preferencia */
-    max-height: 300px; /* Altura máxima */
-    width: auto; /* Mantener la proporción del ancho */
-    height: auto; /* Mantener la proporción del alto */
+    max-width: 300px; 
+    max-height: 300px; 
+    width: auto; 
+    height: auto; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    object-fit: cover; /* Recorta y ajusta la imagen dentro del contenedor */
+    object-fit: cover; 
   }
   
   .destinations-container {
-    background-color: rgba(158, 151, 151, 0.8); /* Fondo semitransparente */
-    border-radius: 15px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
-    padding: 20px; /* Espaciado interno */
-    margin: 20px 160px; /* Espaciado externo: 20px arriba y abajo, 40px a los lados */
-    max-width: 900px; /* Ancho máximo aumentado */
-    text-align: center; /* Centrado del contenido */
+    background-color: rgba(158, 151, 151, 0.8); 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    padding: 20px; 
+    margin: 20px 160px; 
+    max-width: 900px; 
+    text-align: center; 
   }
   
- 
-  
    .description-container {
-    margin: 20px auto; /* Margen superior de 20px y centrado horizontal */
+    margin: 20px auto; 
     padding: 15px;
-    background-color: rgba(29, 27, 27, 0.7); /* Fondo semitransparente */
+    background-color: rgba(29, 27, 27, 0.7); 
     border-radius: 10px;
     color: white;
     text-align: center;

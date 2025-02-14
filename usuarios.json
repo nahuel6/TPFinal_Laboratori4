@@ -128,6 +128,14 @@
       "email": "agus@gmail.com",
       "password": "1212",
       "id": 14
+    },
+    {
+      "nombre": "Nica",
+      "apellido": "Dondero",
+      "dni": "37010980",
+      "email": "abc@gmail.com",
+      "password": "asd123",
+      "id": 15
     }
   ],
   "comentarios": [
@@ -241,6 +249,13 @@
       "content": "Hermosos lugares de cordoba!",
       "nombreUsuario": "roberto",
       "id": 18
+    },
+    {
+      "userId": 15,
+      "destinationId": "4",
+      "content": "Me gusto mucho",
+      "nombreUsuario": "Nica",
+      "id": 19
     }
   ]
 }

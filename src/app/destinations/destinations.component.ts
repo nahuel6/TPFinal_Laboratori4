@@ -10,17 +10,15 @@ import { AuthService } from '../services/auth.service';
   templateUrl: './destinations.component.html',
   styleUrls: ['./destinations.component.css']
 })
-export class DestinationsComponent implements OnInit{
+export class DestinationsComponent{
   imageUrls: string[] = []; 
   description: string = ''; 
-  //userName: string | null = '';
+ 
   showComments: boolean = false;
   selectedDestinationId: string = '';
   constructor(private destinationsService: DestinationsService, private router: Router,private authService: AuthService) {}
 
-ngOnInit(): void {
- 
-}
+
 
   fetchImage(destination: string) {
     // Actualiza la descripción según el destino seleccionado
@@ -33,7 +31,7 @@ ngOnInit(): void {
       },
       (error: UnsplashResponse) => {
         console.error('Error fetching images:', error);
-        this.imageUrls = []; // Limpiar las imágenes si hay un error
+        this.imageUrls = []; 
       }
     );
     this.selectedDestinationId = this.getDestinationIdByName(destination);
