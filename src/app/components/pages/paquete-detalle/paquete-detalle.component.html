@@ -1,0 +1,110 @@
+<div *ngIf="paquete" class="container">
+   
+  
+    <div class="botones-tabs">
+      <h2>{{ paquete.nombre }}</h2>
+      <button (click)="setTab('detalles')">Detalles</button>
+      <button (click)="setTab('itinerario')">Itinerario</button>
+      <button (click)="setTab('ubicacion')">Ubicación</button>
+      <button (click)="setTab('alojamiento')">Alojamiento</button>
+    </div>
+  
+    <div class="tab-content">
+      <div *ngIf="activeTab === 'detalles'" class="detalle-paquete">
+        <h3>Detalles</h3>
+        <p>{{ paquete.descripcion}}</p>
+        <div *ngIf="paquete.detalles" >
+          <h3>Descripción Completa</h3>
+          <p class="descripcion">{{ paquete.detalles.descripcionCompleta }}</p>
+        
+          <h4>Lugar de Partida y Regreso:</h4>
+          <p>{{ paquete.detalles.lugarPartidaRegreso }}</p>
+        
+          <h4>Horario de Salida:</h4>
+          <p>{{ paquete.detalles.horarioSalida }}</p>
+        
+          <h4>Incluye:</h4>
+          <ul>
+            <li *ngFor="let item of paquete?.detalles?.incluido">{{ item }}</li>
+          </ul>
+        
+          <h4>No Incluye:</h4>
+          <ul>
+            <li *ngFor="let item of paquete?.detalles?.noIncluido">{{ item }}</li>
+          </ul>
+        
+          <h4>Tarifas:</h4>
+          <ul>
+            <li *ngFor="let tarifa of paquete?.detalles?.tarifas">
+              {{ tarifa.hotel }}: {{ tarifa.precio | currency:'ARS':'symbol-narrow':'1.0-0' }}
+            </li>
+          </ul>
+        
+          <h4>Notas:</h4>
+          <ul>
+            <li *ngFor="let nota of paquete?.detalles?.notas">{{ nota }}</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div *ngIf="activeTab === 'itinerario'" class="detalle-paquete">
+
+        <h3>Itinerario</h3>
+          <ul *ngIf="paquete.itinerario && paquete.itinerario.length">
+          <li *ngFor="let dia of paquete.itinerario">
+            <strong>{{ dia.dia }}:</strong> {{ dia.descripcion }}
+            </li>
+              </ul>
+       </div>
+       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
+        <h3 class="ubicacion-titulo">Ubicación</h3>
+      
+        <div *ngIf="paquete.ubicacion?.nombre" class="ubicacion-info">
+          <p class="ubicacion-nombre">{{ paquete.ubicacion.nombre }}</p>
+        </div>
+      
+        <app-mapa-paquete
+          *ngIf="paquete.ubicacion?.maps_url"
+          [mapsUrl]="paquete.ubicacion.maps_url">
+        </app-mapa-paquete>
+      
+        <a *ngIf="paquete.ubicacion?.link_externo"
+           [href]="paquete.ubicacion.link_externo"
+           target="_blank"
+           class="mapa-externo-link">
+          Ver en mapa externo
+        </a>
+      </div>
+  <!-- 
+      <div *ngIf="activeTab === 'ubicacion'" >
+        <h3>Ubicación</h3>
+
+        <div *ngIf="paquete.ubicacion?.nombre">
+          <p>{{ paquete.ubicacion.nombre }}</p>
+
+          <app-mapa-paquete [mapsUrl]="paquete.ubicacion.maps_url"></app-mapa-paquete>
+          
+        </div>
+        <a *ngIf="paquete.ubicacion?.link_externo" 
+        [href]="paquete.ubicacion.link_externo" 
+        target="_blank">
+       Ver en mapa externo
+          </a>
+        
+      </div>
+  -->
+      <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete">
+        <h3>Opciones de Alojamiento</h3>
+        <div *ngFor="let hotel of paquete?.alojamientos">
+          <strong>{{ hotel.hotel }}</strong> <div class="estrellas">
+            <span *ngFor="let estrella of generarEstrellas(hotel.categoria)">⭐</span>
+          </div><br />
+          Single: {{ hotel.single }} | Doble: {{ hotel.doble }} | Triple: {{ hotel.triple }}<br />
+          Válido hasta: {{ hotel.validoHasta | date:'dd/MM/yyyy'}}
+          <hr />
+         
+        </div>
+        <p class="nota-importante">{{paquete.aclaracion}}</p>
+      </div>
+    </div>
+  </div>

@@ -257,5 +257,628 @@
       "nombreUsuario": "Nica",
       "id": 19
     }
-  ]
-}
+  ],
+  "paquetes" :[
+    {
+      "id": 1,
+      "destino": "Bariloche",
+      "nombre": "Paquete turistico a Bariloche",
+      "descripcion": "Descubre la magia de San Carlos de Bariloche, un destino que combina paisajes de montañas nevadas, lagos cristalinos y una arquitectura alpina encantadora. Disfruta de actividades como el Circuito Chico, navegación por el lago Nahuel Huapi, excursiones al Cerro Catedral y la experiencia de probar el famoso chocolate artesanal de la región. Ideal para amantes de la naturaleza, la aventura y el relax.",
+      "detalles" :{
+        
+        "descripcionCompleta" : "Paquete a Bariloche con excursiones, traslados y alojamiento en hoteles seleccionados.",
+      "lugarPartidaRegreso": "Aeropuerto de Bariloche",
+      "horarioSalida": "A confirmar",
+      "incluido": [
+        "Traslados in/out",
+        "3 noches de alojamiento con desayuno",
+        "Excursiones: Circuito Chico, Cerro Catedral",
+        "Guía local"
+      ],
+      "noIncluido": [
+        "Entradas a parques",
+        "Comidas no especificadas"
+      ],
+      "tarifas": [{
+        "hotel": " Nevada ", 
+        "precio" : 183000
+        },
+        {
+        "hotel":" Cristal ",
+        "precio":  229000
+      }
+    ],
+    "notas": [
+          "Consultar otras opciones de alojamiento",
+          "Comisionable para agencias",
+          "Tarifas por persona, sujetas a disponibilidad y a modificaciones",
+          "Adicionar 2% de gastos administrativos"
+        ]
+    },
+      "itinerario": [
+        {
+        "dia": "Dia 1",
+        "descripcion":"Llegada a Bariloche Arribo a Bariloche, traslado al hotel y check-in. Tarde libre para explorar el centro y sus famosas chocolaterías."
+      },
+        {
+        "dia":"Dia 2", 
+        "descripcion":"Excursión en Catamarán Paseo en catamarán por el Lago Nahuel Huapi, recorriendo el Bosque de Arrayanes y la Isla Victoria. Tiempo libre para disfrutar de la naturaleza y tomar fotografías."
+      },
+      {
+        "dia":"Dia 3", 
+        "descripcion":"Día Libre Día libre para actividades opcionales, como senderismo, cabalgatas o visita al Cerro Catedral."
+      },
+      {
+        "dia":"Dia 4" ,
+        "descripcion":"Regreso Traslado al aeropuerto para el vuelo de regreso."
+      }
+      ],
+      "ubicacion": {
+        "nombre": "Hotel Soft",
+       
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96169.74603759978!2d-71.42231554470787!3d-41.12787685783888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b6fefc5658b%3A0x34560365211c3283!2sSoft%20Bariloche!5e0!3m2!1ses-419!2sar!4v1731274110596!5m2!1ses-419!2sar", 
+        "link_externo": "https://maps.app.goo.gl/vfjM2ds9e6s3upqU6"
+      },
+      "alojamientos": [
+        {
+          "hotel": "Nevada",
+          "categoria": 3,
+          "single": 40000,
+          "doble": 20000,
+          "triple": 18000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Cristal",
+          "categoria":4,
+          "single": 45000,
+          "doble": 229000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Soft",
+          "categoria":4,
+          "single": 45000,
+          "doble": 229000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        }
+      ],
+      "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+    },
+    {
+      "id": 2,
+      "destino": "Iguazú",
+      "nombre": "Paquete turistico a cataratas del iguazu",
+      "descripcion": "Explora la majestuosidad de las Cataratas del Iguazú, una de las maravillas naturales del mundo. Sumérgete en la selva misionera a través de pasarelas y senderos que te llevan a vistas impresionantes del Salto San Martín, la Garganta del Diablo y muchos más. Incluye paseos en lancha bajo las cataratas, visitas al Parque Nacional Iguazú y contacto directo con la naturaleza en su máximo esplendor.",
+      "detalles" :{
+        
+        "descripcionCompleta" :"Paquete para conocer las Cataratas del Iguazú, con alojamiento y excursiones.",
+      "lugarPartidaRegreso": "Aeropuerto de Iguazú",
+      "horarioSalida": "A confirmar",
+      "incluido": [
+        "Traslados in/out",
+        "2 noches de alojamiento con desayuno",
+        "Excursión Cataratas lado argentino",
+        "Guía local"
+      ],
+      "noIncluido": [
+        "Entradas al parque nacional",
+        "Comidas"
+      ],
+      "tarifas": [{
+        "hotel":"St. George ",
+        "precio": 122000
+      },
+      {
+        "hotel":" Mercure ",
+        "precio": 145000
+      }
+    ],
+    "notas": [
+          "Consultar otras opciones de alojamiento",
+          "Comisionable para agencias",
+          "Tarifas por persona, sujetas a disponibilidad y a modificaciones",
+          "Adicionar 2% de gastos administrativos"
+        ]
+    },
+      "itinerario": [
+        {
+        "dia":"Dia 1" ,
+        "descripcion":"Llegada a Iguazú: Arribo al aeropuerto, traslado al hotel y check-in. Tarde libre para descansar o realizar una caminata por el centro de Puerto Iguazú y visitar el Hito Tres Fronteras."
+        },
+        {
+        "dia": "Dia 2",
+        "descripcion":"Excursión a las Cataratas del Iguazú (lado argentino): Recorrido completo por el Parque Nacional Iguazú. Incluye la Garganta del Diablo, el circuito superior e inferior, con opción de paseo en bote (Gran Aventura)."
+        },
+        {
+        "dia":"Día 3",
+          "descripcion":"Excursión a las Cataratas del Iguazú (lado brasileño): Visita al Parque Nacional do Iguaçu. Caminata con vistas panorámicas de las cataratas. Opcional: entrada al Parque de las Aves o tour en helicóptero."
+        },
+        {
+          "dia":"Día 4",
+            "descripcion":"Día libre para actividades opcionales: Se recomienda visitar las Minas de Wanda, la represa Itaipú, realizar un tour de compras en Foz do Iguaçu o disfrutar del hotel y su entorno natural."
+          },
+          {
+            "dia":"Día 5",
+              "descripcion":"Check-out y traslado al aeropuerto: Mañana libre según horario de vuelo. Fin de los servicios."
+            }
+        
+      ],
+      "ubicacion": {
+        "nombre": "Hotel St. George",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57562.09677066103!2d-54.646117695777015!3d-25.617173540417095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944e77c07179dfbf%3A0x26fa1fc321d95611!2sBEER%20HOTEL%20Iguazu!5e0!3m2!1ses-419!2sar!4v1731274478344!5m2!1ses-419!2sar"
+      },
+      "alojamientos": [
+        {
+          "hotel": "St. George",
+          "categoria": 3,
+          "single": 25000,
+          "doble":  122000,
+          "triple": 10000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Mercure",
+          "categoria": 4,
+          "single":  30000,
+          "doble":  145000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Beer Hotel",
+          "categoria": 4,
+          "single":  30000,
+          "doble":  145000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Sol Cataratas",
+          "categoria": 3,
+          "single":  30000,
+          "doble":  145000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "El libertador",
+          "categoria": 4,
+          "single":  30000,
+          "doble":  145000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        }
+        
+      ],
+      "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+    },
+    {
+      "id": 3,
+      "destino": "Mendoza",
+      "nombre": "Paquete turistico a Mendoza",
+      "descripcion": "Vive una experiencia inolvidable en Mendoza, tierra del sol y del buen vino. Recorre los viñedos al pie de la Cordillera de los Andes, participa en degustaciones en bodegas de renombre y disfruta de la exquisita gastronomía local. Además, aventúrate en actividades como rafting, senderismo o ascensos al Aconcagua, el pico más alto de América.",
+      "detalles": {
+        
+        "descripcionCompleta" :"Disfrutá Mendoza con city tour y visitas a bodegas. Ideal para amantes del vino.",
+      "lugarPartidaRegreso": "Aeropuerto de Mendoza",
+      "horarioSalida": "A confirmar",
+      "incluido": [
+        "Traslados in/out",
+        "3 noches de alojamiento con desayuno",
+        "City Tour y Visita a bodegas con degustación"
+      ],
+      "noIncluido": [
+        "Comidas",
+        "Excursiones opcionales"
+      ],
+      "tarifas": [{
+        "hotel":" Cordon del Plata ",
+        "precio": 115000
+      },
+      {
+        "hotel":" Sheraton ",
+        "precio": 158000
+      }
+    ],
+    "notas": [
+          "Consultar otras opciones de alojamiento",
+          "Comisionable para agencias",
+          "Tarifas por persona, sujetas a disponibilidad y a modificaciones",
+          "Adicionar 2% de gastos administrativos"
+        ]
+    },
+      "itinerario": [
+        {
+        "dia":"Día 1",
+        "descripcion":" Llegada a Mendoza Arribo a la ciudad de Mendoza. Traslado al hotel y check-in. Tarde libre para explorar la ciudad o relajarse en el alojamiento."
+      },{
+        "dia":"Día 2",
+        "descripcion": "Bike Tour de Viñedos Después del desayuno, nos encontramos en el punto de partida para comenzar el Bike Tour de Viñedos, recorriendo bodegas y viñedos emblemáticos en bicicleta, con degustaciones incluidas. Tarde libre para disfrutar de la gastronomía local o seguir explorando."
+      },
+      {
+        "dia":"Día 3", 
+        "descripcion":"Día Libre y Regreso Mañana libre para visitar tiendas de vinos, realizar compras o explorar más la ciudad."
+      },
+      {
+        "dia":"Día 4",
+        "descripcion": "Traslado al aeropuerto o terminal en el horario acordado para el regreso."
+      }
+      ],
+      "ubicacion": {
+        "nombre": "Hotel Cordon del Plata",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53609.11760382558!2d-68.89971884382429!3d-32.883098697403085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09f2a1cf7edf%3A0x203cb49aa9fd66ad!2sDakar%20Hoteles!5e0!3m2!1ses-419!2sar!4v1731273189196!5m2!1ses-419!2sar"
+      },
+      "alojamientos": [
+        {
+          "hotel": "Cordon del Plata",
+          "categoria": 3,
+          "single": 22000,
+          "doble":  115000,
+          "triple":  9500,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Sheraton",
+          "categoria": 4,
+          "single":  34000,
+          "doble":  158000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+        "hotel": "Dakar",
+        "categoria": 4,
+          "single":  34000,
+          "doble":  158000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+
+        },
+        {
+          "hotel": "Lido",
+          "categoria": 5,
+            "single":  34000,
+            "doble":  158000,
+            "triple": 12000,
+            "validoHasta": "2025-09-30"
+  
+          },
+          {
+            "hotel": "Panorama",
+            "categoria": 5,
+              "single":  34000,
+              "doble":  158000,
+              "triple": 12000,
+              "validoHasta": "2025-09-30"
+    
+            }
+      ],
+      "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+    },
+    {
+      "id": 4,
+      "destino": "Córdoba",
+      "nombre": "Paquete turistico a Cordoba",
+      "descripcion": "Descubre la esencia de Córdoba, una provincia que combina historia, naturaleza y cultura. Pasea por las sierras, visita encantadores pueblos como Villa General Belgrano o La Cumbrecita, y conoce el legado jesuítico en su capital. Ideal para disfrutar de caminatas, actividades al aire libre y una vibrante vida cultural.",
+      "detalles": {
+        
+        "descripcionCompleta" :"Este programa invita a disfrutar Córdoba de una manera diferente, descubriendo una ciudad pujante y divertida. Incluye City BIKE tour o City Tour convencional.",
+      "lugarPartidaRegreso": "Aeropuerto Internacional Córdoba",
+      "horarioSalida": "A confirmar",
+      "incluido": [
+        "Traslados In/ Out",
+        "2 noches de alojamiento con desayuno",
+        "City BIKE tour por la ciudad",
+        "Refrigerio"
+      ],
+      "noIncluido": [
+        "Entradas a museos",
+        "Otros gastos"
+      ],
+      "tarifas": [{
+        "hotel":"Camino Real Córdoba ",
+        "precio": 151250
+      },
+      {
+        "hotel":"NH Urbano ",
+        "precio": 169550
+      }
+    ],
+    "notas": [
+          "Consultar otras opciones de alojamiento",
+          "Comisionable para agencias",
+          "Tarifas por persona, sujetas a disponibilidad y a modificaciones",
+          "Adicionar 2% de gastos administrativos"
+        ]
+    },
+      "itinerario": [
+        {
+        "dia": "Dia 1",
+        "descripcion": "Arribo a la ciudad de Cordoba. Traslado a su hotel. Check in. Resto del dia libre."
+      },
+      {
+        "dia":"Dia 2", 
+        "descripcion": "Luego del desayuno nos reunimos en el punto de encuentro establecido para dar comienzo al BIKE TOUR, un divertido city tour pedaleando por las calles y atractivos más destacados."
+      },
+      {
+        "dia":"Dia 3", 
+        "descripcion": "Traslado al aeropuerto o terminal en horario acordado."
+      }
+      ],
+      "ubicacion": {
+        "nombre": "Hotel Sussex",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27238.77728871434!2d-64.2069308!3d-31.4183368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b559b42b7%3A0x5692ff45c3581207!2sHotel%20Sussex!5e0!3m2!1ses-419!2sar!4v1731186921997!5m2!1ses-419!2sar"
+      },
+      "alojamientos": [
+        {
+          "hotel": "AZUR SUSSEX",
+          "categoria": 3,
+          "single": 31239,
+          "doble": 15675,
+          "triple": 14350,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "AMERIAN EXECUTIVE",
+          "categoria": 4,
+          "single":  23900,
+          "doble": 12780,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "NH PANORAMA",
+          "categoria": 4,
+          "single": 19744,
+          "doble": 9928,
+          "triple": 23000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "CASEROS 248",
+          "categoria": 3,
+          "single": 21770,
+          "doble":  11953,
+          "triple": 22000,
+          "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "KUBE APART",
+          "categoria": 3,
+          "single": 15300,
+          "doble":  9150,
+          "triple": 7199,
+          "validoHasta": "2025-09-30"
+        }
+      ],
+      "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+    },
+    {
+      "id": 5,
+      "destino": "Buenos Aires",
+      "nombre": "Paquete Turístico a Buenos Aires",
+      "descripcion": "Descubre Buenos Aires explorando su vibrante vida urbana y rica historia cultural. Incluye City Bike Tour y opción de City Tour tradicional en bus.",
+      "detalles":{
+        
+        "descripcionCompleta" :"Descubre Buenos Aires explorando su vibrante vida urbana y rica historia cultural. Incluye City Bike Tour y opción de City Tour tradicional en bus.",
+      "lugarPartidaRegreso": "Aeropuerto Internacional Ministro Pistarini (Ezeiza)",
+      "horarioSalida": "A confirmar",
+      "incluido": [
+        "Traslados In/Out",
+        "4 noches de alojamiento con desayuno",
+        "City BIKE tour por la ciudad",
+        "Refrigerio durante el recorrido"
+      ],
+      "noIncluido": [
+        "Entradas a museos",
+        "Otros gastos"
+      ],
+      "tarifas": [{
+        "hotel":" Vista Sol ",
+        "precio": 185000
+      },
+      {
+        "hotel": "NH Collection ",
+        "precio": 220000
+      }
+    ],
+    "notas": [
+          "Consultar otras opciones de alojamiento",
+          "Comisionable para agencias",
+          "Tarifas por persona, sujetas a disponibilidad y a modificaciones",
+          "Adicionar 2% de gastos administrativos"
+        ]
+    },
+      "itinerario": [
+        {
+          "dia": "Dia 1",
+          "descripcion": " Llegada a Buenos Aires Arribo a la ciudad de Buenos Aires. Traslado al hotel y check-in. Resto del día libre para explorar la ciudad por su cuenta o relajarse en el alojamiento."
+        },
+        {
+          "dia" : "Dia 2",
+          "descripcion": "City Tour en Bicicleta Después del desayuno, nos reunimos en el punto de encuentro establecido para comenzar el City Bike Tour, un recorrido único por las principales avenidas y monumentos de Buenos Aires. Pedalearemos por la ciudad, visitando los atractivos más destacados, como la Plaza de Mayo, el Obelisco, el barrio de San Telmo y la costanera, disfrutando de un recorrido cultural y divertido en bicicleta. El resto de la tarde es libre para seguir descubriendo la ciudad o disfrutar de sus famosos cafés."
+      },
+        {
+          "dia": "Dia 3",
+          "descripcion": "Día Libre y Regreso Mañana libre para seguir explorando Buenos Aires, hacer compras en sus tiendas de diseño, visitar algún museo o recorrer más barrios. Traslado al aeropuerto o terminal de buses en el horario acordado para el regreso a su ciudad de origen."
+    }
+      ],
+      "ubicacion": {
+        "nombre": "Hotel S Isidro",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13157.159841586199!2d-58.52913342283205!3d-34.470167800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb030e4fcceaf%3A0x6bcfec1e0911a096!2sHotel%20Alto%20San%20Isidro!5e0!3m2!1ses-419!2sar!4v1731272250738!5m2!1ses-419!2sar"
+      },
+      "alojamientos": [
+        {
+          "hotel": "ALTO S. ISIDRO",
+          "categoria": 5,
+          
+            "single": 31239,
+            "doble": 15675,
+            "triple": 14350,
+            "validoHasta": "2025-09-30"
+          
+          
+        },
+        {
+          "hotel": "HOTEL BAHIA",
+          "categoria": 4,
+          
+            "single": 23900,
+            "doble": 12780,
+            "triple": 12000,
+             "validoHasta": "2025-09-30"
+          
+         
+        },
+        {
+          "hotel": "HOTEL LIDO",
+          "categoria": 4,
+         
+            "single": 19744,
+            "doble": 9928,
+            "triple": 12000,
+            "validoHasta": "2025-09-30"
+          
+          
+        },
+        {
+          "hotel": "CASEROS 248",
+          "categoria": 3,
+          
+            "single": 21770,
+            "doble": 11953,
+            "triple": 12000,
+             "validoHasta": "2025-09-30"
+          
+         
+        },
+        {
+          "hotel": "KUBE APART",
+          "categoria": 3,
+          
+            "single": 15300,
+            "doble": 9150,
+            "triple": 7199,
+            "validoHasta": "2025-09-30"
+          
+          
+        }
+      ],
+      "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+    },
+    {
+      "id": 6,
+      "destino": "Salta",
+      "nombre": "Paquete Turístico a Salta",
+      "descripcion": "Este programa invita a descubrir Salta, una ciudad colonial con una rica historia, cultura y paisajes únicos en el noroeste argentino.",
+      "programa": "SALTA, LA LINDA",
+      "detalles": {
+        "descripcionCompleta": "Este paquete ofrece un recorrido por la ciudad de Salta y sus alrededores, incluyendo visitas a Cafayate, sus bodegas, y los Valles Calchaquíes. Disfruta de su arquitectura colonial, sus mercados y la calidez de su gente.",
+        "lugarPartidaRegreso": "Aeropuerto Internacional Martín Miguel de Güemes, Salta",
+        "horarioSalida": "A confirmar",
+        "incluido": [
+          "Traslados In/Out",
+          "4 noches de alojamiento con desayuno",
+          "City tour y excursión a Cafayate",
+          "Degustación de vinos"
+        ],
+        "noIncluido": [
+          "Entradas a museos y parques",
+          "Otros gastos"
+        ],
+        "tarifas": [
+          {
+            "hotel": "Hotel Posada del Sol ",
+            "precio": 190000
+          },
+          {
+            "hotel": "Hotel Design Suites Salta ",
+            "precio": 240000
+          }
+        ],
+        "notas": [
+          "Consultar otras opciones de alojamiento",
+          "Comisionable para agencias",
+          "Tarifas por persona, sujetas a disponibilidad y a modificaciones",
+          "Adicionar 2% de gastos administrativos"
+        ]
+      },
+      "itinerario": [
+        {
+          "dia": "Día 1",
+          "descripcion": "Llegada a Salta Arribo, traslado al hotel y check-in. Tarde libre para conocer la Plaza 9 de Julio y el centro histórico."
+        },
+        {
+          "dia": "Día 2",
+          "descripcion": "City Tour por Salta Desayuno y city tour por la ciudad, incluyendo el Cerro San Bernardo y el Museo de Arqueología de Alta Montaña (MAAM)."
+        },
+        {
+          "dia": "Día 3",
+          "descripcion": "Excursión a Cafayate Salida temprano hacia Cafayate, con paradas en los Valles Calchaquíes para admirar la Quebrada de las Conchas. Visita a una bodega y degustación de vinos."
+        },
+        {
+          "dia": "Día 4",
+          "descripcion": " Día Libre Día libre para realizar actividades opcionales, como una visita a Cachi o al Tren a las Nubes."
+        },
+        {
+          "dia": "Día 5",
+          "descripcion": "Regreso: Traslado al aeropuerto para el vuelo de regreso."
+        }
+      ],
+      "ubicacion": {
+        "nombre": "Hotel Colonial Salta",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115903.91022570255!2d-65.51303054598078!3d-24.795549591395865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3a34ded1f5b%3A0x3c80055903f3a9c4!2sHotel%20Colonial%20Salta!5e0!3m2!1ses-419!2sar!4v1731275195338!5m2!1ses-419!2sar"
+      },
+      "alojamientos":[
+          {
+            "hotel": "COLONIAL SALTA",
+            "categoria": 5,
+            "single": 31239,
+            "doble": 15675,
+            "triple": 14350,
+            "validoHasta": "2025-09-30"
+          },
+          {
+            "hotel": "PORTOZUELO HOTEL",
+            "categoria": 4,
+            "single": "$23900",
+            "doble": "$12780",
+            "triple": "Consultar",
+            "validoHasta": "2025-09-30"
+          },
+          {
+            "hotel": "HOUSE APART",
+            "categoria": 4,
+            "single": 19744,
+            "doble": 99280,
+            "triple": 33000,
+            "validoHasta": "2025-09-30"
+          },
+          {
+            "hotel": "HOTEL HAYBAL",
+            "categoria": 3,
+            "single": 21770,
+            "doble": 11953,
+            "triple": null,
+            "validoHasta": "2025-09-30"
+          },
+          {
+            "hotel": "LA SECUNDIDA",
+            "categoria": 3,
+            "single": 15300,
+            "doble": 9150,
+            "triple": 7199,
+            "validoHasta": "2025-09-30"
+          }
+        ],
+  
+        "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+      }
+    ]
+    }
+  
+
+ 

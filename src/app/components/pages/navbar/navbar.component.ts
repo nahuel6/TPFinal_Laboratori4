@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -15,9 +16,11 @@ export class NavbarComponent {
   goToLogin() {
     this.router.navigate(['/login']);
   }
+
   goToPaquetes() {
     this.router.navigate(['/paquetes']);
   }
+  
   toggleDropdown() {
     this.isDropdownVisible = !this.isDropdownVisible;
   }

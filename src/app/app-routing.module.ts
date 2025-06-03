@@ -11,6 +11,8 @@ import { BarilocheComponent } from './bariloche/bariloche.component';
 import { IguazuComponent } from './iguazu/iguazu.component';
 import { SaltaComponent } from './salta/salta.component';
 import { HomeComponent } from './components/pages/home/home.component';
+import { Paquetes2ListComponent } from './components/pages/paquetes2-list/paquetes2-list.component';
+import { Paquetes2DetalleComponent } from './components/pages/paquete-detalle/paquete-detalle.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,8 @@ const routes: Routes = [
       { path: 'paquete/bariloche', component: BarilocheComponent},
       { path: 'paquete/iguazu', component: IguazuComponent},
       { path: 'paquete/salta', component: SaltaComponent},
+      {path: 'paquetes2',component: Paquetes2ListComponent},
+      {path: 'paquetes2/:id',component: Paquetes2DetalleComponent},
     
    
    { path: '**', redirectTo: '/' }  

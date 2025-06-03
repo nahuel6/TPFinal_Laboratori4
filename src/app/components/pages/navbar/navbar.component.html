@@ -1,9 +1,9 @@
 <header class="navbar">
-    <div class="logo">
+<div class="logo">
       
-      <a href=""><img src="assets/images/logo.png" alt="Logo"></a>
-      <h1>UTN Viajes</h1>
-    </div>
+  <a href=""><img src="assets/images/logo.png" alt="Logo"></a>
+  <h1>UTN Viajes</h1>
+</div>
     <nav>
       <ul class="title2">
         <li><a href="#">Home</a></li>
@@ -17,9 +17,13 @@
             <li><button (click)="goToPaquete('bariloche')">Bariloche</button></li>
             <li><button (click)="goToPaquete('iguazu')">Iguazú</button></li>
             <li><button (click)="goToPaquete('salta')">Salta</button></li>
+            
           </ul>
         </li>
+        <li><a routerLink="/paquetes2" style="cursor: pointer;">Paquetes (nuevo)</a></li>
         <li><a (click)="goToLogin() " style="cursor: pointer;">Iniciar Sesion</a></li>
       </ul>
+    
     </nav>
+  
   </header> 

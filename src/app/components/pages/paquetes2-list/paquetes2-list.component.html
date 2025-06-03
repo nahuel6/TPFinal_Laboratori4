@@ -1,0 +1,17 @@
+<div class="contenedor-general">
+<h2 class="titulo-seccion">Paquetes</h2>
+
+<div *ngIf="paquetes && paquetes.length > 0; else cargando" class="listado-paquetes">
+  <ul>
+    <li *ngFor="let paquete of paquetes" class="tarjeta-paquete">
+      <h2>{{ paquete.destino }}</h2>
+      <p>{{ paquete.descripcion }}</p>
+      <button (click)="verDetalle(paquete.id)" class="boton-detalle">Ver Detalles</button>
+    </li>
+  </ul>
+</div>
+
+<ng-template #cargando>
+  <p class="cargando-texto">Cargando paquetes...</p>
+</ng-template>
+</div>
