@@ -1,12 +1,15 @@
 <div class="carrusel-container">
     <div class="carrusel-slides">
-      <img *ngFor="let imagen of imagenes; let i = index" [src]="imagen" [class.active]="i === imagenActiva" alt="Imagen carrusel">
+      <img *ngFor="let imagen of imagenes; let i = index" 
+      [src]="imagen" 
+      [class.active]="i === imagenActiva" 
+      alt="Imagen carrusel">
     </div>
     
     
     <div class="contenido-superpuesto">
-      
+      <div class="contenido-wrapper">
       <router-outlet></router-outlet>
-      
+    </div>
     </div>
   </div>

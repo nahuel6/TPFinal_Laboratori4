@@ -1,0 +1,127 @@
+<div *ngIf="paquete" class="container">
+   
+  
+    <div class="botones-tabs">
+      <h2>{{ paquete.nombre }}</h2>
+      <button (click)="setTab('detalles')" [class.activo]="activeTab === 'detalles'">Detalles</button>
+      <button (click)="setTab('itinerario')" [class.activo]="activeTab === 'itinerario'">Itinerario</button>
+      <button (click)="setTab('ubicacion')" [class.activo]="activeTab === 'ubicacion'">Ubicación</button>
+      <button (click)="setTab('alojamiento')" [class.activo]="activeTab === 'alojamiento'">Alojamiento</button>
+    </div>
+  
+    <div class="tab-content">
+      <div *ngIf="activeTab === 'detalles'" class="detalle-paquete">
+       
+        <p>{{ paquete.descripcion}}</p>
+        <div *ngIf="paquete.detalles" >
+          <strong> Descripción</strong>
+          <p class="descripcion">{{ paquete.detalles.descripcionCompleta }}</p>
+        
+          <strong>Lugar de Partida y Regreso:</strong>
+          <p>{{ paquete.detalles.lugarPartidaRegreso }}</p>
+        
+          <strong>Horario de Salida:</strong>
+          <p>{{ paquete.detalles.horarioSalida }}</p>
+        
+          <strong> Incluye:</strong>
+          <ul>
+            <li *ngFor="let item of paquete?.detalles?.incluido">{{ item }}</li>
+          </ul>
+        
+          <strong> No Incluye:</strong>
+          <ul>
+            <li *ngFor="let item of paquete?.detalles?.noIncluido">{{ item }}</li>
+          </ul>
+        
+          <strong>Tarifas:</strong>
+          <ul>
+            <li *ngFor="let tarifa of paquete?.detalles?.tarifas">
+              {{ tarifa.hotel }}: {{ tarifa.precio | currency:'ARS':'symbol-narrow':'1.0-0' }}
+            </li>
+          </ul>
+        
+        <strong>Notas:</strong>
+          <ul>
+            <li *ngFor="let nota of paquete?.detalles?.notas">{{ nota }}</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div *ngIf="activeTab === 'itinerario'" class="detalle-paquete">
+
+        <h3>Itinerario</h3>
+          <ul *ngIf="paquete.itinerario && paquete.itinerario.length">
+          <li *ngFor="let dia of paquete.itinerario">
+            <strong>{{ dia.dia }}:</strong> {{ dia.descripcion }}
+            </li>
+              </ul>
+       </div>
+
+
+       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
+          <h3 class="ubicacion-titulo">Ubicación</h3>
+      
+          <!-- Selector de ubicaciones -->
+          <div *ngIf="paquete.ubicacion?.length > 1" class="ubicacion-select">
+            <label for="ubicacionSelect">Elegí una ubicación:</label>
+            <select id="ubicacionSelect" (change)="onUbicacionChange($event)">
+            <option *ngFor="let ubicacion of paquete.ubicacion" [value]="ubicacion.id">
+            {{ ubicacion.nombre }}
+            </option>
+            </select>
+          </div>
+
+            <!-- Mostrar datos solo si hay una ubicación seleccionada -->
+            <div *ngIf="selectedUbicacion" class="ubicacion-info">
+              <p class="ubicacion-nombre">{{ selectedUbicacion.nombre }}</p>
+      
+              <app-mapa-paquete
+            [mapsUrl]="selectedUbicacion.maps_url">
+              </app-mapa-paquete>
+      
+              <a [href]="selectedUbicacion.link_externo"
+                target="_blank"
+                 class="mapa-externo-link">
+                Ver en mapa externo
+              </a>
+          </div>
+      </div>
+
+<!-- 
+       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
+        <h3 class="ubicacion-titulo">Ubicación</h3>
+      
+        <div *ngIf="paquete.ubicacion?.nombre" class="ubicacion-info">
+          <p class="ubicacion-nombre">{{ paquete.ubicacion.nombre }}</p>
+        </div>
+      
+        <app-mapa-paquete
+          *ngIf="paquete.ubicacion?.maps_url"
+          [mapsUrl]="paquete.ubicacion.maps_url">
+        </app-mapa-paquete>
+      
+        <a *ngIf="paquete.ubicacion?.link_externo"
+           [href]="paquete.ubicacion.link_externo"
+           target="_blank"
+           class="mapa-externo-link">
+          Ver en mapa externo
+        </a>
+      </div>
+  
+-->
+
+      <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete">
+        <h3>Opciones de Alojamiento</h3>
+        <div *ngFor="let hotel of paquete?.alojamientos">
+          <strong>{{ hotel.hotel }}</strong> <div class="estrellas">
+            <span *ngFor="let estrella of generarEstrellas(hotel.categoria)">⭐</span>
+          </div><br />
+          Single: {{ hotel.single }} | Doble: {{ hotel.doble }} | Triple: {{ hotel.triple }}<br />
+          Válido hasta: {{ hotel.validoHasta | date:'dd/MM/yyyy'}}
+          <hr />
+         
+        </div>
+        <p class="nota-importante">{{paquete.aclaracion}}</p>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,149 @@
+
+  
+  .detalle-paquete {
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Segoe UI', sans-serif;
+    max-width: 800px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .detalle-paquete h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-bottom: 15px;
+  }
+  
+  .detalle-paquete p,
+  .detalle-paquete li {
+    font-size: 16px;
+    line-height: 1.6;
+    
+  }
+  
+  .detalle-paquete ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .detalle-paquete strong {
+    display: block;
+    margin-top: 20px;
+    color: #ffa500;
+    font-size: 17px;
+  }
+  
+  .botones-tabs {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .botones-tabs button {
+    background-color: #ff5c00;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 0 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .botones-tabs button:hover {
+    background-color: #e04d00;
+  }
+  .botones-tabs button.activo {
+    background-color:  rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+  }
+  .nota-importante {
+    font-style: italic;
+    color: #ffd700;
+    margin-top: 10px;
+  }
+  .estrellas {
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .ubicacion-container {
+    background-color:  rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .ubicacion-titulo {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .ubicacion-info {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .ubicacion-nombre {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .mapa-externo-link {
+    display: inline-block;
+    margin-top: 12px;
+    text-align: center;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .mapa-externo-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  /* Estilos generales para el contenedor */
+div.ubicacion-select {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Etiqueta del selector */
+.ubicacion-select label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #e04d00;
+}
+
+/* Selector estilizado */
+.ubicacion-select select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e04d00;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+  min-width: 250px;
+}
+
+.ubicacion-select select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}

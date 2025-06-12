@@ -1,0 +1,13 @@
+.mapa-container {
+    
+    overflow: hidden;
+    margin-top: 10px;
+    
+      width: 85%;
+      height: 450px;
+      border: 0;
+      border-radius: 15px;
+      margin: 20px auto; 
+      display: block; 
+      }
+  
