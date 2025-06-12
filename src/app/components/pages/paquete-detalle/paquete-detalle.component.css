@@ -1,8 +1,4 @@
 
-
-  .container{
-    padding-top: 90px;
-  }
   
   .detalle-paquete {
     background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro translúcido */
@@ -61,7 +57,11 @@
   .botones-tabs button:hover {
     background-color: #e04d00;
   }
-
+  .botones-tabs button.activo {
+    background-color:  rgba(0, 0, 0, 0.6);
+    color: white;
+    font-weight: bold;
+  }
   .nota-importante {
     font-style: italic;
     color: #ffd700;
@@ -116,4 +116,34 @@
     color: #0056b3;
     text-decoration: underline;
   }
-  
+  /* Estilos generales para el contenedor */
+div.ubicacion-select {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Etiqueta del selector */
+.ubicacion-select label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #e04d00;
+}
+
+/* Selector estilizado */
+.ubicacion-select select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e04d00;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #f9f9f9;
+  transition: border 0.3s ease;
+  min-width: 250px;
+}
+
+.ubicacion-select select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}

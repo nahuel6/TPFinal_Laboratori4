@@ -28,9 +28,15 @@ export interface Paquete {
   nombre: string;
   descripcion: string;
   itinerario: Itinerario[];
-  ubicacion: string;
+  ubicacion: Ubicacion[];
   alojamientos: Alojamiento[];
   detalles?: DetallePaquete;
+}
+export interface Ubicacion {
+  id: number;
+  nombre: string;
+  maps_url: string;
+  link_externo: string;
 }
 
 @Injectable({

@@ -3,44 +3,44 @@
   
     <div class="botones-tabs">
       <h2>{{ paquete.nombre }}</h2>
-      <button (click)="setTab('detalles')">Detalles</button>
-      <button (click)="setTab('itinerario')">Itinerario</button>
-      <button (click)="setTab('ubicacion')">Ubicación</button>
-      <button (click)="setTab('alojamiento')">Alojamiento</button>
+      <button (click)="setTab('detalles')" [class.activo]="activeTab === 'detalles'">Detalles</button>
+      <button (click)="setTab('itinerario')" [class.activo]="activeTab === 'itinerario'">Itinerario</button>
+      <button (click)="setTab('ubicacion')" [class.activo]="activeTab === 'ubicacion'">Ubicación</button>
+      <button (click)="setTab('alojamiento')" [class.activo]="activeTab === 'alojamiento'">Alojamiento</button>
     </div>
   
     <div class="tab-content">
       <div *ngIf="activeTab === 'detalles'" class="detalle-paquete">
-        <h3>Detalles</h3>
+       
         <p>{{ paquete.descripcion}}</p>
         <div *ngIf="paquete.detalles" >
-          <h3>Descripción Completa</h3>
+          <strong> Descripción</strong>
           <p class="descripcion">{{ paquete.detalles.descripcionCompleta }}</p>
         
-          <h4>Lugar de Partida y Regreso:</h4>
+          <strong>Lugar de Partida y Regreso:</strong>
           <p>{{ paquete.detalles.lugarPartidaRegreso }}</p>
         
-          <h4>Horario de Salida:</h4>
+          <strong>Horario de Salida:</strong>
           <p>{{ paquete.detalles.horarioSalida }}</p>
         
-          <h4>Incluye:</h4>
+          <strong> Incluye:</strong>
           <ul>
             <li *ngFor="let item of paquete?.detalles?.incluido">{{ item }}</li>
           </ul>
         
-          <h4>No Incluye:</h4>
+          <strong> No Incluye:</strong>
           <ul>
             <li *ngFor="let item of paquete?.detalles?.noIncluido">{{ item }}</li>
           </ul>
         
-          <h4>Tarifas:</h4>
+          <strong>Tarifas:</strong>
           <ul>
             <li *ngFor="let tarifa of paquete?.detalles?.tarifas">
               {{ tarifa.hotel }}: {{ tarifa.precio | currency:'ARS':'symbol-narrow':'1.0-0' }}
             </li>
           </ul>
         
-          <h4>Notas:</h4>
+        <strong>Notas:</strong>
           <ul>
             <li *ngFor="let nota of paquete?.detalles?.notas">{{ nota }}</li>
           </ul>
@@ -56,6 +56,38 @@
             </li>
               </ul>
        </div>
+
+
+       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
+          <h3 class="ubicacion-titulo">Ubicación</h3>
+      
+          <!-- Selector de ubicaciones -->
+          <div *ngIf="paquete.ubicacion?.length > 1" class="ubicacion-select">
+            <label for="ubicacionSelect">Elegí una ubicación:</label>
+            <select id="ubicacionSelect" (change)="onUbicacionChange($event)">
+            <option *ngFor="let ubicacion of paquete.ubicacion" [value]="ubicacion.id">
+            {{ ubicacion.nombre }}
+            </option>
+            </select>
+          </div>
+
+            <!-- Mostrar datos solo si hay una ubicación seleccionada -->
+            <div *ngIf="selectedUbicacion" class="ubicacion-info">
+              <p class="ubicacion-nombre">{{ selectedUbicacion.nombre }}</p>
+      
+              <app-mapa-paquete
+            [mapsUrl]="selectedUbicacion.maps_url">
+              </app-mapa-paquete>
+      
+              <a [href]="selectedUbicacion.link_externo"
+                target="_blank"
+                 class="mapa-externo-link">
+                Ver en mapa externo
+              </a>
+          </div>
+      </div>
+
+<!-- 
        <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
         <h3 class="ubicacion-titulo">Ubicación</h3>
       
@@ -75,24 +107,9 @@
           Ver en mapa externo
         </a>
       </div>
-  <!-- 
-      <div *ngIf="activeTab === 'ubicacion'" >
-        <h3>Ubicación</h3>
+  
+-->
 
-        <div *ngIf="paquete.ubicacion?.nombre">
-          <p>{{ paquete.ubicacion.nombre }}</p>
-
-          <app-mapa-paquete [mapsUrl]="paquete.ubicacion.maps_url"></app-mapa-paquete>
-          
-        </div>
-        <a *ngIf="paquete.ubicacion?.link_externo" 
-        [href]="paquete.ubicacion.link_externo" 
-        target="_blank">
-       Ver en mapa externo
-          </a>
-        
-      </div>
-  -->
       <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete">
         <h3>Opciones de Alojamiento</h3>
         <div *ngFor="let hotel of paquete?.alojamientos">

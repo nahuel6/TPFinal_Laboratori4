@@ -263,15 +263,16 @@
       "id": 1,
       "destino": "Bariloche",
       "nombre": "Paquete turistico a Bariloche",
-      "descripcion": "Descubre la magia de San Carlos de Bariloche, un destino que combina paisajes de montañas nevadas, lagos cristalinos y una arquitectura alpina encantadora. Disfruta de actividades como el Circuito Chico, navegación por el lago Nahuel Huapi, excursiones al Cerro Catedral y la experiencia de probar el famoso chocolate artesanal de la región. Ideal para amantes de la naturaleza, la aventura y el relax.",
+      "descripcion": "Descubre la magia de San Carlos de Bariloche, un destino que combina paisajes de montañas nevadas, lagos cristalinos y una arquitectura alpina encantadora. ",
       "detalles" :{
         
-        "descripcionCompleta" : "Paquete a Bariloche con excursiones, traslados y alojamiento en hoteles seleccionados.",
+        "descripcionCompleta" : "Un recorrido ideal para parejas, familias o grupos de amigos, Bariloche ofrece actividades como senderismo, paseos en barco y experiencias gastronómicas. Disfruta sus lagos, montañas, gastronomía única, y la experiencia de probar el famoso chocolate artesanal de la región. Ideal para amantes de la naturaleza, la aventura y el relax.",
       "lugarPartidaRegreso": "Aeropuerto de Bariloche",
       "horarioSalida": "A confirmar",
       "incluido": [
         "Traslados in/out",
         "3 noches de alojamiento con desayuno",
+        "Excursion en Catamaran por el lago Nahuel Huapi",
         "Excursiones: Circuito Chico, Cerro Catedral",
         "Guía local"
       ],
@@ -313,12 +314,19 @@
         "descripcion":"Regreso Traslado al aeropuerto para el vuelo de regreso."
       }
       ],
-      "ubicacion": {
+      "ubicacion": [{
+        "id":1,
         "nombre": "Hotel Soft",
-       
-        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96169.74603759978!2d-71.42231554470787!3d-41.12787685783888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b6fefc5658b%3A0x34560365211c3283!2sSoft%20Bariloche!5e0!3m2!1ses-419!2sar!4v1731274110596!5m2!1ses-419!2sar", 
+       "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96169.74603759978!2d-71.42231554470787!3d-41.12787685783888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b6fefc5658b%3A0x34560365211c3283!2sSoft%20Bariloche!5e0!3m2!1ses-419!2sar!4v1731274110596!5m2!1ses-419!2sar", 
         "link_externo": "https://maps.app.goo.gl/vfjM2ds9e6s3upqU6"
       },
+      {
+        "id":2,
+        "nombre": "Hotel Tres Reyes",
+       "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6010.159720794285!2d-71.31034102325908!3d-41.13278257133328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b72535761eb%3A0x644b8fe5b70e380!2sHotel%20Tres%20Reyes!5e0!3m2!1ses-419!2sar!4v1749167537354!5m2!1ses-419!2sar" , 
+        "link_externo": "https://maps.app.goo.gl/juJN38B69VTqD6ZR8"
+      }
+    ],
       "alojamientos": [
         {
           "hotel": "Nevada",
@@ -343,6 +351,14 @@
           "doble": 229000,
           "triple": 12000,
           "validoHasta": "2025-09-30"
+        },
+        {
+          "hotel": "Tres Reyes",
+          "categoria":4,
+          "single": 45000,
+          "doble": 229000,
+          "triple": 12000,
+          "validoHasta": "2025-09-30"
         }
       ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
@@ -351,10 +367,10 @@
       "id": 2,
       "destino": "Iguazú",
       "nombre": "Paquete turistico a cataratas del iguazu",
-      "descripcion": "Explora la majestuosidad de las Cataratas del Iguazú, una de las maravillas naturales del mundo. Sumérgete en la selva misionera a través de pasarelas y senderos que te llevan a vistas impresionantes del Salto San Martín, la Garganta del Diablo y muchos más. Incluye paseos en lancha bajo las cataratas, visitas al Parque Nacional Iguazú y contacto directo con la naturaleza en su máximo esplendor.",
+      "descripcion": "Explora la majestuosidad de las Cataratas del Iguazú, una de las maravillas naturales del mundo,  una experiencia que combina aventura y contacto con la naturaleza. Sumérgete en la selva misionera a través de pasarelas y senderos que te llevan a vistas impresionantes del Salto San Martín, la Garganta del Diablo y muchos más. ",
       "detalles" :{
         
-        "descripcionCompleta" :"Paquete para conocer las Cataratas del Iguazú, con alojamiento y excursiones.",
+        "descripcionCompleta" :"Incluye paseos en lancha bajo las cataratas, visitas al Parque Nacional Iguazú y contacto directo con la naturaleza en su máximo esplendor. Ofrece un recorrido completo por las Cataratas del Iguazú del lado argentino y brasileño, con actividades en la selva subtropical y una visita a la famosa Garganta del Diablo.",
       "lugarPartidaRegreso": "Aeropuerto de Iguazú",
       "horarioSalida": "A confirmar",
       "incluido": [
@@ -406,10 +422,31 @@
             }
         
       ],
-      "ubicacion": {
+      "ubicacion": [{
+        "id":1,
         "nombre": "Hotel St. George",
-        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57562.09677066103!2d-54.646117695777015!3d-25.617173540417095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944e77c07179dfbf%3A0x26fa1fc321d95611!2sBEER%20HOTEL%20Iguazu!5e0!3m2!1ses-419!2sar!4v1731274478344!5m2!1ses-419!2sar"
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57562.09677066103!2d-54.646117695777015!3d-25.617173540417095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x944e77c07179dfbf%3A0x26fa1fc321d95611!2sBEER%20HOTEL%20Iguazu!5e0!3m2!1ses-419!2sar!4v1731274478344!5m2!1ses-419!2sar",
+        "link_externo":"https://maps.app.goo.gl/a1PWKeWpTH7J6eja9"
       },
+    {
+      "id":2,
+        "nombre": "Hotel Sol Cataratas",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.9796553953565!2d-54.56334472377368!3d-25.605592277450384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f693b3feabb145%3A0x55e61862b44f190b!2sHotel%20Sol%20Cataratas!5e0!3m2!1ses-419!2sar!4v1749165494052!5m2!1ses-419!2sar",
+        "link_externo":"https://maps.app.goo.gl/Hz8R3CK4Wu25iKSE8"
+    },
+  {
+    "id":3,
+    "nombre":"Hotel Mercure",
+    "maps_url":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.8143622162356!2d-54.5545003898793!3d-25.611084177352787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f693bbc5611fb7%3A0x395d75bf5ec1d251!2sMercure%20Iguazu%20Hotel%20Iru!5e0!3m2!1ses-419!2sar!4v1749183106093!5m2!1ses-419!2sar",
+    "link_externo":"https://maps.app.goo.gl/R4EkLBBNwsSPvBAD9"
+  },
+  {
+    "id":4,
+    "nombre":"Hotel Gran Melia",
+    "maps_url":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.73961361162!2d-54.44792592377177!3d-25.679924977403438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f6ea6550005051%3A0x7fa1b16f07886fe3!2sGran%20Melia%20Iguazu!5e0!3m2!1sfr!2sar!4v1749267918594!5m2!1sfr!2sar",
+    "link_externo":"https://maps.app.goo.gl/FfpnabrWc8BYYuo27"
+  }
+  ],
       "alojamientos": [
         {
           "hotel": "St. George",
@@ -459,10 +496,10 @@
       "id": 3,
       "destino": "Mendoza",
       "nombre": "Paquete turistico a Mendoza",
-      "descripcion": "Vive una experiencia inolvidable en Mendoza, tierra del sol y del buen vino. Recorre los viñedos al pie de la Cordillera de los Andes, participa en degustaciones en bodegas de renombre y disfruta de la exquisita gastronomía local. Además, aventúrate en actividades como rafting, senderismo o ascensos al Aconcagua, el pico más alto de América.",
+      "descripcion": "Vive una experiencia inolvidable en Mendoza, tierra del sol y del buen vino. Este programa te invita a descubrir Mendoza de una forma auténtica y emocionante, sumergiéndote en su cultura del vino, sus paisajes naturales y su rica tradición. ",
       "detalles": {
         
-        "descripcionCompleta" :"Disfrutá Mendoza con city tour y visitas a bodegas. Ideal para amantes del vino.",
+        "descripcionCompleta" :"Disfrutá Mendoza con city tour y visitas a bodegas. Ideal para amantes del vino. Recorre los viñedos al pie de la Cordillera de los Andes, participa en degustaciones en bodegas de renombre y disfruta de la exquisita gastronomía local. Además, aventúrate en actividades como rafting, senderismo o ascensos al Aconcagua, el pico más alto de América.",
       "lugarPartidaRegreso": "Aeropuerto de Mendoza",
       "horarioSalida": "A confirmar",
       "incluido": [
@@ -507,10 +544,19 @@
         "descripcion": "Traslado al aeropuerto o terminal en el horario acordado para el regreso."
       }
       ],
-      "ubicacion": {
-        "nombre": "Hotel Cordon del Plata",
-        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53609.11760382558!2d-68.89971884382429!3d-32.883098697403085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09f2a1cf7edf%3A0x203cb49aa9fd66ad!2sDakar%20Hoteles!5e0!3m2!1ses-419!2sar!4v1731273189196!5m2!1ses-419!2sar"
+      "ubicacion":[ {
+        "id":1,
+        "nombre": "Hotel Dakar",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53609.11760382558!2d-68.89971884382429!3d-32.883098697403085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09f2a1cf7edf%3A0x203cb49aa9fd66ad!2sDakar%20Hoteles!5e0!3m2!1ses-419!2sar!4v1731273189196!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/WJg7NZLjJNgEn1tm6"
       },
+       {
+        "id":2,
+        "nombre": "Hotel Cordon del plata",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6700.94410493356!2d-68.84186462355885!3d-32.88568537361842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091eb923bc2d%3A0x48276404eecb679c!2sCordon%20Del%20Plata!5e0!3m2!1ses-419!2sar!4v1749092901793!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/C1czhbNtk5rNVrmp6"
+      }
+    ],
       "alojamientos": [
         {
           "hotel": "Cordon del Plata",
@@ -562,10 +608,10 @@
       "id": 4,
       "destino": "Córdoba",
       "nombre": "Paquete turistico a Cordoba",
-      "descripcion": "Descubre la esencia de Córdoba, una provincia que combina historia, naturaleza y cultura. Pasea por las sierras, visita encantadores pueblos como Villa General Belgrano o La Cumbrecita, y conoce el legado jesuítico en su capital. Ideal para disfrutar de caminatas, actividades al aire libre y una vibrante vida cultural.",
+      "descripcion": "Este programa te invita a disfrutar Córdoba de una manera diferente, descubriendo la esencia de Córdoba, una provincia que combina historia, naturaleza y cultura. ",
       "detalles": {
         
-        "descripcionCompleta" :"Este programa invita a disfrutar Córdoba de una manera diferente, descubriendo una ciudad pujante y divertida. Incluye City BIKE tour o City Tour convencional.",
+        "descripcionCompleta" :"Pasea por las sierras, visita encantadores pueblos como Villa General Belgrano o La Cumbrecita, y conoce el legado jesuítico en su capital. Ideal para disfrutar de caminatas, actividades al aire libre y una vibrante vida cultural. Incluye City BIKE tour o City Tour convencional.",
       "lugarPartidaRegreso": "Aeropuerto Internacional Córdoba",
       "horarioSalida": "A confirmar",
       "incluido": [
@@ -608,10 +654,18 @@
         "descripcion": "Traslado al aeropuerto o terminal en horario acordado."
       }
       ],
-      "ubicacion": {
+      "ubicacion": [{
+        "id":1,
         "nombre": "Hotel Sussex",
-        "maps_url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27238.77728871434!2d-64.2069308!3d-31.4183368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b559b42b7%3A0x5692ff45c3581207!2sHotel%20Sussex!5e0!3m2!1ses-419!2sar!4v1731186921997!5m2!1ses-419!2sar"
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d27238.77728871434!2d-64.2069308!3d-31.4183368!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a29b559b42b7%3A0x5692ff45c3581207!2sHotel%20Sussex!5e0!3m2!1ses-419!2sar!4v1731186921997!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/3FjbpfLRif1eR4QS6"
       },
+      {
+    "id":2,
+        "nombre": "Hotel Kube Apart",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3404.7999569271487!2d-64.1965673236059!3d-31.419637174260284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a2874caaa40b%3A0x44e29db80ed391af!2sKube%20Apartments!5e0!3m2!1ses-419!2sar!4v1749165320183!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/cd972DUbL9Zf28id7"
+      }],
       "alojamientos": [
         {
           "hotel": "AZUR SUSSEX",
@@ -660,10 +714,10 @@
       "id": 5,
       "destino": "Buenos Aires",
       "nombre": "Paquete Turístico a Buenos Aires",
-      "descripcion": "Descubre Buenos Aires explorando su vibrante vida urbana y rica historia cultural. Incluye City Bike Tour y opción de City Tour tradicional en bus.",
+      "descripcion": "Descubre Buenos Aires explorando su vibrante vida urbana y rica historia cultural. Una ciudad llena de energía, historia y modernidad. ",
       "detalles":{
         
-        "descripcionCompleta" :"Descubre Buenos Aires explorando su vibrante vida urbana y rica historia cultural. Incluye City Bike Tour y opción de City Tour tradicional en bus.",
+        "descripcionCompleta" :"Este programa te invita a descubrir Buenos Aires ,con una gran variedad de actividades para disfrutar en pareja, en familia, con amigos o conociendo nuevos viajeros. Un recorrido exclusivo por la ciudad, ¡EN BICICLETA! Pedaleando por sus icónicas avenidas y plazas mientras descubres la historia y cultura de la ciudad de manera interactiva.Incluye City Bike Tour y opción de City Tour tradicional en bus.",
       "lugarPartidaRegreso": "Aeropuerto Internacional Ministro Pistarini (Ezeiza)",
       "horarioSalida": "A confirmar",
       "incluido": [
@@ -706,10 +760,17 @@
           "descripcion": "Día Libre y Regreso Mañana libre para seguir explorando Buenos Aires, hacer compras en sus tiendas de diseño, visitar algún museo o recorrer más barrios. Traslado al aeropuerto o terminal de buses en el horario acordado para el regreso a su ciudad de origen."
     }
       ],
-      "ubicacion": {
-        "nombre": "Hotel S Isidro",
-        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13157.159841586199!2d-58.52913342283205!3d-34.470167800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb030e4fcceaf%3A0x6bcfec1e0911a096!2sHotel%20Alto%20San%20Isidro!5e0!3m2!1ses-419!2sar!4v1731272250738!5m2!1ses-419!2sar"
-      },
+      "ubicacion": [{
+        "id":1,
+        "nombre": "Hotel Alto San Isidro",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13157.159841586199!2d-58.52913342283205!3d-34.470167800000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb030e4fcceaf%3A0x6bcfec1e0911a096!2sHotel%20Alto%20San%20Isidro!5e0!3m2!1ses-419!2sar!4v1731272250738!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/xoqhAaVBvaURsA4x9"
+      },{
+        "id":3,
+        "nombre": "Hotel Lido",
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22090.03227630906!2d-58.9226128574339!3d-34.611672404589385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc914535e540f1%3A0xebc4838fef7adcea!2sHOTEL%20LIDO!5e0!3m2!1ses-419!2sar!4v1749165089477!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/N3Dqw2sRdyzcna7H6"
+      }],
       "alojamientos": [
         {
           "hotel": "ALTO S. ISIDRO",
@@ -828,10 +889,24 @@
           "descripcion": "Regreso: Traslado al aeropuerto para el vuelo de regreso."
         }
       ],
-      "ubicacion": {
+      "ubicacion": [{
+        "id":1,
         "nombre": "Hotel Colonial Salta",
-        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115903.91022570255!2d-65.51303054598078!3d-24.795549591395865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3a34ded1f5b%3A0x3c80055903f3a9c4!2sHotel%20Colonial%20Salta!5e0!3m2!1ses-419!2sar!4v1731275195338!5m2!1ses-419!2sar"
+        "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115903.91022570255!2d-65.51303054598078!3d-24.795549591395865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc3a34ded1f5b%3A0x3c80055903f3a9c4!2sHotel%20Colonial%20Salta!5e0!3m2!1ses-419!2sar!4v1731275195338!5m2!1ses-419!2sar",
+         "link_externo":"https://maps.app.goo.gl/zh56tWKoCqNhV3258"
+      },{
+    "id":2,
+    "nombre":"Hotel La Secundina",
+    "maps_url":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115747.7094168816!2d-65.44319806857808!3d-24.962170422961986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941be7659dac82fb%3A0xe8b6337904d417eb!2sLa%20Secundina%20-%20hotel%20de%20campo!5e0!3m2!1ses-419!2sar!4v1749162788938!5m2!1ses-419!2sar",
+    "link_externo":"https://maps.app.goo.gl/WXf3a5KTqcvxRxM59"
       },
+      {
+      "id":3,
+      "nombre":" Portozuelo Hotel ",
+      "maps_url":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.0128626418673!2d-65.39387592379448!3d-24.795013077972108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x941bc382dddf2533%3A0x42ede23e2fd18570!2sPortezuelo%20Nuevo%20Hotel!5e0!3m2!1ses-419!2sar!4v1749164785256!5m2!1ses-419!2sar",
+      "link_externo":"https://maps.app.goo.gl/rNK6aKUjv5PnBm3Z8"
+        }
+    ],
       "alojamientos":[
           {
             "hotel": "COLONIAL SALTA",
@@ -875,7 +950,7 @@
           }
         ],
   
-        "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
+        "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias."
       }
     ]
     }

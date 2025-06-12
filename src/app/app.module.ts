@@ -15,13 +15,13 @@ import { ComentariosComponent } from './components/comentarios/comentarios.compo
 import { HomeComponent } from './components/pages/home/home.component';
 import { NavbarComponent } from './components/pages/navbar/navbar.component';
 
-import { PaquetesComponent } from './paquetes/paquetes.component';
+/*import { PaquetesComponent } from './paquetes/paquetes.component';
 import { BuenosAiresComponent } from './buenos-aires/buenos-aires.component';
 import { MendozaComponent } from './mendoza/mendoza.component';
 import { CordobaComponent } from './cordoba/cordoba.component';
 import { BarilocheComponent } from './bariloche/bariloche.component';
 import { IguazuComponent } from './iguazu/iguazu.component';
-import { SaltaComponent } from './salta/salta.component';
+import { SaltaComponent } from './salta/salta.component';*/
 import { Paquetes2ListComponent } from './components/pages/paquetes2-list/paquetes2-list.component';
 import { Paquetes2DetalleComponent } from './components/pages/paquete-detalle/paquete-detalle.component';
 import { MapaPaqueteComponent } from './mapa-paquete/mapa-paquete.component';
@@ -36,13 +36,13 @@ import { MapaPaqueteComponent } from './mapa-paquete/mapa-paquete.component';
     ComentariosComponent,
     HomeComponent,
     NavbarComponent,
-    PaquetesComponent,
+   /* PaquetesComponent,
     BuenosAiresComponent,
     MendozaComponent,
     CordobaComponent,
     BarilocheComponent,
     IguazuComponent,
-    SaltaComponent,
+    SaltaComponent,*/
     Paquetes2ListComponent,
     Paquetes2DetalleComponent,
     MapaPaqueteComponent,
