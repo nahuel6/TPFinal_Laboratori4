@@ -1,5 +1,42 @@
 .welcome-message {
   position: fixed;
+  top: 90px; /* más arriba para no solaparse con navbar */
+  left: 10%; /* centrado horizontal */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7); /* corregido rgba */
+  color: #e64a19;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; /* mejora en pantallas pequeñas */
+  gap: 10px;
+  text-align: center;
+}
+
+.welcome-message h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.log-out {
+  background-color: #e64a19;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.log-out:hover {
+  background-color: #ff3333;
+}
+/*
+.welcome-message {
+  position: fixed;
   top: 120px;
   left: 10%;
   color: #e64a19;
@@ -30,3 +67,4 @@
 .log-out:hover {
   background-color: #ff3333;
 }
+  */
