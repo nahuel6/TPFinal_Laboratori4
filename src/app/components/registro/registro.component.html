@@ -3,25 +3,76 @@
 
   <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
     <div>
-      <label for="nombre">Nombre:</label>
-      <input id="nombre" formControlName="nombre" required>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" formControlName="nombre" required>
     </div>
     <div>
-      <label for="apellido">Apellido:</label>
-      <input id="apellido" formControlName="apellido" required>
+        <label for="apellido">Apellido:</label>
+        <input id="apellido" formControlName="apellido" required>
     </div>
     <div>
-      <label for="dni">DNI:</label>
-      <input id="dni" formControlName="dni" required>
+        <label for="dni">DNI:</label>
+        <input id="dni" formControlName="dni" required>
     </div>
     <div>
-      <label for="email">Email:</label>
-      <input id="email" formControlName="email" required type="email">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" required type="email">
     </div>
     <div>
       <label for="password">Contraseña:</label>
-      <input id="password" formControlName="password" required type="password">
+      <div class="password-container">
+        <input
+          [type]="mostrarPassword ? 'text' : 'password'"
+          formControlName="password"
+          id="password"
+          required
+        />
+        <button type="button" (click)="togglePassword()" class="toggle-password">
+          {{ mostrarPassword ? '🙈' : '👁️' }}
+        </button>
+      </div>
+    
+      <label for="confirmPassword">Confirmar Contraseña:</label>
+      <div class="password-container"> 
+      <input
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        required
+        [type]="mostrarConfirmPassword ? 'text' : 'password'"
+      />
+      <button type="button" (click)="toggleConfirmPassword()" class="toggle-password">
+        {{ mostrarConfirmPassword ? '🙈' : '👁️' }}
+      </button>
     </div>
+      <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.hasError('required')" class="error">
+        La contraseña es obligatoria.
+      </div>
+      <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.hasError('minlength')" class="error">
+        La contraseña debe tener al menos 6 caracteres.
+      </div>
+      <div *ngIf="registroForm.hasError('passwordMismatch') && registroForm.touched" style="color: red;">
+        Las contraseñas no coinciden.
+      </div>
+    </div>
+    <!--
+    <div>
+        <label for="password">Contraseña:</label>
+        <input id="password" formControlName="password"  type="password" required>
+    
+        <label for="confirmPassword">Confirmar Contraseña:</label>
+        <input id="confirmPassword" formControlName="confirmPassword" required type="password">
+        <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.hasError('required')" class="error">
+        La contraseña es obligatoria.
+        </div>
+        <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.hasError('minlength')" class="error">
+        La contraseña debe tener al menos 6 caracteres.
+        </div>
+    
+        <div *ngIf="registroForm.hasError('passwordMismatch') && registroForm.touched" style="color: red;">
+        Las contraseñas no coinciden.
+        </div>
+    </div>
+     -->
     <button type="submit" [disabled]="registroForm.invalid">Registrar</button>
   </form>
   <p>

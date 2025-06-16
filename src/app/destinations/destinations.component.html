@@ -1,10 +1,11 @@
 
 <div class="content">
 
-      <h2 class="title">Destinos Disponibles</h2>
+      
   
       <!-- Contenedor para botones e imágenes -->
       <div class="destinations-container">
+        <h2 class="title">Destinos Disponibles</h2>
         <div class="destinations">
           <button (click)="fetchImage('Buenos Aires Capital Federal')">Buenos Aires</button>
           <button (click)="fetchImage('Mendoza')">Mendoza</button>
@@ -24,7 +25,7 @@
           <p>{{ description }}</p>
         </div>
         <div *ngIf="selectedDestinationId">
-          <button (click)="showComments = !showComments">
+          <button class="toggle-comments" (click)="showComments = !showComments">
             {{ showComments ? 'Ocultar Reseñas' : 'Ver Reseñas' }}
           </button>
         

@@ -4,11 +4,12 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-color:  rgba(0, 0, 0, 0.6);
  /* padding-top: 90px; /* Ajustado a la altura del navbar */
 }
 
 .titulo-seccion {
-  color: white;
+  color:#ff5722;
   font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
