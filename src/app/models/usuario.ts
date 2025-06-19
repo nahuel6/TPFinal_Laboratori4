@@ -4,5 +4,7 @@ export interface Usuario {
   dni: string;
   email: string;
   password: string;
-  id?: number; 
+  id?: number;
+  rol: string;
+  reservas:{}[]; 
 }

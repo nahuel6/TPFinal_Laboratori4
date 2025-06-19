@@ -24,7 +24,8 @@
       "dni": "12345678",
       "email": "juan.perez@example.com",
       "password": "password123",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 2,
@@ -33,7 +34,8 @@
       "dni": "87654321",
       "email": "maria.gomez@example.com",
       "password": "password456",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "nombre": "pedro",
@@ -42,7 +44,8 @@
       "email": "rodriguez@gmail.com",
       "password": "121212",
       "id": 3,
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "nombre": "roberto",
@@ -51,7 +54,24 @@
       "email": "rb@gmail.com",
       "password": "1212",
       "id": 4,
-      "rol" : "admin"
+      "rol": "admin",
+      "reservas": [
+        {
+          "paqueteId": 2,
+          "fecha": "2025-07-15",
+          "precio": 150000
+        },
+        {
+          "paqueteId": 1,
+          "fecha": "2025-07-15",
+          "precio": 150000
+        },
+        {
+          "paqueteId": 2,
+          "fecha": "2025-07-15",
+          "precio": 150000
+        }
+      ]
     },
     {
       "nombre": "nahuel",
@@ -60,7 +80,8 @@
       "email": "nr@gmail.com",
       "password": "1212",
       "id": 5,
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 6,
@@ -69,7 +90,8 @@
       "dni": "12345678",
       "email": "juan.perez@example.com",
       "password": "password123",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 7,
@@ -78,7 +100,8 @@
       "dni": "87654321",
       "email": "maria.gomez@example.com",
       "password": "password456",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 8,
@@ -87,7 +110,8 @@
       "dni": "34343423",
       "email": "pedro.rodriguez@example.com",
       "password": "1234abcd",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 9,
@@ -96,7 +120,8 @@
       "dni": "23344567",
       "email": "roberto.gonzalez@example.com",
       "password": "1234password",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 10,
@@ -105,7 +130,8 @@
       "dni": "99887766",
       "email": "laura.martinez@example.com",
       "password": "laura123",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 11,
@@ -114,7 +140,8 @@
       "dni": "55667788",
       "email": "carlos.fernandez@example.com",
       "password": "carlos2024",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 12,
@@ -123,7 +150,8 @@
       "dni": "12398765",
       "email": "ana.lopez@example.com",
       "password": "ana@2024",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "id": 13,
@@ -132,7 +160,8 @@
       "dni": "99887755",
       "email": "luis.sanchez@example.com",
       "password": "luis1234",
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "nombre": "agustin",
@@ -141,7 +170,8 @@
       "email": "agus@gmail.com",
       "password": "1212",
       "id": 14,
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "nombre": "Nica",
@@ -150,7 +180,8 @@
       "email": "abc@gmail.com",
       "password": "asd123",
       "id": 15,
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "nombre": "Ernesto",
@@ -159,7 +190,14 @@
       "email": "catalan@gmail.com",
       "password": "",
       "id": 16,
-      "rol": "user"
+      "rol": "user",
+      "reservas": [
+        {
+          "paqueteId": 1,
+          "mes": "Julio",
+          "precio": 150000
+        }
+      ]
     },
     {
       "nombre": "Ernesto",
@@ -168,7 +206,8 @@
       "email": "cata@gmail.com",
       "password": "1234",
       "id": 17,
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     },
     {
       "nombre": "cristiano",
@@ -177,7 +216,8 @@
       "email": "ronaldoo@gmail.com",
       "password": "1414",
       "id": 19,
-      "rol": "user"
+      "rol": "user",
+      "reservas": []
     }
   ],
   "comentarios": [
@@ -377,7 +417,8 @@
           "single": 40000,
           "doble": 20000,
           "triple": 18000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Cristal",
@@ -385,7 +426,8 @@
           "single": 45000,
           "doble": 229000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Soft",
@@ -393,7 +435,8 @@
           "single": 45000,
           "doble": 229000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Tres Reyes",
@@ -401,7 +444,19 @@
           "single": 45000,
           "doble": 229000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "cantidadReservas": 2,
+      "fechasPrecios": [
+        {
+          "mes": "Julio",
+          "precio": 150000
+        },
+        {
+          "mes": "Agosto",
+          "precio": 160000
         }
       ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
@@ -497,7 +552,8 @@
           "single": 25000,
           "doble": 122000,
           "triple": 10000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Mercure",
@@ -505,7 +561,8 @@
           "single": 30000,
           "doble": 145000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Beer Hotel",
@@ -513,7 +570,8 @@
           "single": 30000,
           "doble": 145000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Sol Cataratas",
@@ -521,7 +579,8 @@
           "single": 30000,
           "doble": 145000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "El libertador",
@@ -529,7 +588,19 @@
           "single": 30000,
           "doble": 145000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
+        }
+      ],
+      "cantidadReservas": 3,
+      "fechasPrecios": [
+        {
+          "mes": "Julio",
+          "precio": 150000
+        },
+        {
+          "mes": "Agosto",
+          "precio": 160000
         }
       ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
@@ -643,6 +714,17 @@
           "validoHasta": "2025-09-30"
         }
       ],
+      "cantidadReservas": 0,
+      "fechasPrecios": [
+        {
+          "mes": "Julio",
+          "precio": 150000
+        },
+        {
+          "mes": "Agosto",
+          "precio": 160000
+        }
+      ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
@@ -751,6 +833,17 @@
           "validoHasta": "2025-09-30"
         }
       ],
+      "cantidadReservas": 0,
+      "fechasPrecios": [
+        {
+          "mes": "Julio",
+          "precio": 150000
+        },
+        {
+          "mes": "Agosto",
+          "precio": 160000
+        }
+      ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
@@ -857,6 +950,17 @@
           "doble": 9150,
           "triple": 7199,
           "validoHasta": "2025-09-30"
+        }
+      ],
+      "cantidadReservas": 0,
+      "fechasPrecios": [
+        {
+          "mes": "Julio",
+          "precio": 150000
+        },
+        {
+          "mes": "Agosto",
+          "precio": 160000
         }
       ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
@@ -980,6 +1084,17 @@
           "doble": 9150,
           "triple": 7199,
           "validoHasta": "2025-09-30"
+        }
+      ],
+      "cantidadReservas": 0,
+      "fechasPrecios": [
+        {
+          "mes": "Julio",
+          "precio": 150000
+        },
+        {
+          "mes": "Agosto",
+          "precio": 160000
         }
       ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias."

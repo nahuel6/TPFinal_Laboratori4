@@ -114,6 +114,8 @@ export class AuthService {
   clearUserName() {
     this.userNameSource.next(null);
   }
-  
+  public getUsuario(): Usuario | null {
+    return this.getUsuarioDesdeLocalStorage();
+  }
 }
 
