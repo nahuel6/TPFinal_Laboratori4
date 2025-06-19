@@ -7,6 +7,7 @@
       <button (click)="setTab('itinerario')" [class.activo]="activeTab === 'itinerario'">Itinerario</button>
       <button (click)="setTab('ubicacion')" [class.activo]="activeTab === 'ubicacion'">Ubicación</button>
       <button (click)="setTab('alojamiento')" [class.activo]="activeTab === 'alojamiento'">Alojamiento</button>
+      <button (click)="setTab('fechasPrecios')" [class.activo]="activeTab === 'fechasPrecios'">Fechas</button>
     </div>
   
     <div class="tab-content">
@@ -85,30 +86,9 @@
                 Ver en mapa externo
               </a>
           </div>
+          
       </div>
 
-<!-- 
-       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
-        <h3 class="ubicacion-titulo">Ubicación</h3>
-      
-        <div *ngIf="paquete.ubicacion?.nombre" class="ubicacion-info">
-          <p class="ubicacion-nombre">{{ paquete.ubicacion.nombre }}</p>
-        </div>
-      
-        <app-mapa-paquete
-          *ngIf="paquete.ubicacion?.maps_url"
-          [mapsUrl]="paquete.ubicacion.maps_url">
-        </app-mapa-paquete>
-      
-        <a *ngIf="paquete.ubicacion?.link_externo"
-           [href]="paquete.ubicacion.link_externo"
-           target="_blank"
-           class="mapa-externo-link">
-          Ver en mapa externo
-        </a>
-      </div>
-  
--->
 
       <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete">
         <h3>Opciones de Alojamiento</h3>
@@ -124,4 +104,21 @@
         <p class="nota-importante">{{paquete.aclaracion}}</p>
       </div>
     </div>
+
+    <div *ngIf="activeTab === 'fechasPrecios'" class="detalle-fechas">
+      <h3>Fechas disponibles:</h3>
+      <div class="calendar-wrapper">
+      <full-calendar [options]="calendarOptions"></full-calendar>
+    </div>
+      <div *ngIf="fechaSeleccionada" class="info-seleccion">
+        <p><strong>Fecha seleccionada:</strong> {{ fechaSeleccionada.fecha }}</p>
+        <p><strong>Precio:</strong> {{ fechaSeleccionada.precio | currency:'ARS' }}</p>
+    
+        <button *ngIf="!reservaConfirmada" (click)="confirmarReserva()">Reservar</button>
+        <div *ngIf="reservaConfirmada" class="mensaje-reserva">
+          ✅ ¡Reserva realizada con éxito!
+        </div>
+      </div>
+    </div>
+
   </div>
