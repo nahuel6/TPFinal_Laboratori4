@@ -21,7 +21,7 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
   private authSubscription: Subscription = new Subscription();
   constructor(
     private comentariosService: ComentariosService,
-    private authService: AuthService,
+    public authService: AuthService,
     private http: HttpClient
     
   ) {}
@@ -73,8 +73,35 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
       console.log('Comentarios con nombres:', this.comentarios);
     }
   }
+  agregarComentario(): void {
+    const comentarioLimpio = this.nuevoComentario.trim();
+    if (!comentarioLimpio || !this.usuarioLogueado) return;
+  
+    const comentario: Comentario = {
+      userId: this.authService.getUserId() ?? 0,
+      destinationId: this.destinationId,
+      content: comentarioLimpio,
+      nombreUsuario: this.authService.getUserName() || "",
+      //fecha: new Date().toISOString()
+    };
+  
+    this.http.post('http://localhost:3000/comentarios', comentario).subscribe(() => {
+      this.comentarios.push(comentario);
+      this.nuevoComentario = '';
+    });
+  }
 
+  eliminarComentario(comentario: Comentario): void {
+    const confirmar = confirm(`¿Estás seguro de que deseas eliminar este comentario?`);
+    if (!confirmar) return;
+  
+    this.http.delete(`http://localhost:3000/comentarios/${comentario.id}`).subscribe(() => {
+      // Filtrar el comentario eliminado del array local
+      this.comentarios = this.comentarios.filter(c => c.id !== comentario.id);
+    });
+  }
 
+/*
   agregarComentario(): void {
     if (this.nuevoComentario.trim() && this.usuarioLogueado) { 
       const comentario: Comentario = {
@@ -92,5 +119,5 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
       });
     }
   }
-
+*/
  }

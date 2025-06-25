@@ -30,3 +30,4 @@ export class ComentariosService {
     );
   }
 }
+//tengo un componente comentarios en donde si el usuario esta logueado puede realizar comentarios

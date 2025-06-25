@@ -188,16 +188,49 @@ div.ubicacion-select {
 
 .detalle-fechas h3 {
   color: #e64a19;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 16px;
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  animation: fadeInUp 0.6s ease;
+}
+
+.detalle-fechas h3::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #e64a19;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
 }
 .detalle-fechas strong {
-color: #e64a19;
+  color: #e64a19;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 8px;
 }
+
 .detalle-fechas p {
   font-size: 1.1rem;
-  margin: 10px 0;
-  color: #cfc206;
+  margin: 8px 0;
+  color: #333;
+  background-color: rgba(255, 243, 224, 0.6);
+  padding: 8px 12px;
+  border-left: 4px solid #e64a19;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.detalle-fechas p:hover {
+  background-color: rgba(255, 224, 178, 0.8);
 }
 
 .fc { 

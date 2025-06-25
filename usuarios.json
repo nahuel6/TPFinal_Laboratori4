@@ -70,6 +70,11 @@
           "paqueteId": 2,
           "fecha": "2025-07-15",
           "precio": 150000
+        },
+        {
+          "paqueteId": 6,
+          "fecha": "2025-07-10",
+          "precio": 150000
         }
       ]
     },
@@ -313,24 +318,10 @@
     },
     {
       "userId": 4,
-      "destinationId": "1",
-      "content": "Me encanto el lugar!",
-      "nombreUsuario": "roberto",
-      "id": 16
-    },
-    {
-      "userId": 4,
       "destinationId": "6",
       "content": "Muy lindo lugar, volvere pronto!",
       "nombreUsuario": "roberto",
       "id": 17
-    },
-    {
-      "userId": 4,
-      "destinationId": "3",
-      "content": "Hermosos lugares de cordoba!",
-      "nombreUsuario": "roberto",
-      "id": 18
     },
     {
       "userId": 15,
@@ -451,11 +442,11 @@
       "cantidadReservas": 2,
       "fechasPrecios": [
         {
-          "mes": "Julio",
+          "fecha": "2025-07-10",
           "precio": 150000
         },
         {
-          "mes": "Agosto",
+          "fecha": "2025-08-20",
           "precio": 160000
         }
       ],
@@ -595,11 +586,11 @@
       "cantidadReservas": 3,
       "fechasPrecios": [
         {
-          "mes": "Julio",
+          "fecha": "2025-07-10",
           "precio": 150000
         },
         {
-          "mes": "Agosto",
+          "fecha": "2025-08-20",
           "precio": 160000
         }
       ],
@@ -717,11 +708,11 @@
       "cantidadReservas": 0,
       "fechasPrecios": [
         {
-          "mes": "Julio",
+          "fecha": "2025-07-10",
           "precio": 150000
         },
         {
-          "mes": "Agosto",
+          "fecha": "2025-08-20",
           "precio": 160000
         }
       ],
@@ -836,11 +827,11 @@
       "cantidadReservas": 0,
       "fechasPrecios": [
         {
-          "mes": "Julio",
+          "fecha": "2025-07-10",
           "precio": 150000
         },
         {
-          "mes": "Agosto",
+          "fecha": "2025-08-20",
           "precio": 160000
         }
       ],
@@ -955,11 +946,11 @@
       "cantidadReservas": 0,
       "fechasPrecios": [
         {
-          "mes": "Julio",
+          "fecha": "2025-07-10",
           "precio": 150000
         },
         {
-          "mes": "Agosto",
+          "fecha": "2025-08-20",
           "precio": 160000
         }
       ],
@@ -1051,7 +1042,8 @@
           "single": 31239,
           "doble": 15675,
           "triple": 14350,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": null
         },
         {
           "hotel": "PORTOZUELO HOTEL",
@@ -1059,7 +1051,8 @@
           "single": "$23900",
           "doble": "$12780",
           "triple": "Consultar",
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": null
         },
         {
           "hotel": "HOUSE APART",
@@ -1067,7 +1060,8 @@
           "single": 19744,
           "doble": 99280,
           "triple": 33000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": null
         },
         {
           "hotel": "HOTEL HAYBAL",
@@ -1075,7 +1069,8 @@
           "single": 21770,
           "doble": 11953,
           "triple": null,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": null
         },
         {
           "hotel": "LA SECUNDIDA",
@@ -1083,17 +1078,18 @@
           "single": 15300,
           "doble": 9150,
           "triple": 7199,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": null
         }
       ],
-      "cantidadReservas": 0,
+      "cantidadReservas": 1,
       "fechasPrecios": [
         {
-          "mes": "Julio",
+          "fecha": "2025-07-10",
           "precio": 150000
         },
         {
-          "mes": "Agosto",
+          "fecha": "2025-08-20",
           "precio": 160000
         }
       ],

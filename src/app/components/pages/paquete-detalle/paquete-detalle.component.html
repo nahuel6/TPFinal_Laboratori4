@@ -7,7 +7,7 @@
       <button (click)="setTab('itinerario')" [class.activo]="activeTab === 'itinerario'">Itinerario</button>
       <button (click)="setTab('ubicacion')" [class.activo]="activeTab === 'ubicacion'">Ubicación</button>
       <button (click)="setTab('alojamiento')" [class.activo]="activeTab === 'alojamiento'">Alojamiento</button>
-      <button (click)="setTab('fechasPrecios')" [class.activo]="activeTab === 'fechasPrecios'">Fechas</button>
+      <button (click)="setTab('fechasPrecios')" [class.activo]="activeTab === 'fechasPrecios'">Fechas Y Precios</button>
     </div>
   
     <div class="tab-content">
@@ -106,7 +106,7 @@
     </div>
 
     <div *ngIf="activeTab === 'fechasPrecios'" class="detalle-fechas">
-      <h3>Fechas disponibles:</h3>
+      <h3>Proximas salidas:</h3>
       <div class="calendar-wrapper">
       <full-calendar [options]="calendarOptions"></full-calendar>
     </div>

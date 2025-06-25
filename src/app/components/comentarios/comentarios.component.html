@@ -18,10 +18,22 @@
           </div>
         </div>
       </div>
+      <div class="comentario-footer">
+        <button 
+          *ngIf="usuarioLogueado && comentario.userId === authService.getUserId()" 
+          (click)="eliminarComentario(comentario)">
+          🗑️ Eliminar
+        </button>
+      </div>
     </div>
-    <div *ngIf="usuarioLogueado">
+    <div *ngIf="usuarioLogueado" class="comentario-form">
+      <h4>Escribe tu comentario</h4>
       <textarea [(ngModel)]="nuevoComentario" placeholder="Escribe tu comentario aquí..." rows="3"></textarea>
       <button (click)="agregarComentario()">Enviar Comentario</button>
     </div>
+    <div *ngIf="!usuarioLogueado" class="comentario-login-msg">
+      <p>Iniciá sesión para dejar tu comentario.</p>
+    </div>
+    
   </div>
   
