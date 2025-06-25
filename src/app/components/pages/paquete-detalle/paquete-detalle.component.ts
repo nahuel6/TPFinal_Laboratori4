@@ -10,12 +10,14 @@ import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
 import { UsuarioService } from '../../../services/usuario.service';
 import interactionPlugin from '@fullcalendar/interaction';
+import { ViewEncapsulation } from '@angular/core';
 
 
 @Component({
   selector: 'app-paquetes2-detalle',
   templateUrl: './paquete-detalle.component.html',
-  styleUrls: ['./paquete-detalle.component.css']
+  styleUrls: ['./paquete-detalle.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class Paquetes2DetalleComponent implements OnInit {
   paquete: any;

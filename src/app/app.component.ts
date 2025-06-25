@@ -17,12 +17,16 @@ export class AppComponent implements OnInit {
     this.authService.userName$.subscribe(name => {
       this.userName = name;
     });
+
+
     const user = JSON.parse(localStorage.getItem('user') || 'null');
     if (this.authService.isAuthenticated()) {
-      this.userName = this.authService.getUserName();
+      this.authService.logout();
+    this.router.navigate(['/login']);
+    }else { this.userName = this.authService.getUserName();
   
     }
-    
+  
   }
 
   logout() {
