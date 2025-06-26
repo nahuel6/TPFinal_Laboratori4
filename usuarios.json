@@ -230,19 +230,22 @@
       "id": 1,
       "userId": 1,
       "destinationId": "1",
-      "content": "Hermoso lugar, definitivamente lo recomiendo."
+      "content": "Hermoso lugar, definitivamente lo recomiendo.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 2,
       "userId": 2,
       "destinationId": "2",
-      "content": "Los vinos y la vista de las montañas son maravillosos."
+      "content": "Los vinos y la vista de las montañas son maravillosos.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 3,
       "userId": 1,
       "destinationId": "1",
-      "content": "Gran experiencia cultural y gastronómica en Buenos Aires."
+      "content": "Gran experiencia cultural y gastronómica en Buenos Aires.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 4,
@@ -254,13 +257,15 @@
       "id": 5,
       "userId": 4,
       "destinationId": "3",
-      "content": "Lugares mágicos en Bariloche, con paisajes que quitan el aliento. Totalmente recomendable."
+      "content": "Lugares mágicos en Bariloche, con paisajes que quitan el aliento. Totalmente recomendable.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 6,
       "userId": 5,
       "destinationId": "4",
-      "content": "Iguazú es impresionante, las cataratas son un espectáculo de la naturaleza."
+      "content": "Iguazú es impresionante, las cataratas son un espectáculo de la naturaleza.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 7,
@@ -272,7 +277,8 @@
       "id": 8,
       "userId": 7,
       "destinationId": "5",
-      "content": "Mendoza tiene una belleza única, y los viñedos son espectaculares."
+      "content": "Mendoza tiene una belleza única, y los viñedos son espectaculares.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 9,
@@ -284,7 +290,8 @@
       "id": 10,
       "userId": 9,
       "destinationId": "2",
-      "content": "Me encantó la comida y la hospitalidad. Definitivamente volveré."
+      "content": "Me encantó la comida y la hospitalidad. Definitivamente volveré.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 11,
@@ -296,7 +303,8 @@
       "id": 12,
       "userId": 11,
       "destinationId": "2",
-      "content": "La región de Mendoza tiene unos vinos espectaculares, y la vista de los Andes es impresionante."
+      "content": "La región de Mendoza tiene unos vinos espectaculares, y la vista de los Andes es impresionante.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 13,
@@ -308,7 +316,8 @@
       "id": 14,
       "userId": 13,
       "destinationId": "4",
-      "content": "El parque nacional Iguazú es increíble, el paisaje y las cascadas son de otro mundo."
+      "content": "El parque nacional Iguazú es increíble, el paisaje y las cascadas son de otro mundo.",
+      "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
       "id": 15,
@@ -321,6 +330,7 @@
       "destinationId": "6",
       "content": "Muy lindo lugar, volvere pronto!",
       "nombreUsuario": "roberto",
+      "fecha": "2025-01-05T09:15:00.000Z",
       "id": 17
     },
     {
@@ -328,7 +338,24 @@
       "destinationId": "4",
       "content": "Me gusto mucho",
       "nombreUsuario": "Nica",
+      "fecha": "2024-12-10T14:30:00.000Z",
       "id": 19
+    },
+    {
+      "userId": 4,
+      "destinationId": "5",
+      "content": "Me encantó iguazu",
+      "nombreUsuario": "roberto",
+      "fecha": "2025-01-05T09:15:00.000Z",
+      "id": 20
+    },
+    {
+      "userId": 4,
+      "destinationId": "2",
+      "content": "Muy lindo mendoza!",
+      "nombreUsuario": "roberto",
+      "fecha": "2025-06-26T04:10:00.301Z",
+      "id": 21
     }
   ],
   "paquetes": [

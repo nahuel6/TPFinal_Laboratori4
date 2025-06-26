@@ -9,6 +9,7 @@ export interface Comentario {
   destinationId: string;
   content: string;
   nombreUsuario?: string;
+  fecha?: string;
 }
 
 @Injectable({
@@ -25,9 +26,23 @@ export class ComentariosService {
   }
 
   getComentariosPorDestino(destinationId: string): Observable<Comentario[]> {
+    return this.http.get<Comentario[]>(`${this.comentariosUrl}?destinationId=${destinationId}`);
+  }
+
+/*
+  getComentariosPorDestino(destinationId: string): Observable<Comentario[]> {
     return this.getComentarios().pipe(
       map(comentarios => comentarios.filter(comentario => comentario.destinationId === destinationId))
     );
   }
+*/
+
+  agregarComentario(comentario: Comentario): Observable<Comentario> {
+    return this.http.post<Comentario>(this.comentariosUrl, comentario);
+  }
+
+  eliminarComentario(id: number): Observable<any> {
+    return this.http.delete(`${this.comentariosUrl}/${id}`);
+  }
+
 }
-//tengo un componente comentarios en donde si el usuario esta logueado puede realizar comentarios

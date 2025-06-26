@@ -30,14 +30,16 @@ export class LoginComponent  {
   onLogin() {
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
-
+    const rutaDestino = localStorage.getItem('rutaPostLogin') || '/';
     
     this.authService.login(email, password).subscribe(
       (usuario: Usuario | null) => {
         if (usuario) {
           console.log('Login exitoso:', usuario);
           this.authService.setUserName(usuario.nombre);
-          this.router.navigate(['/']); 
+          //this.router.navigate(['/']); 
+          localStorage.removeItem('rutaPostLogin');
+          this.router.navigate([rutaDestino]);
           this.loginFailed = false;
         } else {
           console.log('Credenciales incorrectas');
