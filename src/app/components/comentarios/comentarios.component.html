@@ -8,7 +8,7 @@
         <div class="comentario-info">
           <div class="comentario-header">
             {{ comentario.nombreUsuario }} 
-            <!--<span class="fecha">{{ comentario.fecha | date:'short' }}</span>-->
+            <span class="fecha"> • {{ comentario.fecha | date: 'dd/MM/yyyy HH:mm' }}</span>
           </div>
           <div class="comentario-body">
             {{ comentario.content }}
@@ -32,7 +32,7 @@
       <button (click)="agregarComentario()">Enviar Comentario</button>
     </div>
     <div *ngIf="!usuarioLogueado" class="comentario-login-msg">
-      <p>Iniciá sesión para dejar tu comentario.</p>
+      <p (click)="goToLogin()" class="clickable-text">Iniciá sesión para dejar tu comentario.</p>
     </div>
     
   </div>

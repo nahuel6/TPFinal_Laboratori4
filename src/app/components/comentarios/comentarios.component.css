@@ -109,111 +109,19 @@
   margin-top: 20px;
   font-size: 0.95rem;
 }
+.clickable-text {
+  color: #ffffff;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.clickable-text:hover {
+  color: #ffd700;
+}
 
-/*
-.comentarios-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    padding: 20px;
-    background-color: orangered;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-   
-  }
-  
-  
-  .comentario {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  
-  .comentario-header {
-    font-weight: bold;
-    font-size: 16px;
-    color: #333;
-  }
-  
- 
-  .comentario-body {
-    margin-top: 10px;
-    color: #555;
-    font-size: 14px;
-  }
-  
-  
-  .comentario-footer {
-    text-align: right;
-    color: #999;
-    font-size: 12px;
-    margin-top: 10px;
-  }
-  .comentarios {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #e8f5e9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
- 
-
-  .comentario-form {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .comentario-form textarea {
-    width: 100%;
-    border: 1px solid #ccc;
-    padding: 8px;
-    border-radius: 6px;
-    font-family: inherit;
-  }
-  
-  .comentario-form button {
-    margin-top: 10px;
-    background-color: #e64a19;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .comentario-form button:hover {
-    background-color: #bf360c;
-  }
-
-  .comentario-login-msg p {
-    font-style: italic;
-    color: #999;
-    text-align: center;
-  }
-  .comentario-footer button {
-    background-color: transparent;
-    border: none;
-    color: #e64a19;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-  }
-  
-  .comentario-footer button:hover {
-    color: #bf360c;
-  }
-
-  */
+.comentario-header .fecha {
+  font-weight: normal;
+  font-size: 12px;
+  color: #777;
+  margin-left: 8px;
+}
