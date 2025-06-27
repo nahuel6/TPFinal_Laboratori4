@@ -1122,5 +1122,38 @@
       ],
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias."
     }
+  ],
+  "destinos":
+  [
+    {
+      "id": 1,
+      "nombre": "Buenos Aires Capital Federal",
+      "descripcion": "Descubre la vibrante capital de Argentina, un lugar donde el tango, la arquitectura europea y la vida nocturna crean una experiencia única. Desde el histórico barrio de San Telmo hasta los modernos cafés y librerías de Palermo, Buenos Aires es una ciudad que nunca duerme y siempre tiene algo nuevo que ofrecer. No te pierdas un espectáculo de tango en vivo y disfruta de una auténtica parrillada argentina."
+    },
+    {
+      "id": 2,
+      "nombre": "Mendoza",
+      "descripcion": "Situada a los pies de la cordillera de los Andes, Mendoza es la capital del vino argentino. Disfruta de una cata de vinos en alguna de sus bodegas de renombre internacional o relájate con vistas a los viñedos mientras degustas su famosa cocina regional. Para los aventureros, el Aconcagua, el pico más alto de América, ofrece vistas y excursiones inolvidables en un entorno natural incomparable."
+    },
+    {
+      "id": 3,
+      "nombre": "Córdoba Argentina",
+      "descripcion": "Con una mezcla de historia colonial y paisajes serranos, Córdoba es un destino que enamora a quienes buscan combinar cultura y naturaleza. Explora las iglesias y conventos del centro histórico o visita las pintorescas villas serranas cercanas, ideales para realizar actividades al aire libre y disfrutar de la hospitalidad cordobesa. Ideal para escapadas relajantes y para amantes de los deportes de aventura"
+    },
+    {
+      "id": 4,
+      "nombre": "Bariloche Cerro Campanario",
+      "descripcion": "Ubicada en el corazón de la Patagonia, San Carlos de Bariloche es un paraíso de montañas, lagos y bosques. En invierno, el esquí y el snowboard atraen a entusiastas de la nieve, mientras que en verano las actividades al aire libre, como el trekking y el kayak, ofrecen una conexión total con la naturaleza. No olvides probar el famoso chocolate de Bariloche y contemplar el atardecer en el Lago Nahuel Huapi."
+    },
+    {
+      "id": 5,
+      "nombre": "Iguazú",
+      "descripcion": "Vive la experiencia única de uno de los grandes tesoros naturales del mundo. Las Cataratas del Iguazú, ubicadas en plena selva misionera, son una maravilla de la naturaleza con más de 270 saltos de agua que ofrecen vistas impresionantes y actividades para los aventureros, como el paseo en lancha que te lleva casi hasta el pie de las caídas de agua. Un destino que combina naturaleza, biodiversidad y emoción."
+    },
+    {
+      "id": 6,
+      "nombre": "Salta Argentina",
+      "descripcion": "Conocida como ‘La Linda’, Salta ofrece paisajes de montañas, quebradas y viñedos en uno de los entornos más pintorescos del norte argentino. Recorre la Quebrada de Humahuaca, Patrimonio de la Humanidad, y déjate cautivar por sus coloridos cerros y pueblitos coloniales. Salta es el punto de partida ideal para explorar la cultura y los sabores únicos de la región andina, con su música folclórica y deliciosa gastronomía.."
+    }
   ]
 }

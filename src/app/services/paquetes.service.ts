@@ -80,52 +80,7 @@ export class PaqueteService {
   actualizarPaquete(id: number, paquete: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, paquete);
   }
-  /*
-  getFechasDisponiblesConPrecios(paquete: any): any[] {
-    const eventos:any[] = [];
-    const currentYear = new Date().getFullYear();
-    const currentMonth = new Date().getMonth(); // 0 = enero
   
-    paquete.fechasPrecios.forEach((fp: any) => {
-
-
-      paquete.fechasPrecios.forEach((fp: any) => {
-        if (!fp.fecha || !fp.precio) return; // seguridad
-    
-        const fecha = fp.fecha; // fecha ya viene del JSON
-        eventos.push({
-          title: `$${fp.precio}`,
-          start: fecha,
-          extendedProps: {
-            precio: fp.precio,
-            paqueteId: paquete.id
-          }
-        });
-      });
-      /*
-      const mesIndex = this.convertirMesANumero(fp.mes);
-      if (mesIndex >= currentMonth) {
-        const fecha = fp.fecha;
-        //const fecha = new Date(currentYear, mesIndex, 15).toISOString().split('T')[0];
-        eventos.push({
-          title: `$${fp.precio}`,
-          start: fecha,
-          extendedProps: {
-            precio: fp.precio,
-            paqueteId: paquete.id
-          }
-        });
-      }
-    });
-  
-    return eventos;
-  }*/
-  /*
-  private convertirMesANumero(mes: string): number {
-    const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
-                   'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-    return meses.findIndex(m => m.toLowerCase() === mes.toLowerCase());
-  }*/
   
 }
 

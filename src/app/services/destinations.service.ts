@@ -16,9 +16,6 @@
     getImages(destination: string): Observable<UnsplashResponse> {  
       return this.http.get<UnsplashResponse>(`${this.apiUrl}?query=${destination}&client_id=${this.accessKey}&per_page=3`);
     }
-  /*
-    getImages(destination: string): Observable<any> {
-      return this.http.get(`${this.apiUrl}?query=${destination}&client_id=${this.accessKey}&per_page=3`);
-    }*/
+  
   }
   
