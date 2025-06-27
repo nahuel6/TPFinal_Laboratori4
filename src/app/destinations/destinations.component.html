@@ -16,7 +16,8 @@
         </div>
   
         <!-- Imagenes del destino seleccionado -->
-        <div class="image-container" *ngIf="imageUrls.length > 0">
+        <div *ngIf="loading" class="loading-spinner">Cargando imágenes...</div>
+        <div class="image-container" *ngIf="!loading && imageUrls.length > 0">
           <img *ngFor="let url of imageUrls" [src]="url" alt="Imagen del destino" />
         </div>
   

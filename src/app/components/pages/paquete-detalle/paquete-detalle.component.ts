@@ -145,44 +145,5 @@ reservaConfirmada: boolean = false;
     });
   }
 
-/*
-  onEventClick(info: any): void {
-    const fecha = info.event.startStr;
-    const precio = info.event.extendedProps.precio;
-  
-    const confirmar = confirm(`¿Reservar para el ${fecha} por $${precio}?`);
-    if (!confirmar) return;
- 
-    const usuario = this.authService.getUsuario();
-    if (!usuario) {
-      alert("Debes iniciar sesión para reservar.");
-      this.router.navigate(['/login']);
-      return;
-    }
-  
-    // Actualizar reservas del usuario
-    usuario.reservas = usuario.reservas || [];
-    usuario.reservas.push({
-      paqueteId: this.paquete.id,
-      fecha,
-      precio
-    });
-  
-    if (usuario.id !== undefined) {
-    this.usuarioService.actualizarUsuario(usuario.id, usuario).subscribe(() => {
-      console.log("Reserva guardada en usuario");
-    });
-  }
-  else {
-    console.error('El ID del usuario es undefined.');
-  };
-    
-  
-    // Actualizar cantidad de reservas del paquete
-    this.paquete.cantidadReservas = (this.paquete.cantidadReservas || 0) + 1;
-    this.paqueteService.actualizarPaquete(this.paquete.id, this.paquete).subscribe(() => {
-      alert("¡Reservado con éxito!");
-    });
-  }
-*/
+
 }
