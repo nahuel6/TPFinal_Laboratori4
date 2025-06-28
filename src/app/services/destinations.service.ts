@@ -14,7 +14,7 @@
     constructor(private http: HttpClient) {}
 
     getImages(destination: string): Observable<UnsplashResponse> {  
-      return this.http.get<UnsplashResponse>(`${this.apiUrl}?query=${destination}&client_id=${this.accessKey}&per_page=3`);
+      return this.http.get<UnsplashResponse>(`${this.apiUrl}?query=${destination}&client_id=${this.accessKey}&per_page=9`);
     }
   
   }
