@@ -34,7 +34,7 @@ export class DestinationsComponent{
     this.destinationsService.getImages(destination).subscribe(
       (response: UnsplashResponse) => {
         
-        this.imageUrls = response.results.slice(0, 3).map((result: UnsplashImage) => result.urls.regular);
+        this.imageUrls = response.results.slice(0, 9).map((result: UnsplashImage) => result.urls.regular);
         this.loading = false;
       },
       (error: UnsplashResponse) => {
