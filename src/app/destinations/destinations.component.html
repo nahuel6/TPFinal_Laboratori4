@@ -1,7 +1,13 @@
+ <!-- Buscador -->
+
+ <div class="search-container">
+  <input type="text" [(ngModel)]="customSearch" placeholder="Buscar otro destino...">
+  <button (click)="buscarDestino()">Buscar</button>
+</div>
 
 <div class="content">
 
-      
+     
   
       <!-- Contenedor para botones e imágenes -->
       <div class="destinations-container">
@@ -14,7 +20,8 @@
           <button (click)="fetchImage('Iguazú')">Iguazú</button>
           <button (click)="fetchImage('Salta Argentina')">Salta</button>
         </div>
-  
+
+        
         <!-- Imagenes del destino seleccionado -->
         <div *ngIf="loading" class="loading-spinner">Cargando imágenes...</div>
         <div class="image-container" *ngIf="!loading && imageUrls.length > 0">
