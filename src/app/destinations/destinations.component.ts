@@ -14,7 +14,10 @@ export class DestinationsComponent{
   imageUrls: string[] = []; 
   description: string = ''; 
   loading : boolean = false;
- 
+ customSearch: string = '';
+
+
+
   showComments: boolean = false;
   selectedDestinationId: string = '';
   constructor(private destinationsService: DestinationsService,
@@ -67,5 +70,25 @@ export class DestinationsComponent{
 
 
   }
+
+  buscarDestino() {
+    const destino = this.customSearch.trim();
+    if (!destino) return;
+  
+    this.loading = true;
+    this.description = `Resultados para: ${destino}`;
+    this.destinationsService.getImages(destino).subscribe(
+      (response) => {
+        this.imageUrls = response.results.slice(0, 6).map((img) => img.urls.regular);
+        this.loading = false;
+      },
+      (error) => {
+        console.error('Error al buscar destino personalizado:', error);
+        this.imageUrls = [];
+        this.loading = false;
+      }
+    );
+  }
+
 }
 
