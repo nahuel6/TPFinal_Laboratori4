@@ -66,6 +66,7 @@
   gap: 20px;
   padding: 20px;
   margin-top: 30px;
+  flex: 2;
 }
 
 .image-container img {
@@ -82,8 +83,37 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
+/* Descripción tipo aside */
 
+.destino-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.descripcion-article {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  max-width: 320px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 120px;
+  height: fit-content;
+}
+
+/* Título dentro del article */
+.descripcion-article h3 {
+  color: #ff5722;
+  margin-bottom: 10px;
+}
 /* Descripción */
+/*
 .description-container {
   margin-top: 25px;
   padding: 20px;
@@ -93,7 +123,7 @@
   text-align: center;
   font-size: 1.1rem;
 }
-
+*/
 /* Botón de comentarios */
 .destinations-container button.toggle-comments {
   margin-top: 20px;
