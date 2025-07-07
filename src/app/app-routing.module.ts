@@ -17,8 +17,9 @@ const routes: Routes = [
     
       {path: 'destinations', component: DestinationsComponent}, 
       {path: 'paquetes2',component: Paquetes2ListComponent},
-      {path: 'paquetes2/:id',component: Paquetes2DetalleComponent,canActivate: [AuthGuard]},
+      {path: 'paquetes2/:id',component: Paquetes2DetalleComponent},
     
+      /* ,canActivate: [AuthGuard] */ 
    
    { path: '**', redirectTo: '/' }  
 ];

@@ -7,12 +7,49 @@
     </div>
     
     
-      <div class="contenido-superpuesto"> 
-      <div class="contenido-wrapper">
+      <div class="contenido-superpuesto "> 
+      <div class="contenido-wrapper layout">
+        <main class="main-content">
       <router-outlet></router-outlet>
+    </main>
+    <aside class="aside-carrusel" *ngIf="mostrarAside">
+      <h3>🌟 Paquetes destacados</h3>
+      <div class="carrusel-paquetes">
+        <button class="prev" (click)="anteriorPaquete()">‹</button>
+        
+        <div class="paquete-activo" (click)="irAlPaquete()" style="cursor: pointer;">
+          <ng-container *ngIf="paqueteActual">
+            <strong>{{ paqueteActual.titulo }}</strong><br>
+            {{ paqueteActual.descripcion }}
+          </ng-container>
+        </div>
+        
+        <button class="next" (click)="siguientePaquete()">›</button>
+      </div>
+    </aside>
+    <!-- 
+    <aside class="aside">
+      <h3>🌟 Paquetes destacados</h3>
+      <ul>
+        <li>
+          <strong>Bariloche 5 días</strong><br>
+          Desde $150.000 - All Inclusive
+        </li>
+        <li>
+          <strong>Mendoza romántica</strong><br>
+          3 noches + visita a bodegas
+        </li>
+        <li>
+          <strong>Iguazú familiar</strong><br>
+          4 días con excursión a Cataratas
+        </li>
+      </ul>
+    </aside>
+    -->
     </div>
-  </div>
     
+  </div>
+ 
   </div>
   <footer class="site-footer">
     <div class="footer-content">
@@ -52,3 +89,4 @@
       <p>© 2025 UTN Viajes - Todos los derechos reservados</p>
     </div>
   </footer>
+  

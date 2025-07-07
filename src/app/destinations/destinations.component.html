@@ -24,14 +24,22 @@
         
         <!-- Imagenes del destino seleccionado -->
         <div *ngIf="loading" class="loading-spinner">Cargando imágenes...</div>
-        <div class="image-container" *ngIf="!loading && imageUrls.length > 0">
+        <div class="destino-layout" *ngIf="!loading && imageUrls.length > 0"> 
+          <div class="image-container" >
           <img *ngFor="let url of imageUrls" [src]="url" alt="Imagen del destino" />
-        </div>
-  
+          </div>
+          <article *ngIf="description" class="descripcion-article">
+          <h3>Descripción del destino</h3>
+          <p>{{ description }}</p>
+          </article>
+      </div>
+
         <!-- Descripción del destino seleccionado -->
+         <!--
         <div *ngIf="description" class="description-container">
           <p>{{ description }}</p>
         </div>
+        -->
         <div *ngIf="selectedDestinationId">
           <button class="toggle-comments" (click)="showComments = !showComments">
             {{ showComments ? 'Ocultar Reseñas' : 'Ver Reseñas' }}
@@ -40,6 +48,6 @@
           <app-comentarios *ngIf="showComments" [destinationId]="selectedDestinationId"></app-comentarios>
         </div>
       </div>
-    
+      
   </div>
   
