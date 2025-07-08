@@ -122,6 +122,112 @@ footer {
 
 
 .aside-carrusel {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* Título de sección */
+.aside-carrusel h3 {
+  color: #ff9800;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 152, 0, 0.5);
+  padding-bottom: 4px;
+}
+
+/* Carrusel de paquetes */
+.carrusel-paquetes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.07);
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.paquete-activo {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.paquete-activo:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.prev,
+.next {
+  background-color: #ff9800;
+  color: black;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #ffa726;
+}
+
+/* Lista de tips */
+.aside-carrusel ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.aside-carrusel ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.aside-carrusel ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #ffeb3b;
+}
+
+/* Líneas separadoras */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 15px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .aside-carrusel {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 20px;
+    box-shadow: none;
+  }
+}
+
+/*
+.aside-carrusel {
   background-color: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 20px;
@@ -159,30 +265,9 @@ button.next:hover {
   transform: scale(1.2);
 }
 
-/*
-.aside {
-  
-  top: 100px;
-  right: 40px;
-  flex: 1 1 25%;
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 5px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px  #ff5722;
-  font-size: 0.95rem;
-  color:white;
-  max-height: 400px;
-  overflow-y: auto;
-  margin-left: auto;
-  width: 300px;
-  align-self: flex-start;
-}
-
-.aside h3{
-  color: #ff5722;
-}
 */
 /* Para mobile */
+/*
 @media (max-width: 768px) {
   .layout {
     flex-direction: column;
@@ -197,3 +282,4 @@ button.next:hover {
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
+  */
