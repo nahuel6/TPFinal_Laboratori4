@@ -1,4 +1,4 @@
-<div *ngIf="paquete" class="container">
+<div *ngIf="paquete" class="container fade-right">
    
   <p *ngIf="!activeTab" class="paquete-descripcion">{{ paquete.descripcion}}</p><br><br>
     <div class="botones-tabs">
@@ -17,52 +17,74 @@
     </div>
 
     <div class="tab-content" *ngIf="activeTab">
-      <div *ngIf="activeTab === 'detalles'" class="detalle-paquete" @tabAnim>
-       
-        
-        <div *ngIf="paquete.detalles" >
-          <strong> Descripción</strong>
-          <p class="descripcion">{{ paquete.detalles.descripcionCompleta }}</p>
-        
-          <strong>Lugar de Partida y Regreso:</strong>
-          <p>{{ paquete.detalles.lugarPartidaRegreso }}</p>
-        
-          <strong>Horario de Salida:</strong>
-          <p>{{ paquete.detalles.horarioSalida }}</p>
-        
-          <strong> Incluye:</strong>
-          <ul>
-            <li *ngFor="let item of paquete?.detalles?.incluido">{{ item }}</li>
-          </ul>
-        
-          <strong> No Incluye:</strong>
-          <ul>
-            <li *ngFor="let item of paquete?.detalles?.noIncluido">{{ item }}</li>
-          </ul>
-        
-          <strong>Tarifas:</strong>
-          <ul>
-            <li *ngFor="let tarifa of paquete?.detalles?.tarifas">
-              {{ tarifa.hotel }}: {{ tarifa.precio | currency:'ARS':'symbol-narrow':'1.0-0' }}
-            </li>
-          </ul>
-        
-        <strong>Notas:</strong>
-          <ul>
-            <li *ngFor="let nota of paquete?.detalles?.notas">{{ nota }}</li>
-          </ul>
-        </div>
-      </div>
-  
-      <div *ngIf="activeTab === 'itinerario'" class="detalle-paquete" @tabAnim>
 
-        <h3>Itinerario</h3>
-          <ul *ngIf="paquete.itinerario && paquete.itinerario.length">
-          <li *ngFor="let dia of paquete.itinerario">
-            <strong>{{ dia.dia }}:</strong> {{ dia.descripcion }}
-            </li>
-              </ul>
-       </div>
+<div *ngIf="activeTab === 'detalles'" class="detalle-paquete" @tabAnim>
+  <div *ngIf="paquete.detalles">
+
+    <div class="bloque-detalle">
+      <h4>📄 Descripción</h4>
+      <p class="descripcion">{{ paquete.detalles.descripcionCompleta }}</p>
+    </div>
+
+    <div class="bloque-detalle">
+      <h4>📍 Lugar de Partida y Regreso</h4>
+      <p>{{ paquete.detalles.lugarPartidaRegreso }}</p>
+    </div>
+
+    <div class="bloque-detalle">
+      <h4>🕒 Horario de Salida</h4>
+      <p>{{ paquete.detalles.horarioSalida }}</p>
+    </div>
+
+    <div class="bloque-detalle">
+      <h4>✅ Incluye</h4>
+      <ul>
+        <li *ngFor="let item of paquete?.detalles?.incluido">{{ item }}</li>
+      </ul>
+    </div>
+
+    <div class="bloque-detalle">
+      <h4>❌ No Incluye</h4>
+      <ul>
+        <li *ngFor="let item of paquete?.detalles?.noIncluido">{{ item }}</li>
+      </ul>
+    </div>
+
+    <div class="bloque-detalle">
+      <h4>💲 Tarifas</h4>
+      <ul>
+        <li *ngFor="let tarifa of paquete?.detalles?.tarifas">
+          {{ tarifa.hotel }}: {{ tarifa.precio | currency:'ARS':'symbol-narrow':'1.0-0' }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="bloque-detalle">
+      <h4>📝 Notas</h4>
+      <ul>
+        <li *ngFor="let nota of paquete?.detalles?.notas">{{ nota }}</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+
+<div *ngIf="activeTab === 'itinerario'" class="detalle-paquete" @tabAnim>
+  <h3>Itinerario</h3>
+
+  <div class="itinerario-grid" *ngIf="paquete.itinerario && paquete.itinerario.length">
+    <div *ngFor="let dia of paquete.itinerario" class="itinerario-card">
+      <div class="itinerario-dia">
+       🚍  {{ dia.dia }}
+      </div>
+      <div class="itinerario-descripcion">
+        {{ dia.descripcion }}
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
        <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container" @tabAnim>
@@ -98,7 +120,7 @@
 
       <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete" @tabAnim>
         <h3>Opciones de Alojamiento</h3>
-        <div *ngFor="let hotel of paquete?.alojamientos">
+        <div *ngFor="let hotel of paquete?.alojamientos" class="hotel-card">
           <strong>{{ hotel.hotel }}</strong> <div class="estrellas">
             <span *ngFor="let estrella of generarEstrellas(hotel.categoria)">⭐</span>
           </div><br />

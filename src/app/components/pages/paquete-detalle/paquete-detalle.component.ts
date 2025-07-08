@@ -13,7 +13,6 @@ import interactionPlugin from '@fullcalendar/interaction';
 import { ViewEncapsulation } from '@angular/core';
 import {
   trigger,
-  state,
   style,
   transition,
   animate,

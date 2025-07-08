@@ -20,6 +20,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import { Paquetes2ListComponent } from './components/pages/paquetes2-list/paquetes2-list.component';
 import { Paquetes2DetalleComponent } from './components/pages/paquete-detalle/paquete-detalle.component';
 import { MapaPaqueteComponent } from './mapa-paquete/mapa-paquete.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { MapaPaqueteComponent } from './mapa-paquete/mapa-paquete.component';
     FormsModule,
     ReactiveFormsModule,
    HttpClientModule,
+    BrowserAnimationsModule,
    FullCalendarModule
    
   ],
