@@ -11,17 +11,36 @@ import { Router } from '@angular/router';
 import { UsuarioService } from '../../../services/usuario.service';
 import interactionPlugin from '@fullcalendar/interaction';
 import { ViewEncapsulation } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  transition,
+  animate,
+} from '@angular/animations';
 
 
 @Component({
   selector: 'app-paquetes2-detalle',
   templateUrl: './paquete-detalle.component.html',
   styleUrls: ['./paquete-detalle.component.css'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger('tabAnim', [
+      transition(':enter', [
+        style({ opacity: 0, transform: 'translateY(10px)' }),
+        animate('300ms ease-out', style({ opacity: 1, transform: 'translateY(0)' })),
+      ]),
+      transition(':leave', [
+        animate('200ms ease-in', style({ opacity: 0, transform: 'translateY(10px)' })),
+      ]),
+    ]),
+  ],
 })
+
 export class Paquetes2DetalleComponent implements OnInit {
   paquete: any;
-  activeTab: string = 'detalles';
+  activeTab: string | null = null;
   selectedUbicacion: Ubicacion | null = null;
   fechaSeleccionada: { fecha: string, precio: number } | null = null;
 reservaConfirmada: boolean = false;
@@ -43,18 +62,6 @@ reservaConfirmada: boolean = false;
     height: 'auto',
     locale: 'es',
     eventClick: this.onEventClick.bind(this),
-
-/*
-    dateClick: (arg) => {
-      // Remover selección anterior
-      const diasSeleccionados = document.querySelectorAll('.fc-daygrid-day.selected-day');
-      diasSeleccionados.forEach(d => d.classList.remove('selected-day'));
-  
-      // Agregar clase al nuevo día seleccionado
-      const celdaDia = arg.dayEl as HTMLElement;
-      celdaDia.classList.add('selected-day');
-    }*/
-
     
     dateClick: () => {
       // Si se hace clic en una fecha sin evento, se limpia la selección
@@ -65,6 +72,17 @@ reservaConfirmada: boolean = false;
   };
 
   ngOnInit(): void {
+
+// Si venís de un login, recuperá el tab
+const savedTab = localStorage.getItem('tabPostLogin');
+if (savedTab) {
+  this.activeTab = savedTab;
+  localStorage.removeItem('tabPostLogin'); // Limpiar para que no quede persistente
+} /*else {
+ // this.activeTab = 'detalles'; // o el tab por defecto
+}*/
+
+// resto de tu lógica de inicialización
 
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
@@ -116,7 +134,14 @@ reservaConfirmada: boolean = false;
     const usuario = this.authService.getUsuario();
     if (!usuario) {
       alert("Debes iniciar sesión para reservar.");
+
+       // ✅ Guardar ruta actual y pestaña activa antes de redirigir
+    const currentUrl = this.router.url;
+    localStorage.setItem('rutaPostLogin', currentUrl);
+    localStorage.setItem('tabPostLogin', 'fechasPrecios'); // o el nombre de tu pestaña
+
       this.router.navigate(['/login']);
+      
       return;
     }
   

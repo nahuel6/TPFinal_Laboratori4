@@ -1,8 +1,8 @@
 import { Component, importProvidersFrom, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
+
 import { Usuario } from '../../models/usuario';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { AuthService } from '../../services/auth.service';
 @Component({
@@ -13,11 +13,14 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent  {
   loginForm: FormGroup;
   loginFailed: boolean = false;
+  returnUrl: string = '/';
+
 
   constructor(
     private fb: FormBuilder,
     private authService: AuthService, 
     private router: Router,
+    private route: ActivatedRoute,
     
   ) {
     this.loginForm = this.fb.group({
@@ -32,6 +35,7 @@ export class LoginComponent  {
     const password = this.loginForm.get('password')?.value;
     const rutaDestino = localStorage.getItem('rutaPostLogin') || '/';
     
+    
     this.authService.login(email, password).subscribe(
       (usuario: Usuario | null) => {
         if (usuario) {
@@ -39,6 +43,7 @@ export class LoginComponent  {
           this.authService.setUserName(usuario.nombre);
           //this.router.navigate(['/']); 
           localStorage.removeItem('rutaPostLogin');
+         
           this.router.navigate([rutaDestino]);
           this.loginFailed = false;
         } else {

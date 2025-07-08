@@ -1,19 +1,25 @@
 <div *ngIf="paquete" class="container">
    
-  
+  <p *ngIf="!activeTab" class="paquete-descripcion">{{ paquete.descripcion}}</p><br><br>
     <div class="botones-tabs">
-      <h2>{{ paquete.nombre }}</h2>
+      <h2>{{ paquete.nombre }}</h2><br><br>
       <button (click)="setTab('detalles')" [class.activo]="activeTab === 'detalles'">Detalles</button>
       <button (click)="setTab('itinerario')" [class.activo]="activeTab === 'itinerario'">Itinerario</button>
-      <button (click)="setTab('ubicacion')" [class.activo]="activeTab === 'ubicacion'">Ubicación</button>
       <button (click)="setTab('alojamiento')" [class.activo]="activeTab === 'alojamiento'">Alojamiento</button>
-      <button (click)="setTab('fechasPrecios')" [class.activo]="activeTab === 'fechasPrecios'">Proximas Salidas</button>
+      <button (click)="setTab('ubicacion')" [class.activo]="activeTab === 'ubicacion'">Ubicación</button>
+      <!-- <button  class="reserva-btn" (click)="setTab('fechasPrecios')" [class.activo]="activeTab === 'fechasPrecios'">🗓️ Proximas Salidas</button>-->
+     
     </div>
-  
-    <div class="tab-content">
-      <div *ngIf="activeTab === 'detalles'" class="detalle-paquete">
+    <div class="boton-reserva-fijo">
+      <button (click)="setTab('fechasPrecios')" [class.activo]="activeTab === 'fechasPrecios'">
+        🗓️ Proximas Salidas - Reservá tu lugar!
+      </button>
+    </div>
+
+    <div class="tab-content" *ngIf="activeTab">
+      <div *ngIf="activeTab === 'detalles'" class="detalle-paquete" @tabAnim>
        
-        <p>{{ paquete.descripcion}}</p>
+        
         <div *ngIf="paquete.detalles" >
           <strong> Descripción</strong>
           <p class="descripcion">{{ paquete.detalles.descripcionCompleta }}</p>
@@ -48,7 +54,7 @@
         </div>
       </div>
   
-      <div *ngIf="activeTab === 'itinerario'" class="detalle-paquete">
+      <div *ngIf="activeTab === 'itinerario'" class="detalle-paquete" @tabAnim>
 
         <h3>Itinerario</h3>
           <ul *ngIf="paquete.itinerario && paquete.itinerario.length">
@@ -59,7 +65,7 @@
        </div>
 
 
-       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container">
+       <div *ngIf="activeTab === 'ubicacion'" class="ubicacion-container" @tabAnim>
           <h3 class="ubicacion-titulo">Ubicación</h3>
       
           <!-- Selector de ubicaciones -->
@@ -90,7 +96,7 @@
       </div>
 
 
-      <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete">
+      <div *ngIf="activeTab === 'alojamiento'" class="detalle-paquete" @tabAnim>
         <h3>Opciones de Alojamiento</h3>
         <div *ngFor="let hotel of paquete?.alojamientos">
           <strong>{{ hotel.hotel }}</strong> <div class="estrellas">
@@ -105,7 +111,7 @@
       </div>
     </div>
 
-    <div *ngIf="activeTab === 'fechasPrecios'" class="detalle-fechas">
+    <div *ngIf="activeTab === 'fechasPrecios'" class="detalle-fechas" @tabAnim>
       <h3>Proximas salidas:</h3>
       <div class="calendar-wrapper">
       <full-calendar [options]="calendarOptions"></full-calendar>
