@@ -226,6 +226,23 @@ hr {
   }
 }
 
+
+/* Animación fade-in lateral */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.aside-carrusel {
+  animation: fadeInSlide 0.6s ease-out;
+}
+
 /*
 .aside-carrusel {
   background-color: rgba(0, 0, 0, 0.6);

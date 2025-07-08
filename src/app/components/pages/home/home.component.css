@@ -1,5 +1,12 @@
 .welcome{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
     color: #e64a19;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+     margin-top: 150px; /* Aumentá este valor según lo que necesites */
+  text-align: center; /* Asegura que todo quede centrado horizontal */
 }
 :host {
     font-size: 30px; 

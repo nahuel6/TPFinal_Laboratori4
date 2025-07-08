@@ -1,4 +1,5 @@
 {
+  
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
@@ -25,6 +26,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+             
             "outputPath": "dist/viajes-yturismo",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -41,9 +43,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css","node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": ["node_modules/aos/dist/aos.js"]
           },
           "configurations": {
             "production": {
@@ -111,4 +113,5 @@
   "cli": {
     "analytics": false
   }
+ 
 }

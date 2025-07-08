@@ -121,3 +121,7 @@ a:hover {
   color: red;
   margin-top: 4px;
 }
+
+.fade-right {
+  animation: fadeInSlideRight 0.6s ease-out;
+}

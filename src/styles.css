@@ -14,3 +14,16 @@ button {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     background-color: #e64a19; /* una versión más oscura en hover */
   }
+
+
+  /* Fade-in desde la derecha */
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

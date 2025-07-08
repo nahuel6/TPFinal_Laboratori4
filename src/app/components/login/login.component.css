@@ -48,3 +48,7 @@
     color: #007bff;
     text-decoration: none;
   }
+
+  .fade-right {
+  animation: fadeInSlideRight 0.6s ease-out;
+}
