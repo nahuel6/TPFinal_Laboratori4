@@ -85,6 +85,22 @@ export class CarruselComponent implements OnInit {
     }
   }
 
+  mostrarModal: boolean = false;
+
+abrirModal() {
+  this.mostrarModal = true;
+}
+
+cerrarModal() {
+  this.mostrarModal = false;
+}
+
+enviarFormulario() {
+  // Por ahora solo cerramos el modal
+  alert("¡Gracias por tu mensaje! Nos pondremos en contacto pronto.");
+  this.cerrarModal();
+}
+
 }
 
 

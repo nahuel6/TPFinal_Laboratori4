@@ -108,7 +108,8 @@
         <h3>Contacto</h3>
         <p>📍 Mar del Plata, Buenos Aires</p>
         <p>📞 0800-333-UTNV (8868)</p>
-        <p>✉️ contacto&#64;utnviajes.com</p>
+        <p>✉️ <a href="#" (click)="abrirModal()">contacto&#64;utnviajes.com</a></p>
+
       </div>
   
       <div class="footer-section links">
@@ -135,4 +136,30 @@
       <p>© 2025 UTN Viajes - Todos los derechos reservados</p>
     </div>
   </footer>
+
+  <!-- Modal de Contacto -->
+<div class="modal-overlay" *ngIf="mostrarModal">
+  <div class="modal-contacto">
+    <h2>Formulario de Contacto</h2>
+    <form (ngSubmit)="enviarFormulario()" #formulario="ngForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" ngModel required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" ngModel required>
+
+      <label for="asunto">Asunto:</label>
+      <input type="asunto" id="asunto" name="asunto" ngModel required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="4" ngModel required></textarea>
+
+      <div class="modal-buttons">
+        <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+        <button type="button" (click)="cerrarModal()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
   
