@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, viewChild } from '@angular/core';
 import { Router,NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs';
+import { ContactoService, MensajeContacto } from '../../../services/contacto.service';
+import { ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-carrusel',
@@ -8,6 +12,7 @@ import { filter } from 'rxjs';
   styleUrls: ['./carrusel.component.css']
 })
 export class CarruselComponent implements OnInit {
+  @ViewChild('formulario') formulario!:NgForm;
   mostrarAside: boolean = true;
   imagenes: string[] = [
     
@@ -36,8 +41,9 @@ export class CarruselComponent implements OnInit {
   indicePaquete = 0;
   imagenActiva: number = 0;
   intervalo!: ReturnType<typeof setInterval>;
+  mostrarModal: boolean = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router,private contactoService: ContactoService) {
     this.router.events
     .pipe(filter(event => event instanceof NavigationEnd))
     .subscribe((event: any) => {
@@ -85,6 +91,42 @@ export class CarruselComponent implements OnInit {
     }
   }
 
+ 
+
+abrirModal() {
+  console.log("Abriendo modal...");
+  this.mostrarModal = true;
 }
 
+cerrarModal() {
+  this.mostrarModal = false;
+}
 
+enviarFormulario(formulario: NgForm) {
+  console.log('formulario:', formulario);
+  console.log('email errors:', formulario.controls['email']?.errors);
+  if (formulario.invalid) {
+    console.warn('Formulario inválido');
+    return;
+  }
+  const mensaje = {
+    nombre: formulario.value.nombre,
+    email: formulario.value.email,
+    asunto: formulario.value.asunto,
+    mensaje: formulario.value.mensaje
+  };
+
+  this.contactoService.enviarMensaje(mensaje).subscribe({
+    next: () => {
+      alert("¡Gracias por tu mensaje! Nos pondremos en contacto pronto.");
+      this.formulario.resetForm();
+      this.cerrarModal();
+    },
+    error: (err) => {
+      console.error("Error al enviar el mensaje", err);
+      alert("Ocurrió un error al guardar tu mensaje.");
+    }
+  });
+}
+
+}

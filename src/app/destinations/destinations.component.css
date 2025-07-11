@@ -201,5 +201,11 @@
   .search-container button:hover {
     background-color: #bf360c;
   }
+  /* formulario con animación desde abajo */
+  .fade-up {
+    animation: fadeInSlideUp 0.6s ease-out;
+  }
 
-  
+  .fade-left {
+    animation: fadeInSlideLeft 0.6s ease-out;
+  }

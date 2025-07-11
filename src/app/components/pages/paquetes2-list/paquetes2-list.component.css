@@ -10,6 +10,7 @@
 }
 
 .titulo-seccion {
+  font-family: 'Roboto', sans-serif;
   color:#ff5722;
   font-size: 2rem;
   margin-bottom: 1.5rem;
@@ -17,6 +18,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
   /*padding-top: 90px; /* Ajustado a la altura del navbar */
 }
+
 
 .listado-paquetes ul {
   display: flex;
@@ -66,4 +68,8 @@
 
 .fade-right {
   animation: fadeInSlideRight 0.6s ease-out;
+}
+
+.fade-left {
+  animation: fadeInSlideLeft 0.6s ease-out;
 }

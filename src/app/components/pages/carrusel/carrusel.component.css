@@ -242,61 +242,147 @@ hr {
 .aside-carrusel {
   animation: fadeInSlide 0.6s ease-out;
 }
-
-/*
-.aside-carrusel {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 300px;
-  box-shadow: 0 4px 10px #ff5722;
-  font-size: 0.95rem;
-  align-self: flex-start;
-}
-
-.carrusel-paquetes {
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
   display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-contacto {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease-out;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-contacto h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #e64a19;
+  text-align: center;
+}
+
+.modal-contacto label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.modal-contacto input,
+.modal-contacto textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.modal-contacto textarea {
+  resize: none;
+}
+
+.modal-buttons {
+  display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
-.paquete-activo {
-  flex: 1;
-  margin: 0 10px;
-  text-align: left;
-}
-
-button.prev,
-button.next {
-  background: none;
+.modal-buttons button {
+  padding: 10px 18px;
+  font-size: 15px;
   border: none;
-  color: #ff5722;
-  font-size: 1.5rem;
+  border-radius: 6px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
-button.prev:hover,
-button.next:hover {
-  transform: scale(1.2);
+.modal-buttons button[type="submit"] {
+  background-color: #e64a19;
+  color: white;
 }
 
-*/
-/* Para mobile */
-/*
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
+.modal-buttons button[type="submit"]:hover {
+  background-color: #d84315;
+}
+
+.modal-buttons button[type="button"] {
+  background-color: #cccccc;
+  color: black;
+}
+
+.modal-buttons button[type="button"]:hover {
+  background-color: #bbbbbb;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
   }
-
-  .aside {
-    margin-top: 20px;
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
-.paquete-activo:hover {
-  background-color: rgba(255, 87, 34, 0.1);
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+
+
+
+.aside-informativo {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
 }
-  */
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aside-informativo h3 {
+  color: #ff9800;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 152, 0, 0.5);
+  padding-bottom: 4px;
+}
+
+.aside-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+
