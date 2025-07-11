@@ -12,6 +12,9 @@
         <main class="main-content">
       <router-outlet></router-outlet>
     </main>
+
+
+    <div class="aside-wrapper"> 
     <aside class="aside-carrusel" *ngIf="mostrarAside">
       <h3>🌟 Paquetes destacados</h3>
       <div class="carrusel-paquetes">
@@ -26,8 +29,9 @@
         
         <button class="next" (click)="siguientePaquete()">›</button>
       </div>
+    </aside>
 
-
+      <aside class="aside-informativo fade-inup">
 <h3>
   <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" fill="#ffeb3b" style="margin-right: 8px;">
     <path d="M12 2a10 10 0 1 0 10 10A10.01142 10.01142 0 0 0 12 2Zm1 15H11v-2h2Zm0-4H11V7h2Z"/>
@@ -64,33 +68,9 @@
 </h3>
 <p>El Cerro Campanario en Bariloche está considerado entre las 7 mejores vistas del mundo según National Geographic.</p>
 
-
-
-
-      <!-- 
-      <h3>🧳 Tips para tu viaje</h3>
-  <ul>
-    <li>Revisá la documentación antes de viajar</li>
-    <li>Contratá seguro de viaje</li>
-    <li>Hacé check-in online 24 hs antes</li>
-  </ul>
-
-  <hr />
-
-  <h3>🎁 Promo de la semana</h3>
-  <p><strong>¡10% OFF!</strong> en paquetes a Salta reservando antes del domingo.</p>
-
-  <hr />
-
-  <h3>🌤️ Clima promedio</h3>
-  <p>🌡️ 23ºC - Ideal para excursiones al aire libre</p>
-
-  <hr />
-
-  <h3>📌 ¿Sabías que...?</h3>
-  <p>El Cerro Campanario en Bariloche está considerado entre las 7 mejores vistas del mundo según National Geographic.</p>
-  -->
-    </aside>
+</aside>
+</div>
+   
     
     </div>
     
@@ -108,7 +88,7 @@
         <h3>Contacto</h3>
         <p>📍 Mar del Plata, Buenos Aires</p>
         <p>📞 0800-333-UTNV (8868)</p>
-        <p>✉️ <a href="#" (click)="abrirModal()">contacto&#64;utnviajes.com</a></p>
+        <p>✉️ <a  (click)="abrirModal()" style="cursor: pointer; text-decoration: underline;">contacto&#64;utnviajes.com</a></p>
 
       </div>
   
@@ -141,21 +121,28 @@
 <div class="modal-overlay" *ngIf="mostrarModal">
   <div class="modal-contacto">
     <h2>Formulario de Contacto</h2>
-    <form (ngSubmit)="enviarFormulario()" #formulario="ngForm">
+    <form #formulario="ngForm" (ngSubmit)="enviarFormulario(formulario)" >
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" ngModel required>
+      <input type="text" id="nombre" name="nombre" ngModel required #nombre="ngModel">
+<div *ngIf="(nombre.touched || nombre.dirty) && nombre.invalid">
+  <small *ngIf="nombre.errors?.['required']">El nombre es obligatorio.</small>
+</div>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" ngModel required>
-
+      <input type="email" id="email" name="email" ngModel required email #email="ngModel">
+      <div *ngIf="(email.touched || email.dirty) && email.invalid">
+        <small *ngIf="email.errors?.['required']">El email es obligatorio.</small>
+        <small *ngIf="email.errors?.['email']">Formato de email inválido.</small>
+        
+      </div>
       <label for="asunto">Asunto:</label>
-      <input type="asunto" id="asunto" name="asunto" ngModel required>
+      <input type="text" id="asunto" name="asunto" ngModel required>
 
       <label for="mensaje">Mensaje:</label>
       <textarea id="mensaje" name="mensaje" rows="4" ngModel required></textarea>
 
       <div class="modal-buttons">
-        <button type="submit" [disabled]="formulario.invalid">Enviar</button>
+        <button type="submit" [disabled]="formulario.invalid" >Enviar</button>
         <button type="button" (click)="cerrarModal()">Cancelar</button>
       </div>
     </form>

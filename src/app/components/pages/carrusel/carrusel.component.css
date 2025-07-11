@@ -242,135 +242,147 @@ hr {
 .aside-carrusel {
   animation: fadeInSlide 0.6s ease-out;
 }
-
-/*
-.aside-carrusel {
-  background-color: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 20px;
-  border-radius: 12px;
-  width: 300px;
-  box-shadow: 0 4px 10px #ff5722;
-  font-size: 0.95rem;
-  align-self: flex-start;
-}
-
-.carrusel-paquetes {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.paquete-activo {
-  flex: 1;
-  margin: 0 10px;
-  text-align: left;
-}
-
-button.prev,
-button.next {
-  background: none;
-  border: none;
-  color: #ff5722;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-button.prev:hover,
-button.next:hover {
-  transform: scale(1.2);
-}
-
-*/
-/* Para mobile */
-/*
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-  }
-
-  .aside {
-    margin-top: 20px;
-  }
-}
-.paquete-activo:hover {
-  background-color: rgba(255, 87, 34, 0.1);
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-  */
-
-  .modal-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 9999;
+  justify-content: center;
+  z-index: 1000;
 }
 
 .modal-contacto {
-  background: #fff;
-  padding: 30px;
-  border: 3px solid red; /* Temporal para asegurarnos que se ve */
+  background-color: #ffffff;
+  padding: 30px 40px;
   border-radius: 12px;
   width: 90%;
   max-width: 500px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  z-index: 10000;
-  display: block;
-  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: zoomIn 0.3s ease-out;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+}
+
+.modal-contacto h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #e64a19;
+  text-align: center;
 }
 
 .modal-contacto label {
   display: block;
-  margin-top: 12px;
+  margin-bottom: 5px;
   font-weight: bold;
+  color: #444;
 }
 
 .modal-contacto input,
 .modal-contacto textarea {
   width: 100%;
-  padding: 8px;
-  margin-top: 6px;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  font-family: inherit;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.modal-contacto textarea {
+  resize: none;
 }
 
 .modal-buttons {
-  margin-top: 20px;
-  text-align: right;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
 }
 
 .modal-buttons button {
-  margin-left: 10px;
-  padding: 8px 16px;
+  padding: 10px 18px;
+  font-size: 15px;
   border: none;
   border-radius: 6px;
-  background-color: #008cba;
-  color: white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
-.modal-buttons button:hover {
-  background-color: #005f73;
+.modal-buttons button[type="submit"] {
+  background-color: #e64a19;
+  color: white;
 }
 
-/* .modal-contacto text{
- 
-   color: #aaa;
+.modal-buttons button[type="submit"]:hover {
+  background-color: #d84315;
 }
- */
-.modal-contacto h2,
-.modal-contacto label,
-.modal-contacto input,
-.modal-contacto textarea {
-  color: #1b1a1a;
+
+.modal-buttons button[type="button"] {
+  background-color: #cccccc;
+  color: black;
 }
+
+.modal-buttons button[type="button"]:hover {
+  background-color: #bbbbbb;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+
+.aside-informativo {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #f5f5f5;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+  width: 320px;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aside-informativo h3 {
+  color: #ff9800;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 152, 0, 0.5);
+  padding-bottom: 4px;
+}
+
+.aside-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+
+

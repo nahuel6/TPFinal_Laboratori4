@@ -3,7 +3,7 @@
 
 <div *ngIf="paquetes && paquetes.length > 0; else cargando" class="listado-paquetes">
   <ul>
-    <li *ngFor="let paquete of paquetes" class="tarjeta-paquete">
+    <li *ngFor="let paquete of paquetes" class="tarjeta-paquete fade-left">
       <h2>{{ paquete.destino }}</h2>
       <p>{{ paquete.descripcion }}</p>
       <button (click)="verDetalle(paquete.id)" class="boton-detalle">Ver Detalles</button>

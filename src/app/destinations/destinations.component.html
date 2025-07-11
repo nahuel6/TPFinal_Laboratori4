@@ -1,18 +1,18 @@
- <!-- Buscador -->
+ <!-- Buscador 
 
  <div class="search-container">
   <input type="text" [(ngModel)]="customSearch" placeholder="Buscar otro destino...">
   <button (click)="buscarDestino()">Buscar</button>
-</div>
+</div>-->
 
 <div class="content">
 
      
   
       <!-- Contenedor para botones e imágenes -->
-      <div class="destinations-container fade-right">
+      <div class="destinations-container fade-left">
         <h2 class="title">Destinos Disponibles</h2>
-        <div class="destinations">
+        <div class="destinations fade-up">
           <button (click)="fetchImage('Buenos Aires Capital Federal')">Buenos Aires</button>
           <button (click)="fetchImage('Mendoza')">Mendoza</button>
           <button (click)="fetchImage('Córdoba Argentina')">Córdoba</button>

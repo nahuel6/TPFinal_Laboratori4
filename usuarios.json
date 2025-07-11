@@ -693,6 +693,11 @@
           "nombre": "Hotel Cordon del plata",
           "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6700.94410493356!2d-68.84186462355885!3d-32.88568537361842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091eb923bc2d%3A0x48276404eecb679c!2sCordon%20Del%20Plata!5e0!3m2!1ses-419!2sar!4v1749092901793!5m2!1ses-419!2sar",
           "link_externo": "https://maps.app.goo.gl/C1czhbNtk5rNVrmp6"
+        },{
+          "id":3,
+          "nombre":"Hotel Sheraton Mendoza",
+          "maps_url":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.2246830240038!2d-68.8380012!3d-32.8922273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09177a2308d3%3A0xaf94b708252aeca4!2sSheraton%20Mendoza%20Hotel!5e0!3m2!1ses-419!2sar!4v1752199189949!5m2!1ses-419!2sar",
+          "link_externo":"https://maps.app.goo.gl/swGenTTGG8EaiMmJA"
         }
       ],
       "alojamientos": [
@@ -1158,6 +1163,29 @@
       "id": 6,
       "nombre": "Salta Argentina",
       "descripcion": "Conocida como ‘La Linda’, Salta ofrece paisajes de montañas, quebradas y viñedos en uno de los entornos más pintorescos del norte argentino. Recorre la Quebrada de Humahuaca, Patrimonio de la Humanidad, y déjate cautivar por sus coloridos cerros y pueblitos coloniales. Salta es el punto de partida ideal para explorar la cultura y los sabores únicos de la región andina, con su música folclórica y deliciosa gastronomía.."
+    }
+  ],
+  "mensajesContacto": [
+    {
+      "nombre": "jose",
+      "email": "jose@gmail.com",
+      "asunto": "reservas",
+      "mensaje": "quisiera saber sobre las fechas de reservas",
+      "id": 1
+    },
+    {
+      "nombre": "as",
+      "email": "asd@asas",
+      "asunto": "as",
+      "mensaje": "as",
+      "id": 2
+    },
+    {
+      "nombre": "as",
+      "email": "as@gmail",
+      "asunto": "as",
+      "mensaje": "as",
+      "id": 3
     }
   ]
 }

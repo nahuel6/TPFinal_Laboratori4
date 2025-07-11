@@ -146,37 +146,46 @@
     color: #0056b3;
     text-decoration: underline;
   }
-  /* Estilos generales para el contenedor */
-div.ubicacion-select {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
-/* Etiqueta del selector */
-.ubicacion-select label {
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #e04d00;
-}
 
-/* Selector estilizado */
-.ubicacion-select select {
-  padding: 0.5rem 1rem;
-  border: 1px solid #e04d00;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: #f9f9f9;
-  transition: border 0.3s ease;
-  min-width: 250px;
-}
+  .ubicacion-select {
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .ubicacion-select label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ubicacion-select select {
+    padding: 10px 16px;
+    font-size: 16px;
+    border: 2px solid #1976d2;
+    border-radius: 8px;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .ubicacion-select select:hover {
+    border-color: #1565c0;
+    box-shadow: 0 4px 10px rgba(21, 101, 192, 0.2);
+  }
+  
+  .ubicacion-select select:focus {
+    border-color: #0d47a1;
+   
+    box-shadow: 0 0 8px rgba(13, 71, 161, 0.5);
+  }
 
-.ubicacion-select select:focus {
-  outline: none;
-  border-color: #007bff;
-  background-color: #fff;
-}
+ 
 
 
 .btn-reservar {
@@ -356,11 +365,11 @@ button:hover {
 
 .boton-reserva-fijo {
   position: fixed;
-  bottom: 40px;
+  bottom: 20px;
   right: 40px;
   z-index: 1000;
   transform: translateY(-50%);
-  top: 50%;
+ 
 }
 
 .boton-reserva-fijo button {
