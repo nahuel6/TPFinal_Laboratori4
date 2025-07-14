@@ -74,6 +74,28 @@ export class AuthService {
       return this.getUsuarioDesdeLocalStorage()?.id ?? null;
     }
 
+
+
+    private events = ['mousemove', 'keydown', 'scroll', 'click'];
+    private listeners: (() => void)[] = [];
+    
+    private setupInactivityListener() {
+      this.removeInactivityListeners(); // evita duplicar
+    
+      this.ngZone.runOutsideAngular(() => {
+        this.events.forEach(event => {
+          const handler = () => this.resetTimer();
+          window.addEventListener(event, handler);
+          this.listeners.push(() => window.removeEventListener(event, handler));
+        });
+      });
+    
+      this.resetTimer(); // inicializa el temporizador
+    }
+
+
+
+/*
     private setupInactivityListener() {
       const events = ['mousemove', 'keydown', 'scroll', 'click'];
     
@@ -84,7 +106,7 @@ export class AuthService {
       });
     
       this.resetTimer(); // inicializa el temporizador
-    }
+    }*/
     
     private resetTimer() {
       clearTimeout(this.timeoutId);
@@ -97,6 +119,13 @@ export class AuthService {
       }, this.inactivityTime);
     }
 
+
+    private removeInactivityListeners() {
+      this.listeners.forEach(remove => remove());
+      this.listeners = [];
+      clearTimeout(this.timeoutId);
+    }
+
    
   logout() {
     
@@ -104,6 +133,7 @@ export class AuthService {
     this.autenticado.next(false);
     this.clearUserName(); // limpia el nombre del observable
     this.reservasSubject.next(0);
+    this.removeInactivityListeners(); // 🧼 limpia los eventos y el timeout
     console.log("Usuario deslogueado");
     this.router.navigate(['/login']);
   }

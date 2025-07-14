@@ -9,12 +9,13 @@ import { Paquetes2ListComponent } from './components/pages/paquetes2-list/paquet
 import { Paquetes2DetalleComponent } from './components/pages/paquete-detalle/paquete-detalle.component';
 import { AuthGuard } from './guards/auth.guard';
 import { MisReservasComponent } from './mis-reservas/mis-reservas.component';
+import { NoAuthGuard } from './guards/no-auth.guard';
 
 const routes: Routes = [
 
     {path: '', component: HomeComponent},
-      { path: 'login', component: LoginComponent },  
-      { path: 'registro', component: RegistroComponent },  
+      { path: 'login', component: LoginComponent,canActivate:[NoAuthGuard] },  
+      { path: 'registro', component: RegistroComponent,canActivate:[NoAuthGuard]  },  
     
       {path: 'destinations', component: DestinationsComponent}, 
       {path: 'paquetes2',component: Paquetes2ListComponent},
@@ -26,7 +27,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
