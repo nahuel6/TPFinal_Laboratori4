@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "json-server",
       "author": "typicode"
     }
   ],
   "comments": [
     {
-      "id": 1,
+      "id": "1",
       "body": "some comment",
       "postId": 1
     }
@@ -18,7 +18,7 @@
   },
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Juan",
       "apellido": "Pérez",
       "dni": "12345678",
@@ -28,7 +28,7 @@
       "reservas": []
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "María",
       "apellido": "Gómez",
       "dni": "87654321",
@@ -43,7 +43,7 @@
       "dni": "34343423",
       "email": "rodriguez@gmail.com",
       "password": "121212",
-      "id": 3,
+      "id": "3",
       "rol": "user",
       "reservas": [
         {
@@ -59,7 +59,7 @@
       "dni": "233445",
       "email": "rb@gmail.com",
       "password": "1212",
-      "id": 4,
+      "id": "4",
       "rol": "admin",
       "reservas": [
         {
@@ -80,12 +80,12 @@
       "dni": "233445",
       "email": "nr@gmail.com",
       "password": "1212",
-      "id": 5,
+      "id": "5",
       "rol": "user",
       "reservas": []
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Juan",
       "apellido": "Pérez",
       "dni": "12345678",
@@ -95,7 +95,7 @@
       "reservas": []
     },
     {
-      "id": 7,
+      "id": "7",
       "nombre": "María",
       "apellido": "Gómez",
       "dni": "87654321",
@@ -105,7 +105,7 @@
       "reservas": []
     },
     {
-      "id": 8,
+      "id": "8",
       "nombre": "Pedro",
       "apellido": "Rodríguez",
       "dni": "34343423",
@@ -115,7 +115,7 @@
       "reservas": []
     },
     {
-      "id": 9,
+      "id": "9",
       "nombre": "Roberto",
       "apellido": "González",
       "dni": "23344567",
@@ -125,7 +125,7 @@
       "reservas": []
     },
     {
-      "id": 10,
+      "id": "10",
       "nombre": "Laura",
       "apellido": "Martínez",
       "dni": "99887766",
@@ -135,7 +135,7 @@
       "reservas": []
     },
     {
-      "id": 11,
+      "id": "11",
       "nombre": "Carlos",
       "apellido": "Fernández",
       "dni": "55667788",
@@ -145,7 +145,7 @@
       "reservas": []
     },
     {
-      "id": 12,
+      "id": "12",
       "nombre": "Ana",
       "apellido": "López",
       "dni": "12398765",
@@ -155,7 +155,7 @@
       "reservas": []
     },
     {
-      "id": 13,
+      "id": "13",
       "nombre": "Luis",
       "apellido": "Sánchez",
       "dni": "99887755",
@@ -170,7 +170,7 @@
       "dni": "232323",
       "email": "agus@gmail.com",
       "password": "1212",
-      "id": 14,
+      "id": "14",
       "rol": "user",
       "reservas": []
     },
@@ -180,7 +180,7 @@
       "dni": "37010980",
       "email": "abc@gmail.com",
       "password": "asd123",
-      "id": 15,
+      "id": "15",
       "rol": "user",
       "reservas": []
     },
@@ -190,7 +190,7 @@
       "dni": "56565656",
       "email": "catalan@gmail.com",
       "password": "",
-      "id": 16,
+      "id": "16",
       "rol": "user",
       "reservas": [
         {
@@ -206,7 +206,7 @@
       "dni": "56565657",
       "email": "cata@gmail.com",
       "password": "1234",
-      "id": 17,
+      "id": "17",
       "rol": "user",
       "reservas": []
     },
@@ -216,7 +216,7 @@
       "dni": "121212",
       "email": "ronaldoo@gmail.com",
       "password": "1414",
-      "id": 19,
+      "id": "19",
       "rol": "user",
       "reservas": []
     },
@@ -226,7 +226,7 @@
       "dni": "122377",
       "email": "aguss@gmail.com",
       "password": "121212",
-      "id": 20
+      "id": "20"
     },
     {
       "nombre": "CARLOS",
@@ -234,105 +234,105 @@
       "dni": "122377",
       "email": "azz@gmail.com",
       "password": "qwqwqw",
-      "id": 21
+      "id": "21"
     }
   ],
   "comentarios": [
     {
-      "id": 1,
+      "id": "1",
       "userId": 1,
       "destinationId": "1",
       "content": "Hermoso lugar, definitivamente lo recomiendo.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 2,
+      "id": "2",
       "userId": 2,
       "destinationId": "2",
       "content": "Los vinos y la vista de las montañas son maravillosos.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 3,
+      "id": "3",
       "userId": 1,
       "destinationId": "1",
       "content": "Gran experiencia cultural y gastronómica en Buenos Aires.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 4,
+      "id": "4",
       "userId": 3,
       "destinationId": "3",
       "content": "Bariloche es un paraíso para los amantes de la naturaleza y el trekking."
     },
     {
-      "id": 5,
+      "id": "5",
       "userId": 4,
       "destinationId": "3",
       "content": "Lugares mágicos en Bariloche, con paisajes que quitan el aliento. Totalmente recomendable.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 6,
+      "id": "6",
       "userId": 5,
       "destinationId": "4",
       "content": "Iguazú es impresionante, las cataratas son un espectáculo de la naturaleza.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 7,
+      "id": "7",
       "userId": 6,
       "destinationId": "4",
       "content": "Una de las maravillas naturales del mundo. La experiencia es indescriptible."
     },
     {
-      "id": 8,
+      "id": "8",
       "userId": 7,
       "destinationId": "5",
       "content": "Mendoza tiene una belleza única, y los viñedos son espectaculares.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 9,
+      "id": "9",
       "userId": 8,
       "destinationId": "5",
       "content": "Un lugar tranquilo y pintoresco, perfecto para relajarse y disfrutar de un buen vino."
     },
     {
-      "id": 10,
+      "id": "10",
       "userId": 9,
       "destinationId": "2",
       "content": "Me encantó la comida y la hospitalidad. Definitivamente volveré.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 11,
+      "id": "11",
       "userId": 10,
       "destinationId": "1",
       "content": "Buenos Aires es una ciudad llena de vida, arte, cultura y buenas opciones gastronómicas."
     },
     {
-      "id": 12,
+      "id": "12",
       "userId": 11,
       "destinationId": "2",
       "content": "La región de Mendoza tiene unos vinos espectaculares, y la vista de los Andes es impresionante.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 13,
+      "id": "13",
       "userId": 12,
       "destinationId": "3",
       "content": "¡Esos lagos en Bariloche son un sueño hecho realidad! Perfecto para hacer senderismo."
     },
     {
-      "id": 14,
+      "id": "14",
       "userId": 13,
       "destinationId": "4",
       "content": "El parque nacional Iguazú es increíble, el paisaje y las cascadas son de otro mundo.",
       "fecha": "2025-01-05T09:15:00.000Z"
     },
     {
-      "id": 15,
+      "id": "15",
       "userId": 14,
       "destinationId": "5",
       "content": "Mendoza es todo lo que me esperaba y más. Vine por los vinos, pero la ciudad es un encanto."
@@ -343,7 +343,7 @@
       "content": "Muy lindo lugar, volvere pronto!",
       "nombreUsuario": "roberto",
       "fecha": "2025-01-05T09:15:00.000Z",
-      "id": 17
+      "id": "17"
     },
     {
       "userId": 15,
@@ -351,7 +351,7 @@
       "content": "Me gusto mucho",
       "nombreUsuario": "Nica",
       "fecha": "2024-12-10T14:30:00.000Z",
-      "id": 19
+      "id": "19"
     },
     {
       "userId": 4,
@@ -359,7 +359,7 @@
       "content": "Me encantó iguazu",
       "nombreUsuario": "roberto",
       "fecha": "2025-01-05T09:15:00.000Z",
-      "id": 20
+      "id": "20"
     },
     {
       "userId": 4,
@@ -367,12 +367,12 @@
       "content": "Muy lindo mendoza!",
       "nombreUsuario": "roberto",
       "fecha": "2025-06-26T04:10:00.301Z",
-      "id": 21
+      "id": "21"
     }
   ],
   "paquetes": [
     {
-      "id": 1,
+      "id": "1",
       "destino": "Bariloche",
       "nombre": "Paquete turistico a Bariloche",
       "descripcion": "Descubre la magia de San Carlos de Bariloche, un destino que combina paisajes de montañas nevadas, lagos cristalinos y una arquitectura alpina encantadora. ",
@@ -504,7 +504,7 @@
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
-      "id": 2,
+      "id": "2",
       "destino": "Iguazú",
       "nombre": "Paquete turistico a cataratas del iguazu",
       "descripcion": "Explora la majestuosidad de las Cataratas del Iguazú, una de las maravillas naturales del mundo,  una experiencia que combina aventura y contacto con la naturaleza. Sumérgete en la selva misionera a través de pasarelas y senderos que te llevan a vistas impresionantes del Salto San Martín, la Garganta del Diablo y muchos más. ",
@@ -660,7 +660,7 @@
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
-      "id": 3,
+      "id": "3",
       "destino": "Mendoza",
       "nombre": "Paquete turistico a Mendoza",
       "descripcion": "Vive una experiencia inolvidable en Mendoza, tierra del sol y del buen vino. Este programa te invita a descubrir Mendoza de una forma auténtica y emocionante, sumergiéndote en su cultura del vino, sus paisajes naturales y su rica tradición. ",
@@ -805,7 +805,7 @@
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
-      "id": 4,
+      "id": "4",
       "destino": "Córdoba",
       "nombre": "Paquete turistico a Cordoba",
       "descripcion": "Este programa te invita a disfrutar Córdoba de una manera diferente, descubriendo la esencia de Córdoba, una provincia que combina historia, naturaleza y cultura. ",
@@ -941,7 +941,7 @@
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
-      "id": 5,
+      "id": "5",
       "destino": "Buenos Aires",
       "nombre": "Paquete Turístico a Buenos Aires",
       "descripcion": "Descubre Buenos Aires explorando su vibrante vida urbana y rica historia cultural. Una ciudad llena de energía, historia y modernidad. ",
@@ -1077,7 +1077,7 @@
       "aclaracion": "Valores válidos para pasajeros argentinos. Consultar condiciones agencia de viajes. Comisionable para agencias. Tarifas sujetas a disponibilidad y modificaciones. Adicionar 2% de gastos administrativos."
     },
     {
-      "id": 6,
+      "id": "6",
       "destino": "Salta",
       "nombre": "Paquete Turístico a Salta",
       "descripcion": "Este programa invita a descubrir Salta, una ciudad colonial con una rica historia, cultura y paisajes únicos en el noroeste argentino.",
@@ -1230,32 +1230,32 @@
   ],
   "destinos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Buenos Aires Capital Federal",
       "descripcion": "Descubre la vibrante capital de Argentina, un lugar donde el tango, la arquitectura europea y la vida nocturna crean una experiencia única. Desde el histórico barrio de San Telmo hasta los modernos cafés y librerías de Palermo, Buenos Aires es una ciudad que nunca duerme y siempre tiene algo nuevo que ofrecer. No te pierdas un espectáculo de tango en vivo y disfruta de una auténtica parrillada argentina."
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Mendoza",
       "descripcion": "Situada a los pies de la cordillera de los Andes, Mendoza es la capital del vino argentino. Disfruta de una cata de vinos en alguna de sus bodegas de renombre internacional o relájate con vistas a los viñedos mientras degustas su famosa cocina regional. Para los aventureros, el Aconcagua, el pico más alto de América, ofrece vistas y excursiones inolvidables en un entorno natural incomparable."
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Córdoba Argentina",
       "descripcion": "Con una mezcla de historia colonial y paisajes serranos, Córdoba es un destino que enamora a quienes buscan combinar cultura y naturaleza. Explora las iglesias y conventos del centro histórico o visita las pintorescas villas serranas cercanas, ideales para realizar actividades al aire libre y disfrutar de la hospitalidad cordobesa. Ideal para escapadas relajantes y para amantes de los deportes de aventura"
     },
     {
-      "id": 4,
+      "id": "4",
       "nombre": "Bariloche Cerro Campanario",
       "descripcion": "Ubicada en el corazón de la Patagonia, San Carlos de Bariloche es un paraíso de montañas, lagos y bosques. En invierno, el esquí y el snowboard atraen a entusiastas de la nieve, mientras que en verano las actividades al aire libre, como el trekking y el kayak, ofrecen una conexión total con la naturaleza. No olvides probar el famoso chocolate de Bariloche y contemplar el atardecer en el Lago Nahuel Huapi."
     },
     {
-      "id": 5,
+      "id": "5",
       "nombre": "Iguazú",
       "descripcion": "Vive la experiencia única de uno de los grandes tesoros naturales del mundo. Las Cataratas del Iguazú, ubicadas en plena selva misionera, son una maravilla de la naturaleza con más de 270 saltos de agua que ofrecen vistas impresionantes y actividades para los aventureros, como el paseo en lancha que te lleva casi hasta el pie de las caídas de agua. Un destino que combina naturaleza, biodiversidad y emoción."
     },
     {
-      "id": 6,
+      "id": "6",
       "nombre": "Salta Argentina",
       "descripcion": "Conocida como ‘La Linda’, Salta ofrece paisajes de montañas, quebradas y viñedos en uno de los entornos más pintorescos del norte argentino. Recorre la Quebrada de Humahuaca, Patrimonio de la Humanidad, y déjate cautivar por sus coloridos cerros y pueblitos coloniales. Salta es el punto de partida ideal para explorar la cultura y los sabores únicos de la región andina, con su música folclórica y deliciosa gastronomía.."
     }
@@ -1266,21 +1266,21 @@
       "email": "jose@gmail.com",
       "asunto": "reservas",
       "mensaje": "quisiera saber sobre las fechas de reservas",
-      "id": 1
+      "id": "1"
     },
     {
       "nombre": "as",
       "email": "asd@asas",
       "asunto": "as",
       "mensaje": "as",
-      "id": 2
+      "id": "2"
     },
     {
       "nombre": "as",
       "email": "as@gmail",
       "asunto": "as",
       "mensaje": "as",
-      "id": 3
+      "id": "3"
     }
   ]
 }

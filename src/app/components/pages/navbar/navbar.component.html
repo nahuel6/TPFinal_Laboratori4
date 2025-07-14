@@ -1,19 +1,22 @@
 <header class="navbar">
-<div class="logo">
-      
-  <a href=""><img src="assets/images/logo.png" alt="Logo"></a>
-  <h1>UTN Viajes</h1>
-</div>
-    <nav>
-      <ul class="title2">
-        <li><a href="#">Inicio</a></li>
-        <li><a (click)="goToDestinations()" style="cursor: pointer;">Destinos</a></li>
-       
-        <li><a routerLink="/paquetes2" style="cursor: pointer;">Paquetes</a></li>
-        <li><a (click)="goToLogin() " style="cursor: pointer;">Iniciar Sesion</a></li>
-        <li><a routerLink="/mis-reservas">Mis Reservas</a></li>
-      </ul>
-    
-    </nav>
-  
-  </header> 
+  <div class="logo">
+    <a href=""><img src="assets/images/logo.png" alt="Logo"></a>
+    <h1>UTN Viajes</h1>
+  </div>
+
+  <!-- Botón hamburguesa (visible en móvil) -->
+  <button class="menu-toggle" (click)="menuAbierto = !menuAbierto">
+    ☰
+  </button>
+
+  <!-- Menú principal -->
+  <nav [class.visible]="menuAbierto">
+    <ul class="title2">
+      <li><a href="#" (click)="cerrarMenu()">Inicio</a></li>
+<li><a (click)="goToDestinations(); cerrarMenu()" style="cursor: pointer;">Destinos</a></li>
+<li><a routerLink="/paquetes2" (click)="cerrarMenu()" style="cursor: pointer;">Paquetes</a></li>
+<li><a (click)="goToLogin(); cerrarMenu()" style="cursor: pointer;">Iniciar Sesión</a></li>
+<li><a routerLink="/mis-reservas" (click)="cerrarMenu()">Mis Reservas</a></li>
+    </ul>
+  </nav>
+</header>

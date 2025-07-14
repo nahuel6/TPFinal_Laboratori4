@@ -94,4 +94,47 @@ h1{
     border-radius: 15px;
   }
   
-  
+/*  codigo para css responsive  */
+
+/* Ocultar botón en escritorio */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+/* Mostrar botón en pantallas pequeñas */
+ @media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background-color: rgba(8, 3, 0, 0.9);
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    display: none; 
+    gap: 20 px;
+    transition: opacity 0.3s ease;
+ 
+ 
+
+
+  }
+
+  nav.visible ul {
+    display: flex;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+} 
+

@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   isDropdownVisible: boolean = false;
+  menuAbierto: boolean = false; // 👈 Esto controla el menú hamburguesa
+
   constructor(private router: Router){}
   
   goToDestinations() {
@@ -21,5 +23,10 @@ export class NavbarComponent {
    // this.fetchImage(destination);  // O realiza cualquier lógica necesaria para el destino
     this.isDropdownVisible = false;  // Ocultar el menú al seleccionar un destino
   }
+
+  cerrarMenu() {
+  this.menuAbierto = false;
+}
+
   
 }
