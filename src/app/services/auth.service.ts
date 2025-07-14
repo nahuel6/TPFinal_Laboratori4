@@ -12,7 +12,7 @@ export class AuthService {
   private userKey = 'user';
   private timeoutId: any;
   private inactivityTime = 60000; // 1 minuto = 60.000 ms
-
+  
 
   constructor(private http: HttpClient,private router: Router, private ngZone: NgZone) { 
     
@@ -23,6 +23,8 @@ export class AuthService {
   private autenticado = new BehaviorSubject<boolean>(this.isAuthenticated());
   public autenticado$ = this.autenticado.asObservable();
   private userNameSource = new BehaviorSubject<string | null>(null);
+  public reservasSubject = new BehaviorSubject<number>(0);
+  public reservas$ = this.reservasSubject.asObservable();
   userName$ = this.userNameSource.asObservable();
 
     login(email: string, password: string): Observable<Usuario | null> {
@@ -33,6 +35,7 @@ export class AuthService {
             //this.usuarioLogueado = usuario;
             localStorage.setItem('user', JSON.stringify(usuario));
             this.autenticado.next(true);
+            this.actualizarCantidadReservas();
             console.log("Usuario logueado:", usuario);
             observer.next(usuario);
             this.setupInactivityListener();
@@ -50,7 +53,8 @@ export class AuthService {
       
       try {
         return JSON.parse(data);
-      } catch {
+      } catch (e){
+        console.error("Error al parsear usuario del localStorage:", e);
         return null;
       }
     }
@@ -99,6 +103,7 @@ export class AuthService {
     localStorage.removeItem('user');
     this.autenticado.next(false);
     this.clearUserName(); // limpia el nombre del observable
+    this.reservasSubject.next(0);
     console.log("Usuario deslogueado");
     this.router.navigate(['/login']);
   }
@@ -117,5 +122,29 @@ export class AuthService {
   public getUsuario(): Usuario | null {
     return this.getUsuarioDesdeLocalStorage();
   }
+
+
+
+
+  public actualizarCantidadReservas(): void {
+    const usuario = this.getUsuario();
+    const cantidad = usuario?.reservas?.length || 0;
+    this.reservasSubject.next(cantidad);
+  }
+  public actualizarUsuarioLocal(usuario: Usuario): void {
+    localStorage.setItem('user', JSON.stringify(usuario));
+    this.setUserName(usuario.nombre);
+    this.reservasSubject.next(usuario.reservas?.length ?? 0);
+  }
+
+  public inicializarSesionSiExiste() {
+    const usuario = this.getUsuarioDesdeLocalStorage();
+    if (usuario) {
+      this.autenticado.next(true);
+      this.setUserName(usuario.nombre);
+      this.setupInactivityListener(); 
+    }
+  }
+
 }
 

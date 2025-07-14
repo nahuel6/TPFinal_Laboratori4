@@ -38,17 +38,23 @@
       "reservas": []
     },
     {
-      "nombre": "pedro",
-      "apellido": "carlos",
+      "nombre": "Pedro",
+      "apellido": "Carlos",
       "dni": "34343423",
       "email": "rodriguez@gmail.com",
       "password": "121212",
       "id": 3,
       "rol": "user",
-      "reservas": []
+      "reservas": [
+        {
+          "paqueteId": 2,
+          "fecha": "2025-07-10",
+          "precio": 150000
+        }
+      ]
     },
     {
-      "nombre": "roberto",
+      "nombre": "Roberto",
       "apellido": "gonzalez",
       "dni": "233445",
       "email": "rb@gmail.com",
@@ -58,33 +64,18 @@
       "reservas": [
         {
           "paqueteId": 2,
-          "fecha": "2025-07-15",
-          "precio": 150000
+          "fecha": "2025-08-03",
+          "precio": 160000
         },
         {
-          "paqueteId": 1,
-          "fecha": "2025-07-15",
-          "precio": 150000
-        },
-        {
-          "paqueteId": 2,
-          "fecha": "2025-07-15",
-          "precio": 150000
-        },
-        {
-          "paqueteId": 6,
-          "fecha": "2025-07-10",
-          "precio": 150000
-        },
-        {
-          "paqueteId": 1,
-          "fecha": "2025-07-10",
-          "precio": 150000
+          "paqueteId": 5,
+          "fecha": "2025-08-20",
+          "precio": 160000
         }
       ]
     },
     {
-      "nombre": "nahuel",
+      "nombre": "Nahuel",
       "apellido": "rodriguez",
       "dni": "233445",
       "email": "nr@gmail.com",
@@ -175,7 +166,7 @@
     },
     {
       "nombre": "agustin",
-      "apellido": "rodriguez",
+      "apellido": "Rodriguez",
       "dni": "232323",
       "email": "agus@gmail.com",
       "password": "1212",
@@ -195,7 +186,7 @@
     },
     {
       "nombre": "Ernesto",
-      "apellido": "catalan",
+      "apellido": "Catalan",
       "dni": "56565656",
       "email": "catalan@gmail.com",
       "password": "",
@@ -220,14 +211,30 @@
       "reservas": []
     },
     {
-      "nombre": "cristiano",
-      "apellido": " ronaldo",
+      "nombre": "Cristiano",
+      "apellido": " Ronaldo",
       "dni": "121212",
       "email": "ronaldoo@gmail.com",
       "password": "1414",
       "id": 19,
       "rol": "user",
       "reservas": []
+    },
+    {
+      "nombre": "AGUSTINA",
+      "apellido": "MENDOZA",
+      "dni": "122377",
+      "email": "aguss@gmail.com",
+      "password": "121212",
+      "id": 20
+    },
+    {
+      "nombre": "CARLOS",
+      "apellido": "ASAS",
+      "dni": "122377",
+      "email": "azz@gmail.com",
+      "password": "qwqwqw",
+      "id": 21
     }
   ],
   "comentarios": [
@@ -471,14 +478,26 @@
           "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 3,
+      "cantidadReservas": 12,
       "fechasPrecios": [
         {
-          "fecha": "2025-07-10",
+          "fecha": "2025-07-17",
           "precio": 150000
         },
         {
           "fecha": "2025-08-20",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "fecha": "2025-07-30",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-08-03",
           "precio": 160000
         }
       ],
@@ -615,14 +634,26 @@
           "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 3,
+      "cantidadReservas": 6,
       "fechasPrecios": [
         {
-          "fecha": "2025-07-10",
+          "fecha": "2025-07-17",
           "precio": 150000
         },
         {
           "fecha": "2025-08-20",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "fecha": "2025-07-30",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-08-03",
           "precio": 160000
         }
       ],
@@ -693,11 +724,12 @@
           "nombre": "Hotel Cordon del plata",
           "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6700.94410493356!2d-68.84186462355885!3d-32.88568537361842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091eb923bc2d%3A0x48276404eecb679c!2sCordon%20Del%20Plata!5e0!3m2!1ses-419!2sar!4v1749092901793!5m2!1ses-419!2sar",
           "link_externo": "https://maps.app.goo.gl/C1czhbNtk5rNVrmp6"
-        },{
-          "id":3,
-          "nombre":"Hotel Sheraton Mendoza",
-          "maps_url":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.2246830240038!2d-68.8380012!3d-32.8922273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09177a2308d3%3A0xaf94b708252aeca4!2sSheraton%20Mendoza%20Hotel!5e0!3m2!1ses-419!2sar!4v1752199189949!5m2!1ses-419!2sar",
-          "link_externo":"https://maps.app.goo.gl/swGenTTGG8EaiMmJA"
+        },
+        {
+          "id": 3,
+          "nombre": "Hotel Sheraton Mendoza",
+          "maps_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.2246830240038!2d-68.8380012!3d-32.8922273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e09177a2308d3%3A0xaf94b708252aeca4!2sSheraton%20Mendoza%20Hotel!5e0!3m2!1ses-419!2sar!4v1752199189949!5m2!1ses-419!2sar",
+          "link_externo": "https://maps.app.goo.gl/swGenTTGG8EaiMmJA"
         }
       ],
       "alojamientos": [
@@ -707,7 +739,8 @@
           "single": 22000,
           "doble": 115000,
           "triple": 9500,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Sheraton",
@@ -715,7 +748,8 @@
           "single": 34000,
           "doble": 158000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Dakar",
@@ -723,7 +757,8 @@
           "single": 34000,
           "doble": 158000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Lido",
@@ -731,7 +766,8 @@
           "single": 34000,
           "doble": 158000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "Panorama",
@@ -739,17 +775,30 @@
           "single": 34000,
           "doble": 158000,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 0,
+      "cantidadReservas": 1,
       "fechasPrecios": [
         {
-          "fecha": "2025-07-10",
+          "fecha": "2025-07-17",
           "precio": 150000
         },
         {
           "fecha": "2025-08-20",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "fecha": "2025-07-30",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-08-03",
           "precio": 160000
         }
       ],
@@ -826,7 +875,8 @@
           "single": 31239,
           "doble": 15675,
           "triple": 14350,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "AMERIAN EXECUTIVE",
@@ -834,7 +884,8 @@
           "single": 23900,
           "doble": 12780,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "NH PANORAMA",
@@ -842,7 +893,8 @@
           "single": 19744,
           "doble": 9928,
           "triple": 23000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "CASEROS 248",
@@ -850,7 +902,8 @@
           "single": 21770,
           "doble": 11953,
           "triple": 22000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "KUBE APART",
@@ -858,17 +911,30 @@
           "single": 15300,
           "doble": 9150,
           "triple": 7199,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 0,
+      "cantidadReservas": 2,
       "fechasPrecios": [
         {
-          "fecha": "2025-07-10",
+          "fecha": "2025-07-17",
           "precio": 150000
         },
         {
           "fecha": "2025-08-20",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "fecha": "2025-07-30",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-08-03",
           "precio": 160000
         }
       ],
@@ -945,7 +1011,8 @@
           "single": 31239,
           "doble": 15675,
           "triple": 14350,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "HOTEL BAHIA",
@@ -953,7 +1020,8 @@
           "single": 23900,
           "doble": 12780,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "HOTEL LIDO",
@@ -961,7 +1029,8 @@
           "single": 19744,
           "doble": 9928,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "CASEROS 248",
@@ -969,7 +1038,8 @@
           "single": 21770,
           "doble": 11953,
           "triple": 12000,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "KUBE APART",
@@ -977,17 +1047,30 @@
           "single": 15300,
           "doble": 9150,
           "triple": 7199,
-          "validoHasta": "2025-09-30"
+          "validoHasta": "2025-09-30",
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 0,
+      "cantidadReservas": 3,
       "fechasPrecios": [
         {
-          "fecha": "2025-07-10",
+          "fecha": "2025-07-17",
           "precio": 150000
         },
         {
           "fecha": "2025-08-20",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "fecha": "2025-07-30",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-08-03",
           "precio": 160000
         }
       ],
@@ -1080,7 +1163,7 @@
           "doble": 15675,
           "triple": 14350,
           "validoHasta": "2025-09-30",
-          "valido_hasta": null
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "PORTOZUELO HOTEL",
@@ -1089,7 +1172,7 @@
           "doble": "$12780",
           "triple": "Consultar",
           "validoHasta": "2025-09-30",
-          "valido_hasta": null
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "HOUSE APART",
@@ -1098,7 +1181,7 @@
           "doble": 99280,
           "triple": 33000,
           "validoHasta": "2025-09-30",
-          "valido_hasta": null
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "HOTEL HAYBAL",
@@ -1107,7 +1190,7 @@
           "doble": 11953,
           "triple": null,
           "validoHasta": "2025-09-30",
-          "valido_hasta": null
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         },
         {
           "hotel": "LA SECUNDIDA",
@@ -1116,17 +1199,29 @@
           "doble": 9150,
           "triple": 7199,
           "validoHasta": "2025-09-30",
-          "valido_hasta": null
+          "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 1,
+      "cantidadReservas": 4,
       "fechasPrecios": [
         {
-          "fecha": "2025-07-10",
+          "fecha": "2025-07-17",
           "precio": 150000
         },
         {
           "fecha": "2025-08-20",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "fecha": "2025-07-30",
+          "precio": 160000
+        },
+        {
+          "fecha": "2025-08-03",
           "precio": 160000
         }
       ],

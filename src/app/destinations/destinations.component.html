@@ -13,12 +13,13 @@
       <div class="destinations-container fade-left">
         <h2 class="title">Destinos Disponibles</h2>
         <div class="destinations fade-up">
-          <button (click)="fetchImage('Buenos Aires Capital Federal')">Buenos Aires</button>
-          <button (click)="fetchImage('Mendoza')">Mendoza</button>
-          <button (click)="fetchImage('Córdoba Argentina')">Córdoba</button>
-          <button (click)="fetchImage('Bariloche Cerro Campanario')">Bariloche</button>
-          <button (click)="fetchImage('Iguazú')">Iguazú</button>
-          <button (click)="fetchImage('Salta Argentina')">Salta</button>
+          <button (click)="fetchImage('Buenos Aires Capital Federal')" [class.activo]="destinoSeleccionado === 'Buenos Aires Capital Federal'">Buenos Aires</button>
+          
+          <button (click)="fetchImage('Mendoza')" [class.activo]="destinoSeleccionado === 'Mendoza'">Mendoza</button>
+          <button (click)="fetchImage('Córdoba Argentina')" [class.activo]="destinoSeleccionado === 'Córdoba Argentina'">Córdoba</button>
+          <button (click)="fetchImage('Bariloche Cerro Campanario')"  [class.activo]="destinoSeleccionado === 'Bariloche Cerro Campanario'">Bariloche</button>
+          <button (click)="fetchImage('Iguazú')" [class.activo]="destinoSeleccionado === 'Iguazú'">Iguazú</button>
+          <button (click)="fetchImage('Salta Argentina')"  [class.activo]="destinoSeleccionado === 'Salta Argentina'">Salta</button>
         </div>
 
         
@@ -31,6 +32,10 @@
           <article *ngIf="description" class="descripcion-article">
           <h3>Descripción del destino</h3>
           <p>{{ description }}</p>
+          <h2 class="scroll-down-text">
+            Desliza hacia abajo para ver los comentarios
+            <span class="arrow-down">↓</span>
+          </h2>
           </article>
       </div>
 

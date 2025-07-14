@@ -1,0 +1,16 @@
+<div class="mis-reservas">
+    <h2 class="titulo">Mis Reservas</h2>
+  
+    <div *ngIf="reservas.length > 0; else sinReservas" class="reservas-lista">
+      <div class="reserva-card" *ngFor="let r of reservas; let i = index">
+        <h3>{{ getNombrePaquete(r.paqueteId) }}</h3>
+        <p><strong>Fecha:</strong> {{ r.fecha }}</p>
+        <p><strong>Precio:</strong> ${{ r.precio }}</p>
+        <button class="cancelar-btn" (click)="cancelarReserva(i, r)">Cancelar</button>
+      </div>
+    </div>
+  
+    <ng-template #sinReservas>
+      <p class="mensaje-vacio">No tenés reservas activas por el momento. 🧳</p>
+    </ng-template>
+  </div>

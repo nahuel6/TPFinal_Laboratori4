@@ -145,6 +145,8 @@
         <button *ngIf="!reservaConfirmada" (click)="confirmarReserva()">Reservar</button>
         <div *ngIf="reservaConfirmada" class="mensaje-reserva">
           ✅ ¡Reserva realizada con éxito!
+          <br>
+    <button (click)="cancelarReserva()">Cancelar reserva</button>
         </div>
       </div>
     </div>

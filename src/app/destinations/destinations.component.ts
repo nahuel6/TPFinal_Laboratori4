@@ -15,7 +15,7 @@ export class DestinationsComponent{
   description: string = ''; 
   loading : boolean = false;
  customSearch: string = '';
-
+ destinoSeleccionado: string | null = null; 
 
 
   showComments: boolean = false;
@@ -32,6 +32,7 @@ export class DestinationsComponent{
   fetchImage(destination: string) {
     // Actualiza la descripción según el destino seleccionado
     this.loading = true;
+    this.destinoSeleccionado = destination;
     this.setDescription(destination);
 
     this.destinationsService.getImages(destination).subscribe(

@@ -1,3 +1,5 @@
+import { Reserva } from "../mis-reservas/mis-reservas.component";
+
 export interface Usuario {
   nombre: string;
   apellido: string;
@@ -6,5 +8,6 @@ export interface Usuario {
   password: string;
   id?: number;
   rol: string;
-  reservas:{}[]; 
+  reservas: Reserva[]; 
+  //reservas:{}[]; 
 }

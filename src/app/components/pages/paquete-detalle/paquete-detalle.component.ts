@@ -154,7 +154,10 @@ if (savedTab) {
   
     if (usuario.id !== undefined) {
       this.usuarioService.actualizarUsuario(usuario.id, usuario).subscribe(() => {
+        this.authService.actualizarUsuarioLocal(usuario);
         console.log("Reserva guardada en usuario");
+        this.authService.actualizarCantidadReservas();
+        this.authService.reservasSubject.next(usuario.reservas.length);
       });
     } else {
       console.error('El ID del usuario es undefined.');
@@ -170,4 +173,80 @@ if (savedTab) {
   }
 
 
+
+  cancelarReserva() {
+    const confirmar = confirm("¿Estás seguro de cancelar la reserva?");
+    if (!confirmar || !this.fechaSeleccionada || !this.paquete) return;
+  
+    /* ------------------------------------------
+       1.  Actualizar estado local de la pantalla
+    -------------------------------------------*/
+    this.reservaConfirmada = false;
+    const { fecha } = this.fechaSeleccionada;
+    this.fechaSeleccionada = null;
+  
+    /* ------------------------------------------
+       2.  Actualizar contador en el paquete
+    -------------------------------------------*/
+    const paqueteId = this.paquete.id!;
+    this.paqueteService.getPaquetePorId(paqueteId).subscribe(pack => {
+      pack.cantidadReservas = Math.max((pack.cantidadReservas || 1) - 1, 0);
+  
+      this.paqueteService.actualizarPaquete(paqueteId, pack).subscribe({
+        next: () => console.log('Paquete actualizado OK'),
+        error: err => console.error('❌ Error actualizando paquete', err)
+      });
+    });
+  
+    /* ------------------------------------------
+       3.  Quitar la reserva del usuario
+    -------------------------------------------*/
+    const usuario = this.authService.getUsuario();
+    if (!usuario) return;          // doble chequeo de seguridad
+  
+    // Filtra todo lo que NO sea el paquete/fecha cancelados
+    usuario.reservas = (usuario.reservas as any[]).filter(
+      (r: any) => !(r.paqueteId === paqueteId && r.fecha === fecha)
+    );
+  
+    this.usuarioService.actualizarUsuario(usuario.id!, usuario).subscribe({
+      
+      next: () => {
+        alert('Reserva cancelada.');
+        this.authService.actualizarUsuarioLocal(usuario);
+      this.authService.actualizarCantidadReservas();
+    },
+      error: err => {
+        console.error('❌ Error actualizando usuario', err);
+        alert('Error al cancelar la reserva.');
+      }
+  });
+  }
+
+
+
+/*
+  cancelarReserva() {
+    const confirmar = confirm("¿Estás seguro de cancelar la reserva?");
+    if (!confirmar) return;
+  
+    this.reservaConfirmada = false;
+    this.fechaSeleccionada = null;
+  
+    // Restar una reserva del paquete en json-server
+    const paqueteId = this.paquete?.id;
+  
+    if (paqueteId) {
+      this.paqueteService.getPaquetePorId(paqueteId).subscribe(paquete => {
+        paquete.cantidadReservas = Math.max((paquete.cantidadReservas || 1) - 1, 0);
+  
+        this.paqueteService.actualizarPaquete(paqueteId, paquete).subscribe(() => {
+          alert("Reserva cancelada.");
+        }, error => {
+          console.error("Error al actualizar el paquete:", error);
+          alert("Error al cancelar la reserva.");
+        });
+      });
+    }
+  }*/
 }
