@@ -77,7 +77,7 @@ export class PaqueteService {
     return eventos;
   }
 
-  actualizarPaquete(id: number, paquete: any): Observable<any> {
+  actualizarPaquete(id: string, paquete: any): Observable<any> {
     return this.http.put(`${this.apiUrl}/${id}`, paquete);
   }
   

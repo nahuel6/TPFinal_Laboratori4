@@ -42,6 +42,7 @@ export class CarruselComponent implements OnInit {
   imagenActiva: number = 0;
   intervalo!: ReturnType<typeof setInterval>;
   mostrarModal: boolean = false;
+  mostrarAsideInformativo: boolean = false;
 
   constructor(private router: Router,private contactoService: ContactoService) {
     this.router.events
@@ -50,6 +51,14 @@ export class CarruselComponent implements OnInit {
       const rutasOcultas = ['/paquetes', '/login', '/registro'];
       const rutaActual = event.urlAfterRedirects;
       this.mostrarAside = !rutasOcultas.some(ruta => rutaActual.startsWith(ruta));
+
+      
+      const rutasPermitidas = ['/', '/paquetes2', '/destinations'];
+const rutasExcluidas = ['/login', '/registro'];
+
+this.mostrarAsideInformativo =
+  rutasPermitidas.some(r => rutaActual === r || rutaActual.startsWith(r)) &&
+  !rutasExcluidas.some(r => rutaActual.startsWith(r));
     });
   }
 

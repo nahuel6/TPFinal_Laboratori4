@@ -2,6 +2,7 @@
 <app-navbar></app-navbar>
 <div *ngIf="userName" class="welcome-message">
     <h2>Hola, {{ userName }}!</h2>
+    <p> Tienes <strong>{{ cantidadReservas }}</strong> reservas realizadas </p>
     <button class="log-out" (click)="logout()" class="log-out">Cerrar sesión</button>
   </div>
 <app-carrusel></app-carrusel>

@@ -7,6 +7,7 @@
   background-color:  rgba(0, 0, 0, 0.6);
  /* padding-top: 90px; /* Ajustado a la altura del navbar */
  border-radius: 10px;
+ margin-top: 60px; /* o el valor que necesites */
 }
 
 .titulo-seccion {

@@ -12,6 +12,7 @@
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(4px);
   transition: all 0.3s ease;
+  margin-top: 90px; /* o el valor que necesites */
 }
 
   .detalle-paquete {

@@ -52,9 +52,12 @@ toggleConfirmPassword() {
     return;
   }
     
-
+  const formValue = this.registroForm.value;
     const nuevoUsuario = {
-      ...this.registroForm.value,
+      ...formValue,
+      //...this.registroForm.value,
+      nombre: formValue.nombre.toUpperCase(),
+  apellido: formValue.apellido.toUpperCase(),
       confirmPassword: undefined // No se envía al backend
     };
     /*const nuevoUsuario = this.registroForm.value;*/  
@@ -63,6 +66,25 @@ toggleConfirmPassword() {
       const usuarioExistente = usuarios.find(usuario => usuario.email === nuevoUsuario.email);
    
 
+
+      const emailRepetido = usuarios.some(usuario => usuario.email === nuevoUsuario.email);
+      const dniRepetido = usuarios.some(usuario => usuario.dni === nuevoUsuario.dni);
+      
+      if (emailRepetido) {
+        alert('El email ya está registrado. Por favor, utiliza otro email.');
+      } else if (dniRepetido) {
+        alert('El DNI ya está registrado. Por favor, verifica tus datos.');
+      } else {
+        this.usuarioService.registrarUsuario(nuevoUsuario).subscribe(() => {
+          this.registroExitoso = true;
+          this.registroForm.reset();
+          this.router.navigate(['/login']);
+        });
+      }
+
+
+
+/*
       if (usuarioExistente) {
         alert('El email ya está registrado. Por favor, utiliza otro email.');
       } else {
@@ -74,6 +96,8 @@ toggleConfirmPassword() {
         });
         
       }
+
+*/
     });
   }
 

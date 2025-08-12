@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent  {
+export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loginFailed: boolean = false;
   returnUrl: string = '/';
@@ -29,7 +29,17 @@ export class LoginComponent  {
     });
   }
 
-
+  ngOnInit(): void {
+    if (this.authService.estaAutenticado()) {
+      const confirmar = confirm('Ya hay una sesión activa. ¿Querés cerrarla e iniciar con otra cuenta?');
+      if (!confirmar) {
+        this.router.navigate(['/']); // Redirigí a donde prefieras
+        return;
+      }
+  
+      this.authService.logout();
+    }
+  }
   onLogin() {
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
