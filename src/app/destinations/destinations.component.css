@@ -33,7 +33,7 @@
   padding: 30px;
   margin: 0 auto;
   max-width: 1280px;
-   
+  margin-top: 40px; /* o el valor que necesites */
 }
 
 /* Botones de destinos */

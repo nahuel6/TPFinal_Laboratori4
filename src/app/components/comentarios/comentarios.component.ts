@@ -19,6 +19,9 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
   nuevoComentario: string = '';
   usuarioLogueado: boolean = false;
   private authSubscription: Subscription = new Subscription();
+  comentariosCargados = false;
+  usuariosCargados = false;
+
 
   constructor(
     private comentariosService: ComentariosService,
@@ -55,6 +58,7 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
   obtenerComentarios(): void {
     this.comentariosService.getComentariosPorDestino(this.destinationId).subscribe((data) => {
       this.comentarios = data;
+      this.comentariosCargados = true;
       this.combinarComentariosConUsuarios();
     });
   }
@@ -62,14 +66,16 @@ export class ComentariosComponent implements OnInit, OnChanges, OnDestroy {
   obtenerUsuarios(): void {
     this.usuarioService.obtenerUsuarios().subscribe((data) => {
       this.usuarios = data;
+      this.usuariosCargados = true;
       this.combinarComentariosConUsuarios();
     });
   }
 
   combinarComentariosConUsuarios(): void {
-    if (this.comentarios.length && this.usuarios.length) {
+    //if (this.comentarios.length && this.usuarios.length) {
+      if (this.comentariosCargados && this.usuariosCargados) {
       this.comentarios = this.comentarios.map((comentario) => {
-        const usuario = this.usuarios.find((u) => u.id === comentario.userId);
+        const usuario = this.usuarios.find((u) => Number(u.id) === Number(comentario.userId));
         return {
           ...comentario,
           nombreUsuario: usuario ? usuario.nombre : 'Usuario desconocido',

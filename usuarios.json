@@ -235,6 +235,31 @@
       "email": "azz@gmail.com",
       "password": "qwqwqw",
       "id": "21"
+    },
+    {
+      "nombre": "MARTIN",
+      "apellido": "GONZALEZ",
+      "dni": "5555555",
+      "email": "martin@gmail.com",
+      "password": "121212",
+      "id": "B3cdDyh",
+      "reservas": [
+        {
+          "paqueteId": "2",
+          "fecha": "2025-07-17",
+          "precio": 150000
+        },
+        {
+          "paqueteId": "3",
+          "fecha": "2025-07-24",
+          "precio": 150000
+        },
+        {
+          "paqueteId": "5",
+          "fecha": "2025-07-24",
+          "precio": 150000
+        }
+      ]
     }
   ],
   "comentarios": [
@@ -368,6 +393,14 @@
       "nombreUsuario": "roberto",
       "fecha": "2025-06-26T04:10:00.301Z",
       "id": "21"
+    },
+    {
+      "userId": "4",
+      "destinationId": "1",
+      "content": "Me encanto Buenos Aires!",
+      "nombreUsuario": "Roberto",
+      "fecha": "2025-07-14T16:20:25.012Z",
+      "id": "FobDrsC"
     }
   ],
   "paquetes": [
@@ -478,7 +511,7 @@
           "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 12,
+      "cantidadReservas": 13,
       "fechasPrecios": [
         {
           "fecha": "2025-07-17",
@@ -634,7 +667,7 @@
           "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 6,
+      "cantidadReservas": 7,
       "fechasPrecios": [
         {
           "fecha": "2025-07-17",
@@ -779,7 +812,7 @@
           "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 1,
+      "cantidadReservas": 2,
       "fechasPrecios": [
         {
           "fecha": "2025-07-17",
@@ -1051,7 +1084,7 @@
           "valido_hasta": "1970-01-01T00:00:00.000Z"
         }
       ],
-      "cantidadReservas": 3,
+      "cantidadReservas": 4,
       "fechasPrecios": [
         {
           "fecha": "2025-07-17",
@@ -1281,6 +1314,13 @@
       "asunto": "as",
       "mensaje": "as",
       "id": "3"
+    },
+    {
+      "nombre": "Jose",
+      "email": "martin@gmail.com",
+      "asunto": "reservas",
+      "mensaje": "necesito informacion",
+      "id": "Wy1J7eB"
     }
   ]
 }
