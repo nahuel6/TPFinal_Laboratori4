@@ -1,0 +1,71 @@
+<footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Sobre Nosotros</h3>
+        <p>UTN Viajes es una agencia joven enfocada en brindar experiencias turísticas únicas.</p>
+      </div>
+  
+      <div class="footer-section contact">
+        <h3>Contacto</h3>
+        <p>📍 Mar del Plata, Buenos Aires</p>
+        <p>📞 0800-333-UTNV (8868)</p>
+        <p>✉️ <a  (click)="abrirModal()" style="cursor: pointer; text-decoration: underline;">contacto&#64;utnviajes.com</a></p>
+
+      </div>
+  
+      <div class="footer-section links">
+        <h3>Enlaces</h3>
+        <ul>
+          <li><a routerLink="/">Inicio</a></li>
+          <li><a routerLink="/destinations">Destinos</a></li>
+          <li><a routerLink="/paquetes2">Paquetes</a></li>
+          <li><a href="/terminos">Términos y condiciones</a></li>
+          <li><a href="/privacidad">Política de privacidad</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-section social">
+        <h3>Seguinos</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a><br>
+        
+        <a href="#"><i class="fab fa-instagram"></i> Instagram</a><br>
+        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>© 2025 UTN Viajes - Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+   <!-- Modal de Contacto -->
+<div class="modal-overlay" *ngIf="mostrarModal">
+    <div class="modal-contacto">
+      <h2>Formulario de Contacto</h2>
+      <form #formulario="ngForm" (ngSubmit)="enviarFormulario(formulario)" >
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" ngModel required #nombre="ngModel">
+  <div *ngIf="(nombre.touched || nombre.dirty) && nombre.invalid">
+    <small *ngIf="nombre.errors?.['required']">El nombre es obligatorio.</small>
+  </div>
+  
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ngModel required email #email="ngModel">
+        <div *ngIf="(email.touched || email.dirty) && email.invalid">
+          <small *ngIf="email.errors?.['required']">El email es obligatorio.</small>
+          <small *ngIf="email.errors?.['email']">Formato de email inválido.</small>
+          
+        </div>
+        <label for="asunto">Asunto:</label>
+        <input type="text" id="asunto" name="asunto" ngModel required>
+  
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" ngModel required></textarea>
+  
+        <div class="modal-buttons">
+          <button type="submit" [disabled]="formulario.invalid" >Enviar</button>
+          <button type="button" (click)="cerrarModal()">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>

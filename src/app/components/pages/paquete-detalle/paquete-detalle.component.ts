@@ -224,29 +224,4 @@ if (savedTab) {
   }
 
 
-
-/*
-  cancelarReserva() {
-    const confirmar = confirm("¿Estás seguro de cancelar la reserva?");
-    if (!confirmar) return;
-  
-    this.reservaConfirmada = false;
-    this.fechaSeleccionada = null;
-  
-    // Restar una reserva del paquete en json-server
-    const paqueteId = this.paquete?.id;
-  
-    if (paqueteId) {
-      this.paqueteService.getPaquetePorId(paqueteId).subscribe(paquete => {
-        paquete.cantidadReservas = Math.max((paquete.cantidadReservas || 1) - 1, 0);
-  
-        this.paqueteService.actualizarPaquete(paqueteId, paquete).subscribe(() => {
-          alert("Reserva cancelada.");
-        }, error => {
-          console.error("Error al actualizar el paquete:", error);
-          alert("Error al cancelar la reserva.");
-        });
-      });
-    }
-  }*/
 }
