@@ -101,7 +101,7 @@ this.mostrarAsideInformativo =
   }
 
  
-
+/*
 abrirModal() {
   console.log("Abriendo modal...");
   this.mostrarModal = true;
@@ -137,5 +137,5 @@ enviarFormulario(formulario: NgForm) {
     }
   });
 }
-
+*/
 }

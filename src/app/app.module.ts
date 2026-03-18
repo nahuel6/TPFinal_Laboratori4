@@ -22,6 +22,7 @@ import { Paquetes2DetalleComponent } from './components/pages/paquete-detalle/pa
 import { MapaPaqueteComponent } from './mapa-paquete/mapa-paquete.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MisReservasComponent } from './mis-reservas/mis-reservas.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MisReservasComponent } from './mis-reservas/mis-reservas.component';
     Paquetes2DetalleComponent,
     MapaPaqueteComponent,
     MisReservasComponent,
+    FooterComponent,
 
   ],
   imports: [
